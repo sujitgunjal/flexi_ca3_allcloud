@@ -120,7 +120,7 @@ export function getModels(): Promise<ModelInfo[]> {
 }
 
 export async function getRequests(): Promise<RequestRecord[]> {
-	const payload: unknown = await getJson<unknown>("/requests");
+	const payload: unknown = await getJson<unknown>("/metrics/recent");;
 
 	if (Array.isArray(payload)) {
 		if (payload.every(isRequestRecord)) {

@@ -28,7 +28,7 @@ class RequestMetrics(BaseModel):
     context_before_tokens: int | None = Field(default=None, ge=0)
     context_after_tokens: int | None = Field(default=None, ge=0)
     context_reduction_percent: float | None = None
-    quality_score: float | None = Field(default=None, ge=1, le=5)
+    quality_score: float | None = Field(default=None, ge=0, le=1)
     quality_status: str | None = Field(default=None, max_length=32)
     escalated: bool | None = None
     fallback_used: bool | None = None

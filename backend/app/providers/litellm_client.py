@@ -1,3 +1,4 @@
+
 from litellm import completion
 
 from app.providers.config import (
@@ -13,7 +14,7 @@ def generate_with_cloud(
     prompt: str,
     history: list[dict] | None = None,
     timeout: float | None = None,
-) -> str:
+) -> dict:
 
     messages = []
 
@@ -46,4 +47,12 @@ def generate_with_cloud(
         **options,
     )
 
-    return response.choices[0].message.content
+    usage = getattr(response, "usage", None)
+    choice = response.choices[0]
+
+
+    return {
+        "response": choice.message.content or "",
+        "input_tokens": getattr(usage, "prompt_tokens", None),
+        "output_tokens": getattr(usage, "completion_tokens", None),
+    }
