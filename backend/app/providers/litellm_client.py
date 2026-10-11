@@ -54,5 +54,6 @@ def generate_with_cloud(
     return {
         "response": choice.message.content or "",
         "input_tokens": getattr(usage, "prompt_tokens", None),
-        "output_tokens": getattr(usage, "completion_tokens", None),
+        "outp"
+        "ut_tokens": getattr(usage, "completion_tokens", None),
     }
