@@ -1,3 +1,4 @@
+
 import time
 
 from fastapi import APIRouter, HTTPException
@@ -74,11 +75,12 @@ def probe_tier(tier: str, request: ProbeRequest):
     started = time.perf_counter()
 
     try:
-        text = generate_response(
+        result = generate_response(
             model=tier,
             prompt=request.prompt,
             timeout=30,
         )
+        text = result.get("response", "")
     except Exception as exc:
         status, detail = _classify_generation_error(exc)
         return ProbeResponse(
@@ -142,7 +144,12 @@ def _classify_generation_error(exc: Exception) -> tuple[str, str]:
         return "connection_error", "Connection failed"
     if "not found" in text or "does not exist" in text or "unavailable" in text:
         return "unavailable", "Model is unavailable"
-    if "credential" in text or "api key" in text or "401" in text or "403" in text:
+    if (
+        "credential" in text
+        or "api key" in text
+        or "401" in text
+        or "403" in text
+    ):
         return "error", "API authentication failed"
 
     return "error", "API error"

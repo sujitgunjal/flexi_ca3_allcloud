@@ -1,3 +1,4 @@
+
 from app.providers.litellm_client import generate_with_cloud
 from app.providers.ollama import generate_with_ollama
 from app.providers.registry import get_tier
@@ -8,8 +9,8 @@ def generate_response(
     prompt: str,
     history: list[dict] | None = None,
     timeout: float | None = None,
-) -> str:
-    """Generate a reply for a tier name: local, cheap, or strong."""
+) -> dict:
+    """Generate a reply and return available token usage metadata."""
 
     tier = get_tier(model)
 

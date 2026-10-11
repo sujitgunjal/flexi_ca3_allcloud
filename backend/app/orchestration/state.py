@@ -33,3 +33,8 @@ class RequestState(TypedDict, total=False):
     latency: float
 
     response: str
+    actual_model: str
+    input_tokens: int | None
+    output_tokens: int | None
+    fallback_used: bool
+    escalation_attempted: bool
