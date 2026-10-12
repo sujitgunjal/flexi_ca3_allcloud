@@ -1,47 +1,2642 @@
 [
-  {"id": "q001", "domain": "programming", "split": "calibration", "query": "What is a variable in Python?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q002", "domain": "mathematics", "split": "calibration", "query": "What is 15 + 27?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q003", "domain": "ai_ml", "split": "calibration", "query": "What does AI stand for?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q004", "domain": "databases", "split": "calibration", "query": "What is a primary key?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q005", "domain": "cloud", "split": "calibration", "query": "What is a virtual machine?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q006", "domain": "networking", "split": "calibration", "query": "What does DNS stand for?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q007", "domain": "devops", "split": "calibration", "query": "What is a Docker container?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q008", "domain": "general", "split": "calibration", "query": "What is the capital of Japan?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q009", "domain": "system_design", "split": "calibration", "query": "What is a client-server architecture in one sentence?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q010", "domain": "programming", "split": "validation", "query": "What does the len() function do in Python?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q011", "domain": "mathematics", "split": "validation", "query": "What is a square root?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q012", "domain": "databases", "split": "validation", "query": "What is a SQL table?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q013", "domain": "networking", "split": "test", "query": "What port does HTTP use by default?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q014", "domain": "devops", "split": "test", "query": "What is a Git commit?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q015", "domain": "general", "split": "test", "query": "How many bits are in a byte?", "labels": {"complexity": "simple", "reasoning": "low", "context": "low"}},
-  {"id": "q016", "domain": "programming", "split": "calibration", "query": "Write a Python function that returns the largest number in a list.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q017", "domain": "mathematics", "split": "calibration", "query": "Solve 3x + 6 = 21 and show the steps.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "low"}},
-  {"id": "q018", "domain": "ai_ml", "split": "calibration", "query": "Explain the difference between classification and regression.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q019", "domain": "databases", "split": "calibration", "query": "Write a SQL query to find users who signed up in the last 7 days.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q020", "domain": "cloud", "split": "calibration", "query": "Explain the difference between horizontal and vertical scaling.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q021", "domain": "networking", "split": "calibration", "query": "Explain the difference between TCP and UDP.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q022", "domain": "devops", "split": "calibration", "query": "How do you write a Dockerfile for a small Python web app?", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q023", "domain": "general", "split": "calibration", "query": "Explain why seasons happen on Earth.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "low"}},
-  {"id": "q024", "domain": "system_design", "split": "calibration", "query": "Describe how a URL shortener stores a link and redirects it.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q025", "domain": "programming", "split": "validation", "query": "How does a hash map handle collisions?", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q026", "domain": "ai_ml", "split": "validation", "query": "What is overfitting and how does a validation set help?", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q027", "domain": "cloud", "split": "validation", "query": "How does an autoscaling group decide to add instances?", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q028", "domain": "databases", "split": "test", "query": "Explain the difference between an inner join and a left join.", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q029", "domain": "networking", "split": "test", "query": "How does a TCP three-way handshake work?", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q030", "domain": "devops", "split": "test", "query": "What is the difference between CI and CD?", "labels": {"complexity": "medium", "reasoning": "medium", "context": "medium"}},
-  {"id": "q031", "domain": "system_design", "split": "calibration", "query": "Design a rate limiter for an API running on 20 servers. Include the data model and failure behavior.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q032", "domain": "programming", "split": "calibration", "query": "A recursive tree walk is too slow and allocates on every call. Propose a faster design and explain the complexity change.", "labels": {"complexity": "complex", "reasoning": "high", "context": "medium"}},
-  {"id": "q033", "domain": "mathematics", "split": "calibration", "query": "You have an unfair coin that lands heads 70 percent of the time. How can you use it to make a fair 50/50 choice?", "labels": {"complexity": "complex", "reasoning": "high", "context": "low"}},
-  {"id": "q034", "domain": "ai_ml", "split": "calibration", "query": "A production classifier lost 12 percent accuracy after a feature pipeline change. Outline the investigation.", "labels": {"complexity": "complex", "reasoning": "high", "context": "medium"}},
-  {"id": "q035", "domain": "databases", "split": "calibration", "query": "Design a migration plan for splitting a monolithic orders table across regions without downtime.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q036", "domain": "cloud", "split": "calibration", "query": "Design a multi-AZ deployment for a stateful service that must survive one availability zone failing.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q037", "domain": "networking", "split": "calibration", "query": "A BGP session between two routers is flapping. Reason about likely causes and a safe mitigation sequence.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q038", "domain": "devops", "split": "calibration", "query": "Design a zero-downtime Kubernetes rollout that also runs a backward-compatible database migration.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q039", "domain": "system_design", "split": "calibration", "query": "Design an event-driven order system where a duplicate message must not charge the customer twice.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q040", "domain": "programming", "split": "validation", "query": "Explain how to keep a shared cache correct across threads and processes.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q041", "domain": "ai_ml", "split": "validation", "query": "Design a feature store that prevents training-serving skew.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q042", "domain": "databases", "split": "validation", "query": "How would you shard a social graph, and which queries become difficult after sharding?", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q043", "domain": "cloud", "split": "test", "query": "Design a three-VPC network with private subnets, NAT, and a shared services VPC.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q044", "domain": "system_design", "split": "test", "query": "Design a URL shortener for 100 million requests per day, including caching and failure modes.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}},
-  {"id": "q045", "domain": "devops", "split": "test", "query": "Compare blue-green and rolling deploys when a release includes a backward-incompatible API change, then recommend one and explain rollback.", "labels": {"complexity": "complex", "reasoning": "high", "context": "high"}}
+  {
+    "id": "q001",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "What is a variable in Python?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q002",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "What is 15 + 27?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q003",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "What does AI stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q004",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "What is a primary key?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q005",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "What is a virtual machine?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q006",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "What does DNS stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q007",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "What is a Docker container?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q008",
+    "domain": "general",
+    "split": "calibration",
+    "query": "What is the capital of Japan?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q009",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "What is a client-server architecture in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q010",
+    "domain": "programming",
+    "split": "validation",
+    "query": "What does the len() function do in Python?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q011",
+    "domain": "mathematics",
+    "split": "validation",
+    "query": "What is a square root?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q012",
+    "domain": "databases",
+    "split": "validation",
+    "query": "What is a SQL table?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q013",
+    "domain": "networking",
+    "split": "test",
+    "query": "What port does HTTP use by default?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q014",
+    "domain": "devops",
+    "split": "test",
+    "query": "What is a Git commit?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q015",
+    "domain": "general",
+    "split": "test",
+    "query": "How many bits are in a byte?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q016",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Write a Python function that returns the largest number in a list.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q017",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Solve 3x + 6 = 21 and show the steps.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q018",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "Explain the difference between classification and regression.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q019",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Write a SQL query to find users who signed up in the last 7 days.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q020",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Explain the difference between horizontal and vertical scaling.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q021",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Explain the difference between TCP and UDP.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q022",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "How do you write a Dockerfile for a small Python web app?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q023",
+    "domain": "general",
+    "split": "calibration",
+    "query": "Explain why seasons happen on Earth.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q024",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Describe how a URL shortener stores a link and redirects it.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q025",
+    "domain": "programming",
+    "split": "validation",
+    "query": "How does a hash map handle collisions?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q026",
+    "domain": "ai_ml",
+    "split": "validation",
+    "query": "What is overfitting and how does a validation set help?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q027",
+    "domain": "cloud",
+    "split": "validation",
+    "query": "How does an autoscaling group decide to add instances?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q028",
+    "domain": "databases",
+    "split": "test",
+    "query": "Explain the difference between an inner join and a left join.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q029",
+    "domain": "networking",
+    "split": "test",
+    "query": "How does a TCP three-way handshake work?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q030",
+    "domain": "devops",
+    "split": "test",
+    "query": "What is the difference between CI and CD?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q031",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Design a rate limiter for an API running on 20 servers. Include the data model and failure behavior.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q032",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "A recursive tree walk is too slow and allocates on every call. Propose a faster design and explain the complexity change.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q033",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "You have an unfair coin that lands heads 70 percent of the time. How can you use it to make a fair 50/50 choice?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q034",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "A production classifier lost 12 percent accuracy after a feature pipeline change. Outline the investigation.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q035",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Design a migration plan for splitting a monolithic orders table across regions without downtime.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q036",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Design a multi-AZ deployment for a stateful service that must survive one availability zone failing.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q037",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "A BGP session between two routers is flapping. Reason about likely causes and a safe mitigation sequence.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q038",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Design a zero-downtime Kubernetes rollout that also runs a backward-compatible database migration.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q039",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Design an event-driven order system where a duplicate message must not charge the customer twice.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q040",
+    "domain": "programming",
+    "split": "validation",
+    "query": "Explain how to keep a shared cache correct across threads and processes.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q041",
+    "domain": "ai_ml",
+    "split": "validation",
+    "query": "Design a feature store that prevents training-serving skew.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q042",
+    "domain": "databases",
+    "split": "validation",
+    "query": "How would you shard a social graph, and which queries become difficult after sharding?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q043",
+    "domain": "cloud",
+    "split": "test",
+    "query": "Design a three-VPC network with private subnets, NAT, and a shared services VPC.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q044",
+    "domain": "system_design",
+    "split": "test",
+    "query": "Design a URL shortener for 100 million requests per day, including caching and failure modes.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q045",
+    "domain": "devops",
+    "split": "test",
+    "query": "Compare blue-green and rolling deploys when a release includes a backward-incompatible API change, then recommend one and explain rollback.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q046",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "What was the function name I asked you to rename?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q047",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "What is 18 plus 27?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q048",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "What does GPU stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q049",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "What does SQL stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q050",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "What does the S in Amazon S3 stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q051",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "What does HTTP stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q052",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "What does CI stand for in CI/CD?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q053",
+    "domain": "general",
+    "split": "calibration",
+    "query": "What is the boiling point of water in Celsius at sea level?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q054",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "What is a load balancer, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q055",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "In the snippet I pasted earlier, what type is the variable user?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q056",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "What number did I ask you to square?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q057",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "Which loss function did you say we were using?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q058",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Which table did I ask you to query?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q059",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Which cloud region did I tell you to deploy to?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q060",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "What port did I say the API listens on?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q061",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "What branch name did I ask you to deploy?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q062",
+    "domain": "general",
+    "split": "calibration",
+    "query": "Which city did I say I was visiting?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q063",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Which service did we decide would store user sessions?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q064",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Is [1, 2, 3] a Python list, a dict, or a string?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q065",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Which is larger, 3/7 or 5/12?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q066",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "In one sentence, what is a feature in a machine-learning model?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q067",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Can a primary key column contain two identical values?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q068",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Is a cloud region one data center, or a group of data centers?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q069",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Is 192.168.1.10 a private IPv4 address?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q070",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Does git status create a new commit?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q071",
+    "domain": "general",
+    "split": "calibration",
+    "query": "Which planet is closest to the Sun?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q072",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Name one reason to put a cache in front of a database.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q073",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "A function returns None when n is less than or equal to 0, and returns n otherwise. If n is 4, what does it return?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q074",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "A prime number has exactly two positive divisors, 1 and itself. Is 1 prime?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q075",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "Is predicting tomorrow's temperature a classification task or a regression task?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q076",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "What character usually ends a SQL statement?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q077",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "From the diagram you described, which service stores the files?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q078",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "In one sentence, how is a TCP port different from an IP address?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q079",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "A pipeline runs tests before deploy, and the tests failed. Does the deploy stage run?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q080",
+    "domain": "general",
+    "split": "calibration",
+    "query": "All bloops are razzes, and all razzes are lazzes. Is every bloop a lazz?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q081",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "What availability target did I give you?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q082",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Which keyword starts a function definition in Python?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q083",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Using the formula you gave, what is the area when the radius is 3?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q084",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "A classifier predicts the positive class only when the score is above 0.5. The score is 0.2. Which class does it predict?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q085",
+    "domain": "databases",
+    "split": "validation",
+    "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q086",
+    "domain": "cloud",
+    "split": "validation",
+    "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q087",
+    "domain": "networking",
+    "split": "validation",
+    "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q088",
+    "domain": "devops",
+    "split": "validation",
+    "query": "What does the command docker ps show?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q089",
+    "domain": "general",
+    "split": "validation",
+    "query": "Translate the sentence I just wrote into French.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q090",
+    "domain": "system_design",
+    "split": "validation",
+    "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q091",
+    "domain": "programming",
+    "split": "validation",
+    "query": "After the loop we just wrote, what is the final value of count?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q092",
+    "domain": "mathematics",
+    "split": "validation",
+    "query": "What is 15 percent of 80?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q093",
+    "domain": "ai_ml",
+    "split": "validation",
+    "query": "In the training log above, what was the last accuracy number?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q094",
+    "domain": "databases",
+    "split": "validation",
+    "query": "In the schema we discussed, which column is the foreign key?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q095",
+    "domain": "cloud",
+    "split": "validation",
+    "query": "Using the bucket name from my last message, say where the logs are stored.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q096",
+    "domain": "networking",
+    "split": "validation",
+    "query": "In the packet capture we looked at, which IP address was the source?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q097",
+    "domain": "devops",
+    "split": "validation",
+    "query": "In the pipeline file above, which step runs first?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q098",
+    "domain": "general",
+    "split": "test",
+    "query": "What was the second item on the list you gave me?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q099",
+    "domain": "system_design",
+    "split": "test",
+    "query": "In the sketch we made, where are the images stored?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q100",
+    "domain": "mathematics",
+    "split": "test",
+    "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q101",
+    "domain": "ai_ml",
+    "split": "test",
+    "query": "Did the model you just described use a transformer or a decision tree?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q102",
+    "domain": "databases",
+    "split": "test",
+    "query": "Add the status filter I mentioned to the query you just wrote, and do not change the selected columns.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q103",
+    "domain": "cloud",
+    "split": "test",
+    "query": "What is a container registry, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q104",
+    "domain": "networking",
+    "split": "test",
+    "query": "Repeat only the DNS record type you recommended.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q105",
+    "domain": "general",
+    "split": "test",
+    "query": "How many days are in a leap year?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q106",
+    "domain": "system_design",
+    "split": "test",
+    "query": "What does stateless mean for an API server, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q107",
+    "domain": "mathematics",
+    "split": "test",
+    "query": "How many degrees are in a right angle?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q108",
+    "domain": "ai_ml",
+    "split": "test",
+    "query": "Precision is true positives divided by predicted positives. We predicted 10 positives and 8 were correct. What is the precision?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q109",
+    "domain": "cloud",
+    "split": "test",
+    "query": "Name one difference between a region and an availability zone.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q110",
+    "domain": "mathematics",
+    "split": "test",
+    "query": "State the quadratic formula. Do not solve an equation.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q111",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Write a Python function that takes a string and returns how many characters it contains.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q112",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "A rectangle is 5 units by 8 units. What are its area and its perimeter?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q113",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "Explain the bias-variance tradeoff in two sentences.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q114",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Write a SQL query that counts rows in orders grouped by customer_id. The table has columns customer_id and id.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q115",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "How is a managed Kubernetes service different from running the same containers on virtual machines you patch yourself?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q116",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "What messages are exchanged when a TCP connection closes, in order?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q117",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Write a Dockerfile that starts from python:3.12-slim, copies the app, and runs python app.py.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q118",
+    "domain": "general",
+    "split": "calibration",
+    "query": "Why do we have leap years? Answer in two sentences.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q119",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "What is a message queue used for? Give one example.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q120",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "This function is supposed to return the largest number in a list, but the body says return min(values). What is the bug, and what should the return line be?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q121",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Show that the sum of two even integers is even. A short proof is enough.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q122",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "A model is very accurate on its training data and poor on new data. What is that problem called, and name one change that often helps?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q123",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "This query is slow: SELECT * FROM events WHERE YEAR(created_at) = 2024. Why does that pattern block a normal index, and how would you write the date filter instead?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q124",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "A storage bucket that holds invoices is world-readable. What is the risk, and what access change removes it?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q125",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Users can open the site by IP address but not by its name. Where do you look first, and why?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q126",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "A container exits at once with status 127. What does that status usually mean, and what would you check in the image?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q127",
+    "domain": "general",
+    "split": "calibration",
+    "query": "Explain how a solar eclipse happens, in three sentences.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q128",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "A blog is read often and updated a few times a day. Choose a cache or a read replica, and give one reason.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q129",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Show Python code that reads a JSON file named data.json and prints the value of the name field.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q130",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Solve 5x - 5 = 20 and check the result.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q131",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "How does a train, validation, and test split differ from using only a train and test split?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q132",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "When is a composite index on (user_id, created_at) more useful than an index on user_id alone?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q133",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Give one example of object storage and one example of block storage, and say how a server uses each.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q134",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "What is the difference between HTTP status 301 and HTTP status 404?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q135",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "What is the difference between CMD and ENTRYPOINT in a Dockerfile?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q136",
+    "domain": "general",
+    "split": "calibration",
+    "query": "The shop is closed on Tuesday. Today is Tuesday. Can an order be picked up in the shop today? Say why.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q137",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "How does a rate limiter protect a login endpoint?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q138",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Rename the variables in the function you just wrote so a new reader can tell what they store.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q139",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Use the same method you just used to compute the next value.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q140",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "Apply the preprocessing steps you listed to this sentence: Order cancelled.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q141",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Change the query you wrote so it keeps only rows where status is open.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q142",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Attach the access policy you drafted to a bucket named logs-prod. Do not rewrite the rules.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q143",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Using the subnet from my previous message, is 10.0.4.8 inside it? Show the comparison.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q144",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Add the environment variable I mentioned to the compose file you wrote.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q145",
+    "domain": "general",
+    "split": "calibration",
+    "query": "In two sentences, how is a republic different from a monarchy?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q146",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Add the billing service I mentioned to the component list you proposed.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q147",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "The traceback I pasted points at line 40 of parser.py. Explain the most likely cause and a one-line fix.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q148",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "In your last answer, you differentiated x squared plus 3x and wrote 2x. Recompute the derivative and correct it.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q149",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "What does each cell of a confusion matrix count?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q150",
+    "domain": "databases",
+    "split": "validation",
+    "query": "What is the difference between WHERE and HAVING?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q151",
+    "domain": "cloud",
+    "split": "validation",
+    "query": "What does an availability-zone outage do to a database that runs in only one zone?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q152",
+    "domain": "networking",
+    "split": "validation",
+    "query": "What is a subnet mask used for?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q153",
+    "domain": "devops",
+    "split": "validation",
+    "query": "What does a green CI build tell you, and what does it not tell you?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q154",
+    "domain": "general",
+    "split": "validation",
+    "query": "Add one sentence to the summary you started.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q155",
+    "domain": "system_design",
+    "split": "validation",
+    "query": "What is the difference between latency and throughput?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q156",
+    "domain": "programming",
+    "split": "validation",
+    "query": "Explain the difference between a Python list and a tuple, with one example of when a tuple is the better choice.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q157",
+    "domain": "mathematics",
+    "split": "validation",
+    "query": "Convert 0.125 to a fraction in lowest terms.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q158",
+    "domain": "ai_ml",
+    "split": "validation",
+    "query": "The learning curve I described is still rising at the last point. Should we collect more data or enlarge the model first? Give the reason.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q159",
+    "domain": "databases",
+    "split": "validation",
+    "query": "The query plan above is a full scan of orders. Which index would you add, and which predicate should it match?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q160",
+    "domain": "cloud",
+    "split": "validation",
+    "query": "The deploy described in the last note rolled back after health checks failed. What is the most likely configuration mistake?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q161",
+    "domain": "networking",
+    "split": "validation",
+    "query": "A traceroute stops responding at hop 4. What does that suggest, and what would you check next?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q162",
+    "domain": "devops",
+    "split": "validation",
+    "query": "The rollback script from the last message failed on the second host. What should it check before touching another host?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q163",
+    "domain": "general",
+    "split": "test",
+    "query": "What causes ocean tides?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q164",
+    "domain": "system_design",
+    "split": "test",
+    "query": "Your previous design uses one database. What fails first if write traffic doubles?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q165",
+    "domain": "programming",
+    "split": "test",
+    "query": "Add a one-line docstring to the function in the previous message. Do not change the code.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q166",
+    "domain": "mathematics",
+    "split": "test",
+    "query": "Using the system of equations from my last message, solve for y and show the substitution.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q167",
+    "domain": "ai_ml",
+    "split": "test",
+    "query": "In the notebook we were looking at, which metric was logged on each epoch?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q168",
+    "domain": "cloud",
+    "split": "test",
+    "query": "Name the three cloud resources from the architecture in my previous message.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q169",
+    "domain": "networking",
+    "split": "test",
+    "query": "In the curl output we reviewed, which header set the cookie?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q170",
+    "domain": "devops",
+    "split": "test",
+    "query": "Which image tag did the pipeline log in my last message show for the failed deploy?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q171",
+    "domain": "general",
+    "split": "test",
+    "query": "The itinerary above has flights listed by day. Is there a day with two flights, and which day is it?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q172",
+    "domain": "system_design",
+    "split": "test",
+    "query": "Which two stores did you offer for session data?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q173",
+    "domain": "networking",
+    "split": "test",
+    "query": "Update the firewall rule we discussed so it also allows port 22 from the office address.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q174",
+    "domain": "general",
+    "split": "test",
+    "query": "Shorten the paragraph you just wrote to fewer than twenty words.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q175",
+    "domain": "general",
+    "split": "test",
+    "query": "Using the constraints I listed earlier, which of the two cities is the better place to meet?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q176",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Design a Python service that receives webhook events, ignores duplicates for 24 hours, and retries a failed handler with backoff. Describe the modules, the data you would store, and what happens if the process dies after the handler starts.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q177",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Prove that there are infinitely many prime numbers. Write the argument as clear steps.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q178",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "Design an evaluation for a document retriever that must not leak test documents into training. Include the split, the metrics, and one failure those metrics can miss.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q179",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Design a schema for orders that belong to tenants, where one tenant must never read another tenant's rows. Include keys, the index you would rely on, and how the database enforces isolation.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q180",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Design an active-passive deployment of a payments API in two regions. Include how traffic moves, how data is replicated, and the recovery point you would promise.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q181",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Design address space for three environments that cannot route to each other by default, plus one controlled path for the deploy system. Include how you would test that isolation holds.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q182",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Design a deploy pipeline that can reverse a bad release in under five minutes. Include the build, the canary, the metric that aborts it, and who is allowed to force it through.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q183",
+    "domain": "general",
+    "split": "calibration",
+    "query": "A city may replace a fixed bus route with vans that come on request. Compare cost, waiting, coverage, and name one group of riders who are worse off. Recommend one option.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q184",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Design a chat system for 10 million accounts with presence, history, and groups of up to 500 members. Include storage, how a message reaches the group, and the first bottleneck you expect.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q185",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "A Python worker spends most of its time waiting on HTTP APIs. Compare threads and asyncio, recommend one, and state the main tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q186",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Compare bisection and Newton-Raphson for a root of a function that is expensive to differentiate. Recommend one, and state the failure if the derivative is zero at the root.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q187",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "Compare LoRA fine-tuning and full fine-tuning of a 7-billion-parameter model on one GPU, for a task with 10,000 examples. Recommend one and state the tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q188",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Compare optimistic and pessimistic locking for a seat-booking update that lasts a few milliseconds. Choose one and say what fails if you choose badly.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q189",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Compare spot capacity and on-demand capacity for a batch job that runs every night and can restart. Recommend one and state the failure you accept.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q190",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Compare terminating TLS at a load balancer with terminating it at the application. Choose one for an internal admin API and justify it.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q191",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Compare a blue-green deploy with a rolling deploy when the release adds a required database column. Recommend one and say what breaks in the other.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q192",
+    "domain": "general",
+    "split": "calibration",
+    "query": "A council must decide whether a disputed claim about water safety is established. Compare the standard a jury uses with the standard a scientific study uses, recommend which standard the council should require before changing the water plant, and state one way that standard can still be wrong.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q193",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "Design a rate limiter shared by ten API servers that does not take a lock on one database row for every request. Include the data you store and what a dead server does to the count.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q194",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "The worker we designed loses events when the process restarts. Change the handoff so a crash after the handler starts cannot drop an event that was already accepted.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q195",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "Finish the induction proof you started for the claim that the sum of the first n odd numbers is n squared. Complete the inductive step.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q196",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "The training run we discussed diverged right after the learning-rate change. Give a likely cause and a safer schedule.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q197",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "The migration you proposed takes a lock on the users table for the whole backfill. Change the plan so reads and writes continue while old rows are copied.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q198",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "The failover we designed last week can accept writes in both regions at once. Explain the split-brain risk and change the design so only one region is writable.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q199",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Packet loss on the VPN from the last session happens only for large packets. Explain the likely MTU problem and the change you would test first.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q200",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Yesterday the canary metrics passed, but the business check I described failed. Change the pipeline so that check can stop the rollout.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q201",
+    "domain": "general",
+    "split": "calibration",
+    "query": "Using the budget and the two options I described earlier, recommend one. Show the figure that would reverse the recommendation.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q202",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "A team of four is building the first version of billing. Compare one deployable service with a split into several services. Recommend one, and say what would force you to change.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q203",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "Compare a lock and a queue for handing jobs to three worker processes. Recommend one when the jobs are CPU-bound, and state what goes wrong if every worker waits on one lock.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q204",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "You need to solve thousands of linear systems that share a matrix and differ only in the right-hand side. Compare factoring the matrix once against solving each system from scratch, recommend one, and state the memory tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q205",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "A team can prompt a hosted model or fine-tune a small model on 2,000 labeled support tickets. Compare them for labels that change every month, recommend one, and state the maintenance cost you accept.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q206",
+    "domain": "databases",
+    "split": "calibration",
+    "query": "Compare storing an order total on the order row against computing it from line items on every read. Recommend one when the total is shown on every page view, and state how a partial refund can make the stored total wrong.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q207",
+    "domain": "cloud",
+    "split": "calibration",
+    "query": "Compare encrypting a whole database disk with encrypting the columns that finance staff must read. Recommend one when backups are copied to another account, and state what the copy still exposes.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q208",
+    "domain": "networking",
+    "split": "calibration",
+    "query": "Compare allowing a whole office subnet to reach an admin port against requiring a per-user VPN identity. Recommend one for a five-person team, and state the failure when a laptop is stolen.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q209",
+    "domain": "devops",
+    "split": "calibration",
+    "query": "Compare rebuilding a release from a Git tag against deploying an image digest. Recommend one when a security scan must match the bytes that were approved, and state what a movable tag can hide.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q210",
+    "domain": "general",
+    "split": "calibration",
+    "query": "A club of 90 people must pick one of four venues, and a plurality winner can be disliked by most voters. Compare plurality with an instant runoff, recommend one, and describe a case where your choice still picks a weak compromise.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q211",
+    "domain": "system_design",
+    "split": "calibration",
+    "query": "The feed design we agreed on cannot handle the write rate I added in the last message. Revise how posts reach followers, and say which consistency you would give up.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q212",
+    "domain": "programming",
+    "split": "calibration",
+    "query": "The traceback and the function from the last turn disagree about the type of the user id. Diagnose the mismatch and propose a fix that keeps the public function signature.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q213",
+    "domain": "mathematics",
+    "split": "calibration",
+    "query": "The integral in your last answer dropped the constant. Recompute it from the expression I gave and show the corrected result.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q214",
+    "domain": "ai_ml",
+    "split": "calibration",
+    "query": "A medical screening model has precision 0.95 and recall 0.40. Explain who is missed, who is burdened, and which metric you would move next, including the tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q215",
+    "domain": "databases",
+    "split": "validation",
+    "query": "The plan above nests a loop over orders and items. Propose an index and a rewritten join, and say how you would confirm the plan changed.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q216",
+    "domain": "cloud",
+    "split": "validation",
+    "query": "A lifecycle rule deletes invoices 30 days after upload, but finance must keep them for 7 years. Explain the conflict and separate retention from the application bucket.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q217",
+    "domain": "networking",
+    "split": "validation",
+    "query": "Every person in one office shares a single public IP, so a rate limiter treats them as one client. Explain why, and propose an identity the limiter should use instead.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q218",
+    "domain": "devops",
+    "split": "validation",
+    "query": "A deployment has three replicas and a readiness probe that always fails. Describe what users experience and the smallest change that returns traffic without skipping the probe.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q219",
+    "domain": "general",
+    "split": "validation",
+    "query": "Three roommates share a rent of 3000. Rooms are 10, 20, and 30 square meters. Compute each share if rent follows room size, then give one fairness objection to that rule.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q220",
+    "domain": "system_design",
+    "split": "validation",
+    "query": "Compare writing a follower's feed when a post is created against building that feed when the follower opens the app. Recommend one for an account with 20 million followers, and state the cost the other design pays.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q221",
+    "domain": "programming",
+    "split": "validation",
+    "query": "Extend the parser you wrote so it accepts the optional fields from my earlier message, and describe how it reports an error.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q222",
+    "domain": "mathematics",
+    "split": "validation",
+    "query": "Using only the recurrence in my previous message, find a closed form and justify it.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q223",
+    "domain": "ai_ml",
+    "split": "validation",
+    "query": "Adapt the feature pipeline from the previous turn to the new label I just defined, and say which features are no longer valid.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q224",
+    "domain": "databases",
+    "split": "validation",
+    "query": "Apply the partitioning scheme from the last design to a new events table. State the partition key and one query that would have to touch every partition.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q225",
+    "domain": "cloud",
+    "split": "validation",
+    "query": "Take the network layout from the previous message and add a private path for the workers. Describe the routes and what must not be reachable from the internet.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q226",
+    "domain": "networking",
+    "split": "validation",
+    "query": "Using the routing table from the last message, which next hop is chosen for 10.8.0.0/16, and what happens to that traffic if the hop is removed?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q227",
+    "domain": "devops",
+    "split": "validation",
+    "query": "Update the runbook you wrote so the on-call step includes the feature flag from my last note.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q228",
+    "domain": "general",
+    "split": "test",
+    "query": "Revise the argument you made so it answers the objection I raised about the sample being too small.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q229",
+    "domain": "system_design",
+    "split": "test",
+    "query": "Notifications can be sent by email, push, or SMS, and a worker may retry. Design deduplication so the user gets one alert. Include the key and how long you keep it.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q230",
+    "domain": "programming",
+    "split": "test",
+    "query": "A web handler reads an entire upload into memory before it checks the content type. Explain how a large request can take the process down, and describe a structure that validates and limits the body first.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q231",
+    "domain": "mathematics",
+    "split": "test",
+    "query": "A fair coin is flipped until the first heads. Derive the expected number of flips and show each step.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q232",
+    "domain": "ai_ml",
+    "split": "test",
+    "query": "The ablation table above removes one component at a time. Which component would you drop, and what new result would change that choice?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q233",
+    "domain": "databases",
+    "split": "test",
+    "query": "A user updates a profile and the next read comes from a replica. Describe the stale read they can see, and a design that makes that read show the new profile.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q234",
+    "domain": "cloud",
+    "split": "test",
+    "query": "The cost report above rose because of traffic between availability zones. Identify the likely path and a change that reduces that traffic without dropping the second zone.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q235",
+    "domain": "networking",
+    "split": "test",
+    "query": "The capture summary above shows retransmissions after the server window reaches zero. Explain that condition and what the application should change.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q236",
+    "domain": "devops",
+    "split": "test",
+    "query": "The timeline above starts the rollback before the canary has finished. Where is the gap, and what gate would you add?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q237",
+    "domain": "general",
+    "split": "test",
+    "query": "The timeline above places two events on the same day that cannot both have happened. Identify the contradiction and the smallest correction.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  },
+  {
+    "id": "q238",
+    "domain": "system_design",
+    "split": "test",
+    "query": "Using the constraints from the previous review, choose a queue or an append-only log for the audit trail, and check it against the retention requirement I added.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    }
+  },
+  {
+    "id": "q239",
+    "domain": "general",
+    "split": "test",
+    "query": "A chart says crime fell 40 percent. List the definition, the denominator, and the time window a reader must check, and say which missing piece makes the two periods incomparable.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    }
+  },
+  {
+    "id": "q240",
+    "domain": "system_design",
+    "split": "test",
+    "query": "In the sequence above, the client writes to two services. Show how a failure after the first write leaves bad state, and change the flow so the user sees one outcome.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    }
+  }
 ]

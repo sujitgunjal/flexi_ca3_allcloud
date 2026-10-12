@@ -1,0 +1,1490 @@
+[
+  {
+    "id": "q013",
+    "split": "test",
+    "domain": "networking",
+    "query": "What port does HTTP use by default?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 22.8653,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q014",
+    "split": "test",
+    "domain": "devops",
+    "query": "What is a Git commit?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.4106,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q015",
+    "split": "test",
+    "domain": "general",
+    "query": "How many bits are in a byte?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.2238,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q028",
+    "split": "test",
+    "domain": "databases",
+    "query": "Explain the difference between an inner join and a left join.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.9551,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q029",
+    "split": "test",
+    "domain": "networking",
+    "query": "How does a TCP three-way handshake work?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.1679,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q030",
+    "split": "test",
+    "domain": "devops",
+    "query": "What is the difference between CI and CD?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.6971,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q043",
+    "split": "test",
+    "domain": "cloud",
+    "query": "Design a three-VPC network with private subnets, NAT, and a shared services VPC.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.9682,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q044",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Design a URL shortener for 100 million requests per day, including caching and failure modes.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0196,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q045",
+    "split": "test",
+    "domain": "devops",
+    "query": "Compare blue-green and rolling deploys when a release includes a backward-incompatible API change, then recommend one and explain rollback.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.099,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q098",
+    "split": "test",
+    "domain": "general",
+    "query": "What was the second item on the list you gave me?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8301,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q099",
+    "split": "test",
+    "domain": "system_design",
+    "query": "In the sketch we made, where are the images stored?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.7,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.3,
+        "medium": 0.6,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6707,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q100",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.8483,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q101",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "Did the model you just described use a transformer or a decision tree?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2905,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q102",
+    "split": "test",
+    "domain": "databases",
+    "query": "Add the status filter I mentioned to the query you just wrote, and do not change the selected columns.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.1972,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q103",
+    "split": "test",
+    "domain": "cloud",
+    "query": "What is a container registry, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.7,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.5,
+        "medium": 0.4,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6833,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q104",
+    "split": "test",
+    "domain": "networking",
+    "query": "Repeat only the DNS record type you recommended.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.7896,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q105",
+    "split": "test",
+    "domain": "general",
+    "query": "How many days are in a leap year?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.5195,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q106",
+    "split": "test",
+    "domain": "system_design",
+    "query": "What does stateless mean for an API server, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8294,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q107",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "How many degrees are in a right angle?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.5346,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q108",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "Precision is true positives divided by predicted positives. We predicted 10 positives and 8 were correct. What is the precision?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2689,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q109",
+    "split": "test",
+    "domain": "cloud",
+    "query": "Name one difference between a region and an availability zone.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.81,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q110",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "State the quadratic formula. Do not solve an equation.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0093,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q163",
+    "split": "test",
+    "domain": "general",
+    "query": "What causes ocean tides?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.7,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.3,
+        "medium": 0.6,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8141,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q164",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Your previous design uses one database. What fails first if write traffic doubles?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6518,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q165",
+    "split": "test",
+    "domain": "programming",
+    "query": "Add a one-line docstring to the function in the previous message. Do not change the code.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.162,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q166",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "Using the system of equations from my last message, solve for y and show the substitution.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.9823,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q167",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "In the notebook we were looking at, which metric was logged on each epoch?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2182,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q168",
+    "split": "test",
+    "domain": "cloud",
+    "query": "Name the three cloud resources from the architecture in my previous message.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.3107,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q169",
+    "split": "test",
+    "domain": "networking",
+    "query": "In the curl output we reviewed, which header set the cookie?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.9271,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q170",
+    "split": "test",
+    "domain": "devops",
+    "query": "Which image tag did the pipeline log in my last message show for the failed deploy?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.3068,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q171",
+    "split": "test",
+    "domain": "general",
+    "query": "The itinerary above has flights listed by day. Is there a day with two flights, and which day is it?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.5112,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q172",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Which two stores did you offer for session data?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.1716,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q173",
+    "split": "test",
+    "domain": "networking",
+    "query": "Update the firewall rule we discussed so it also allows port 22 from the office address.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.913,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q174",
+    "split": "test",
+    "domain": "general",
+    "query": "Shorten the paragraph you just wrote to fewer than twenty words.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.9102,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q175",
+    "split": "test",
+    "domain": "general",
+    "query": "Using the constraints I listed earlier, which of the two cities is the better place to meet?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.9245,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q228",
+    "split": "test",
+    "domain": "general",
+    "query": "Revise the argument you made so it answers the objection I raised about the sample being too small.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4732,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q229",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Notifications can be sent by email, push, or SMS, and a worker may retry. Design deduplication so the user gets one alert. Include the key and how long you keep it.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.7,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.8789,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q230",
+    "split": "test",
+    "domain": "programming",
+    "query": "A web handler reads an entire upload into memory before it checks the content type. Explain how a large request can take the process down, and describe a structure that validates and limits the body first.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.9378,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q231",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "A fair coin is flipped until the first heads. Derive the expected number of flips and show each step.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.189,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q232",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "The ablation table above removes one component at a time. Which component would you drop, and what new result would change that choice?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.3371,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q233",
+    "split": "test",
+    "domain": "databases",
+    "query": "A user updates a profile and the next read comes from a replica. Describe the stale read they can see, and a design that makes that read show the new profile.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.0711,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q234",
+    "split": "test",
+    "domain": "cloud",
+    "query": "The cost report above rose because of traffic between availability zones. Identify the likely path and a change that reduces that traffic without dropping the second zone.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.3193,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q235",
+    "split": "test",
+    "domain": "networking",
+    "query": "The capture summary above shows retransmissions after the server window reaches zero. Explain that condition and what the application should change.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.5196,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q236",
+    "split": "test",
+    "domain": "devops",
+    "query": "The timeline above starts the rollback before the canary has finished. Where is the gap, and what gate would you add?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.7297,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q237",
+    "split": "test",
+    "domain": "general",
+    "query": "The timeline above places two events on the same day that cannot both have happened. Identify the contradiction and the smallest correction.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.5594,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q238",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Using the constraints from the previous review, choose a queue or an append-only log for the audit trail, and check it against the retention requirement I added.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.2694,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q239",
+    "split": "test",
+    "domain": "general",
+    "query": "A chart says crime fell 40 percent. List the definition, the denominator, and the time window a reader must check, and say which missing piece makes the two periods incomparable.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7213,
+    "model": "llama3:8b"
+  },
+  {
+    "id": "q240",
+    "split": "test",
+    "domain": "system_design",
+    "query": "In the sequence above, the client writes to two services. Show how a failure after the first write leaves bad state, and change the flow so the user sees one outcome.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.0699,
+    "model": "llama3:8b"
+  }
+]

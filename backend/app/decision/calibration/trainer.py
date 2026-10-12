@@ -39,6 +39,12 @@ def train(refresh: bool = False) -> ProbabilityCalibrator:
     for index, record in enumerate(records, start=1):
         existing = by_id.get(record["id"])
         if existing and existing.get("output_valid") and not refresh:
+            # Keep the saved raw probabilities, but take labels and split from
+            # the dataset. A label correction must not require a new Ollama call.
+            existing["split"] = record["split"]
+            existing["domain"] = record["domain"]
+            existing["query"] = record["query"]
+            existing["labels"] = record["labels"]
             continue
 
         print(f"[trainer] {index}/{len(records)} {record['id']}")
@@ -57,6 +63,7 @@ def train(refresh: bool = False) -> ProbabilityCalibrator:
         )
 
     predictions = [by_id[record["id"]] for record in records]
+    _save_predictions(predictions)
 
     calibration_rows = [
         item

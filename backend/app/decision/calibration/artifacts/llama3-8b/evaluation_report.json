@@ -1,0 +1,1008 @@
+{
+  "decision_model": "ollama/llama3:8b",
+  "provider_verified": true,
+  "split": "test",
+  "test_rows": 48,
+  "valid_rows": 48,
+  "invalid_outputs": 0,
+  "invalid_ids": [],
+  "latency_seconds": {
+    "count": 48,
+    "mean": 14.2201,
+    "median": 14.0593,
+    "p95": 14.9682,
+    "min": 12.8789,
+    "max": 22.8653,
+    "total": 682.5672
+  },
+  "calibration_applied_separately": true,
+  "calibrator_note": "The loaded calibrator is the existing artifact. It was fitted on llama3.2:3b calibration rows and was not refit on llama3:8b.",
+  "raw": {
+    "complexity": {
+      "accuracy": 0.4375,
+      "macro_precision": 0.3643,
+      "macro_recall": 0.4375,
+      "macro_f1": 0.3712,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            9,
+            7,
+            0
+          ],
+          [
+            3,
+            12,
+            1
+          ],
+          [
+            0,
+            16,
+            0
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.75,
+          "recall": 0.5625,
+          "f1": 0.6429,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.3429,
+          "recall": 0.75,
+          "f1": 0.4706,
+          "support": 16
+        },
+        {
+          "label": "complex",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.8017
+    },
+    "reasoning": {
+      "accuracy": 0.3958,
+      "macro_precision": 0.6449,
+      "macro_recall": 0.4442,
+      "macro_f1": 0.3782,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            9,
+            9,
+            0
+          ],
+          [
+            3,
+            8,
+            0
+          ],
+          [
+            1,
+            16,
+            2
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6923,
+          "recall": 0.5,
+          "f1": 0.5806,
+          "support": 18
+        },
+        {
+          "label": "medium",
+          "precision": 0.2424,
+          "recall": 0.7273,
+          "f1": 0.3636,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 1.0,
+          "recall": 0.1053,
+          "f1": 0.1905,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.7075
+    },
+    "context": {
+      "accuracy": 0.3542,
+      "macro_precision": 0.4526,
+      "macro_recall": 0.4087,
+      "macro_f1": 0.3134,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            8,
+            14,
+            0
+          ],
+          [
+            1,
+            8,
+            1
+          ],
+          [
+            4,
+            11,
+            1
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6154,
+          "recall": 0.3636,
+          "f1": 0.4571,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.2424,
+          "recall": 0.8,
+          "f1": 0.3721,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.5,
+          "recall": 0.0625,
+          "f1": 0.1111,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.9429
+    }
+  },
+  "existing_calibrator_on_new_raw": {
+    "complexity": {
+      "accuracy": 0.5,
+      "macro_precision": 0.6282,
+      "macro_recall": 0.5,
+      "macro_f1": 0.4424,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            3,
+            8,
+            5
+          ],
+          [
+            0,
+            5,
+            11
+          ],
+          [
+            0,
+            0,
+            16
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 1.0,
+          "recall": 0.1875,
+          "f1": 0.3158,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.3846,
+          "recall": 0.3125,
+          "f1": 0.3448,
+          "support": 16
+        },
+        {
+          "label": "complex",
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.596
+    },
+    "reasoning": {
+      "accuracy": 0.375,
+      "macro_precision": 0.6425,
+      "macro_recall": 0.4266,
+      "macro_f1": 0.3454,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            9,
+            9,
+            0
+          ],
+          [
+            3,
+            8,
+            0
+          ],
+          [
+            1,
+            17,
+            1
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6923,
+          "recall": 0.5,
+          "f1": 0.5806,
+          "support": 18
+        },
+        {
+          "label": "medium",
+          "precision": 0.2353,
+          "recall": 0.7273,
+          "f1": 0.3556,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 1.0,
+          "recall": 0.0526,
+          "f1": 0.0999,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.7539
+    },
+    "context": {
+      "accuracy": 0.4583,
+      "macro_precision": 0.1528,
+      "macro_recall": 0.3333,
+      "macro_f1": 0.2095,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            22,
+            0,
+            0
+          ],
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            16,
+            0,
+            0
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.4583,
+          "recall": 1.0,
+          "f1": 0.6285,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.7679
+    }
+  },
+  "baseline_model": "ollama/llama3.2:3b",
+  "baseline_valid_rows": 47,
+  "baseline_raw": {
+    "complexity": {
+      "accuracy": 0.4255,
+      "macro_precision": 0.4001,
+      "macro_recall": 0.4208,
+      "macro_f1": 0.3923,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            13,
+            2,
+            1
+          ],
+          [
+            8,
+            3,
+            4
+          ],
+          [
+            3,
+            9,
+            4
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.5417,
+          "recall": 0.8125,
+          "f1": 0.65,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.2143,
+          "recall": 0.2,
+          "f1": 0.2069,
+          "support": 15
+        },
+        {
+          "label": "complex",
+          "precision": 0.4444,
+          "recall": 0.25,
+          "f1": 0.32,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.7668
+    },
+    "reasoning": {
+      "accuracy": 0.4681,
+      "macro_precision": 0.5149,
+      "macro_recall": 0.4238,
+      "macro_f1": 0.4198,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            6,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            8
+          ],
+          [
+            0,
+            5,
+            14
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.8571,
+          "recall": 0.3529,
+          "f1": 0.5,
+          "support": 17
+        },
+        {
+          "label": "medium",
+          "precision": 0.25,
+          "recall": 0.1818,
+          "f1": 0.2105,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 0.4375,
+          "recall": 0.7368,
+          "f1": 0.549,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.7793
+    },
+    "context": {
+      "accuracy": 0.3404,
+      "macro_precision": 0.4179,
+      "macro_recall": 0.3758,
+      "macro_f1": 0.3443,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            5,
+            12,
+            5
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            8,
+            6
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.625,
+          "recall": 0.2273,
+          "f1": 0.3334,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.2857,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.4286,
+          "recall": 0.4,
+          "f1": 0.4138,
+          "support": 15
+        }
+      ],
+      "brier_score": 0.9587
+    }
+  },
+  "shared_valid_ids": 47,
+  "shared_raw": {
+    "complexity": {
+      "accuracy": 0.4468,
+      "macro_precision": 0.387,
+      "macro_recall": 0.4542,
+      "macro_f1": 0.3822,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            9,
+            7,
+            0
+          ],
+          [
+            2,
+            12,
+            1
+          ],
+          [
+            0,
+            16,
+            0
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.8182,
+          "recall": 0.5625,
+          "f1": 0.6667,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.3429,
+          "recall": 0.8,
+          "f1": 0.48,
+          "support": 15
+        },
+        {
+          "label": "complex",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.7915
+    },
+    "reasoning": {
+      "accuracy": 0.383,
+      "macro_precision": 0.6364,
+      "macro_recall": 0.4344,
+      "macro_f1": 0.3686,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            8,
+            9,
+            0
+          ],
+          [
+            3,
+            8,
+            0
+          ],
+          [
+            1,
+            16,
+            2
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6667,
+          "recall": 0.4706,
+          "f1": 0.5517,
+          "support": 17
+        },
+        {
+          "label": "medium",
+          "precision": 0.2424,
+          "recall": 0.7273,
+          "f1": 0.3636,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 1.0,
+          "recall": 0.1053,
+          "f1": 0.1905,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.7187
+    },
+    "context": {
+      "accuracy": 0.3617,
+      "macro_precision": 0.4697,
+      "macro_recall": 0.4101,
+      "macro_f1": 0.3201,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            8,
+            14,
+            0
+          ],
+          [
+            1,
+            8,
+            1
+          ],
+          [
+            3,
+            11,
+            1
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6667,
+          "recall": 0.3636,
+          "f1": 0.4706,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.2424,
+          "recall": 0.8,
+          "f1": 0.3721,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.5,
+          "recall": 0.0667,
+          "f1": 0.1177,
+          "support": 15
+        }
+      ],
+      "brier_score": 0.9243
+    }
+  },
+  "shared_baseline_raw": {
+    "complexity": {
+      "accuracy": 0.4255,
+      "macro_precision": 0.4001,
+      "macro_recall": 0.4208,
+      "macro_f1": 0.3923,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            13,
+            2,
+            1
+          ],
+          [
+            8,
+            3,
+            4
+          ],
+          [
+            3,
+            9,
+            4
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.5417,
+          "recall": 0.8125,
+          "f1": 0.65,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.2143,
+          "recall": 0.2,
+          "f1": 0.2069,
+          "support": 15
+        },
+        {
+          "label": "complex",
+          "precision": 0.4444,
+          "recall": 0.25,
+          "f1": 0.32,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.7668
+    },
+    "reasoning": {
+      "accuracy": 0.4681,
+      "macro_precision": 0.5149,
+      "macro_recall": 0.4238,
+      "macro_f1": 0.4198,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            6,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            8
+          ],
+          [
+            0,
+            5,
+            14
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.8571,
+          "recall": 0.3529,
+          "f1": 0.5,
+          "support": 17
+        },
+        {
+          "label": "medium",
+          "precision": 0.25,
+          "recall": 0.1818,
+          "f1": 0.2105,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 0.4375,
+          "recall": 0.7368,
+          "f1": 0.549,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.7793
+    },
+    "context": {
+      "accuracy": 0.3404,
+      "macro_precision": 0.4179,
+      "macro_recall": 0.3758,
+      "macro_f1": 0.3443,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            5,
+            12,
+            5
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            8,
+            6
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.625,
+          "recall": 0.2273,
+          "f1": 0.3334,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.2857,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.4286,
+          "recall": 0.4,
+          "f1": 0.4138,
+          "support": 15
+        }
+      ],
+      "brier_score": 0.9587
+    }
+  },
+  "shared_existing_calibrator": {
+    "complexity": {
+      "accuracy": 0.4894,
+      "macro_precision": 0.6111,
+      "macro_recall": 0.4847,
+      "macro_f1": 0.4263,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            3,
+            8,
+            5
+          ],
+          [
+            0,
+            4,
+            11
+          ],
+          [
+            0,
+            0,
+            16
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 1.0,
+          "recall": 0.1875,
+          "f1": 0.3158,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.3333,
+          "recall": 0.2667,
+          "f1": 0.2963,
+          "support": 15
+        },
+        {
+          "label": "complex",
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.5998
+    },
+    "reasoning": {
+      "accuracy": 0.3617,
+      "macro_precision": 0.634,
+      "macro_recall": 0.4168,
+      "macro_f1": 0.3357,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            8,
+            9,
+            0
+          ],
+          [
+            3,
+            8,
+            0
+          ],
+          [
+            1,
+            17,
+            1
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6667,
+          "recall": 0.4706,
+          "f1": 0.5517,
+          "support": 17
+        },
+        {
+          "label": "medium",
+          "precision": 0.2353,
+          "recall": 0.7273,
+          "f1": 0.3556,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 1.0,
+          "recall": 0.0526,
+          "f1": 0.0999,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.7602
+    },
+    "context": {
+      "accuracy": 0.4681,
+      "macro_precision": 0.156,
+      "macro_recall": 0.3333,
+      "macro_f1": 0.2126,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            22,
+            0,
+            0
+          ],
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.4681,
+          "recall": 1.0,
+          "f1": 0.6377,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 15
+        }
+      ],
+      "brier_score": 0.758
+    }
+  },
+  "conclusion": "llama3:8b is mixed against llama3.2:3b on held-out complexity: one of accuracy or macro-F1 is higher and the other is not. Shared valid test rows: 47. Accuracy 0.4255 -> 0.4468 (+0.0213). Macro-F1 0.3923 -> 0.3822 (-0.0101). This comparison uses raw class labels. The existing calibrator was fitted for llama3.2:3b and is reported separately."
+}
