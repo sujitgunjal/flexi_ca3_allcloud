@@ -1,53 +1,39 @@
-
 from app.orchestration.state import RequestState
+from app.quality.service import QualityService
+from app.quality.validation import empty_response_result
 
 
 class QualityAgent:
-    QUALITY_THRESHOLD = 0.70
-    MIN_RESPONSE_LENGTH = 20
-
-    ERROR_MARKERS = (
-        "internal server error",
-        "service unavailable",
-        "bad gateway",
-        "rate limit exceeded",
-        "provider error",
-        "model unavailable",
-    )
+    def __init__(self, service: QualityService | None = None):
+        self.service = service or QualityService()
 
     def run(self, state: RequestState) -> RequestState:
-        """Apply lightweight heuristic checks to a generated response."""
-
+        query = state.get("query", "")
         response = state.get("response", "")
-        normalized = response.strip().lower()
+        provider_name = getattr(self.service.evaluator, "name", "unknown")
 
-        if not normalized:
-            quality_score = 0.0
-            quality_reason = "Response is empty"
-
-        elif len(normalized) < self.MIN_RESPONSE_LENGTH:
-            quality_score = 0.30
-            quality_reason = "Response is too short"
-
-        elif any(marker in normalized for marker in self.ERROR_MARKERS):
-            quality_score = 0.20
-            quality_reason = "Response contains a provider error marker"
-
+        if not response.strip():
+            result = empty_response_result(provider_name)
         else:
-            quality_score = 0.85
-            quality_reason = "Response passed basic heuristic checks"
+            result = self.service.evaluate(query, response)
 
-        escalation_required = quality_score < self.QUALITY_THRESHOLD
+        state["quality_score"] = result.quality_score
+        state["quality_reason"] = result.quality_reason
+        state["quality_relevant"] = result.relevant.decision
+        state["quality_complete"] = result.complete.decision
+        state["quality_escalate"] = result.escalate.decision
+        state["quality_evaluation"] = result.model_dump()
+        state["escalation"] = result.escalation_required
 
-        state["quality_score"] = quality_score
-        state["quality_reason"] = quality_reason
-        state["escalation"] = escalation_required
-
-        print(f"[QualityAgent] Score: {quality_score}")
-        print(f"[QualityAgent] Reason: {quality_reason}")
         print(
-            f"[QualityAgent] Escalation required: "
-            f"{escalation_required}"
+            "[QualityAgent] "
+            f"relevant={result.relevant.decision} "
+            f"complete={result.complete.decision} "
+            f"escalate={result.escalate.decision}"
         )
-
+        print(f"[QualityAgent] Score: {result.quality_score}")
+        print(
+            "[QualityAgent] Escalation required: "
+            f"{result.escalation_required}"
+        )
         return state
