@@ -4,37 +4,12 @@ import urllib.error
 import urllib.request
 
 from app.decision.base import DecisionProviderError
+from app.decision.prompts.candidate import CANDIDATE_SYSTEM_PROMPT
 from app.providers.config import OLLAMA_API_BASE, OLLAMA_MODEL
 
 
-SYSTEM_PROMPT = """You are a query classifier for an LLM router.
-Do not answer the user's question.
-Do not explain your reasoning.
-Return only a JSON object with probability distributions for three decisions.
-
-Use exactly these keys and class names:
-{
-  "complexity": {"simple": 0.0, "medium": 0.0, "complex": 0.0},
-  "reasoning": {"low": 0.0, "medium": 0.0, "high": 0.0},
-  "context": {"low": 0.0, "medium": 0.0, "high": 0.0}
-}
-
-Rules:
-- complexity: simple, medium, or complex
-- reasoning: how much multi-step reasoning is required (low, medium, high)
-- context: how much surrounding context is required (low, medium, high)
-- Every probability is a number from 0 to 1
-- The three probabilities in each decision sum to 1
-- Do not set every class in a decision to 0
-- Put the highest probability on the class you believe is correct
-
-Example for "What is 2 + 2?":
-{
-  "complexity": {"simple": 0.9, "medium": 0.1, "complex": 0.0},
-  "reasoning": {"low": 0.85, "medium": 0.15, "high": 0.0},
-  "context": {"low": 0.9, "medium": 0.1, "high": 0.0}
-}
-"""
+# Live classifier prompt. Selected on the validation split for llama3:8b.
+SYSTEM_PROMPT = CANDIDATE_SYSTEM_PROMPT
 
 
 class OllamaDecisionProvider:
@@ -46,7 +21,13 @@ class OllamaDecisionProvider:
         self.model_name = model or os.getenv("DECISION_OLLAMA_MODEL", OLLAMA_MODEL)
         self.api_base = (api_base or OLLAMA_API_BASE).rstrip("/")
 
-    def classify_raw(self, query: str, *, correction: str | None = None) -> str:
+    def classify_raw(
+        self,
+        query: str,
+        *,
+        correction: str | None = None,
+        system_prompt: str | None = None,
+    ) -> str:
         user_content = f"Classify this query:\n{query.strip()}"
         if correction:
             user_content = f"{correction}\n\n{user_content}"
@@ -56,7 +37,7 @@ class OllamaDecisionProvider:
             "stream": False,
             "format": "json",
             "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": system_prompt or SYSTEM_PROMPT},
                 {"role": "user", "content": user_content},
             ],
             "options": {

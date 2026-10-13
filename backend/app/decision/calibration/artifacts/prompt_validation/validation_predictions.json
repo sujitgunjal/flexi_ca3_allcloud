@@ -1,0 +1,5570 @@
+[
+  {
+    "id": "q010",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q011",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q012",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.15,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q025",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q026",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q027",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q040",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q041",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q042",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.4,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q085",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q086",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q087",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q088",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q089",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q090",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q091",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q092",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.15,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q093",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q094",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q095",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q096",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q097",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q150",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.4,
+        "medium": 0.6,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q151",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q152",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q153",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.7,
+        "medium": 0.3,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.4,
+        "medium": 0.6,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q154",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q155",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q156",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q157",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.15,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q158",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.4,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q159",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q160",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.4,
+        "medium": 0.6,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q161",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q162",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q215",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.4,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.3,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q216",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.4,
+        "medium": 0.6,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.8,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q217",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q218",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q219",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q220",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.4,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.3,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q221",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.7,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q222",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q223",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.7,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q224",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q225",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.4,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.3,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q226",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.4,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.3,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.2,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q227",
+    "model": "llama3.2:3b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": null
+  },
+  {
+    "id": "q010",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.99,
+        "medium": 0.01,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 11.7129
+  },
+  {
+    "id": "q011",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.99,
+        "medium": 0.01,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3316
+  },
+  {
+    "id": "q012",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.99,
+        "medium": 0.01,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2728
+  },
+  {
+    "id": "q025",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.5495
+  },
+  {
+    "id": "q026",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6455
+  },
+  {
+    "id": "q027",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3531
+  },
+  {
+    "id": "q040",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3445
+  },
+  {
+    "id": "q041",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.313
+  },
+  {
+    "id": "q042",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3194
+  },
+  {
+    "id": "q085",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6554
+  },
+  {
+    "id": "q086",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3257
+  },
+  {
+    "id": "q087",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3923
+  },
+  {
+    "id": "q088",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3078
+  },
+  {
+    "id": "q089",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3217
+  },
+  {
+    "id": "q090",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6926
+  },
+  {
+    "id": "q091",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2958
+  },
+  {
+    "id": "q092",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.99,
+        "medium": 0.01,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2661
+  },
+  {
+    "id": "q093",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2725
+  },
+  {
+    "id": "q094",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.5447
+  },
+  {
+    "id": "q095",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2737
+  },
+  {
+    "id": "q096",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.02,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2951
+  },
+  {
+    "id": "q097",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.5782
+  },
+  {
+    "id": "q150",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3032
+  },
+  {
+    "id": "q151",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3263
+  },
+  {
+    "id": "q152",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2757
+  },
+  {
+    "id": "q153",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.96,
+        "medium": 0.03,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3108
+  },
+  {
+    "id": "q154",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.02,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2892
+  },
+  {
+    "id": "q155",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.88,
+        "medium": 0.1,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.84,
+        "medium": 0.14,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.93,
+        "medium": 0.05,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2643
+  },
+  {
+    "id": "q156",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.96,
+        "high": 0.04
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3211
+  },
+  {
+    "id": "q157",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.88,
+        "medium": 0.1,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.84,
+        "medium": 0.14,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.93,
+        "medium": 0.05,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2897
+  },
+  {
+    "id": "q158",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.5784
+  },
+  {
+    "id": "q159",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.5828
+  },
+  {
+    "id": "q160",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6035
+  },
+  {
+    "id": "q161",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2757
+  },
+  {
+    "id": "q162",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6126
+  },
+  {
+    "id": "q215",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2619
+  },
+  {
+    "id": "q216",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2736
+  },
+  {
+    "id": "q217",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3487
+  },
+  {
+    "id": "q218",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6876
+  },
+  {
+    "id": "q219",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2796
+  },
+  {
+    "id": "q220",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.5928
+  },
+  {
+    "id": "q221",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.96,
+        "complex": 0.04
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.96,
+        "high": 0.04
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.96,
+        "high": 0.04
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.2596
+  },
+  {
+    "id": "q222",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 4.3068
+  },
+  {
+    "id": "q223",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6408
+  },
+  {
+    "id": "q224",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6078
+  },
+  {
+    "id": "q225",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.6148
+  },
+  {
+    "id": "q226",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 8.611
+  },
+  {
+    "id": "q227",
+    "model": "llama3.2:3b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.3334,
+        "medium": 0.3333,
+        "complex": 0.3333
+      },
+      "reasoning": {
+        "low": 0.3334,
+        "medium": 0.3333,
+        "high": 0.3333
+      },
+      "context": {
+        "low": 0.3334,
+        "medium": 0.3333,
+        "high": 0.3333
+      }
+    },
+    "output_valid": false,
+    "latency_seconds": 8.6997
+  },
+  {
+    "id": "q010",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 22.107
+  },
+  {
+    "id": "q011",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.7,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.3,
+        "medium": 0.6,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7409
+  },
+  {
+    "id": "q012",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2761
+  },
+  {
+    "id": "q025",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7955
+  },
+  {
+    "id": "q026",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.5376
+  },
+  {
+    "id": "q027",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6522
+  },
+  {
+    "id": "q040",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.9898
+  },
+  {
+    "id": "q041",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.5686
+  },
+  {
+    "id": "q042",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.4,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.1598
+  },
+  {
+    "id": "q085",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.5458
+  },
+  {
+    "id": "q086",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.5398
+  },
+  {
+    "id": "q087",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2874
+  },
+  {
+    "id": "q088",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2267
+  },
+  {
+    "id": "q089",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.3751
+  },
+  {
+    "id": "q090",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.6099
+  },
+  {
+    "id": "q091",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2076
+  },
+  {
+    "id": "q092",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.8,
+        "medium": 0.2,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.4296
+  },
+  {
+    "id": "q093",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.9659
+  },
+  {
+    "id": "q094",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6572
+  },
+  {
+    "id": "q095",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8761
+  },
+  {
+    "id": "q096",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0974
+  },
+  {
+    "id": "q097",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7051
+  },
+  {
+    "id": "q150",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6898
+  },
+  {
+    "id": "q151",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2331
+  },
+  {
+    "id": "q152",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.2,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.3,
+        "high": 0.0
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.598
+  },
+  {
+    "id": "q153",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6804
+  },
+  {
+    "id": "q154",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8777
+  },
+  {
+    "id": "q155",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.9222
+  },
+  {
+    "id": "q156",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7477
+  },
+  {
+    "id": "q157",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.959
+  },
+  {
+    "id": "q158",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.2805
+  },
+  {
+    "id": "q159",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.9334
+  },
+  {
+    "id": "q160",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0259
+  },
+  {
+    "id": "q161",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.54
+  },
+  {
+    "id": "q162",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8675
+  },
+  {
+    "id": "q215",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.1329
+  },
+  {
+    "id": "q216",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.1056
+  },
+  {
+    "id": "q217",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.3092
+  },
+  {
+    "id": "q218",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.1513
+  },
+  {
+    "id": "q219",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.7733
+  },
+  {
+    "id": "q220",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.5449
+  },
+  {
+    "id": "q221",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0779
+  },
+  {
+    "id": "q222",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7533
+  },
+  {
+    "id": "q223",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 1,
+        "complex": 0.0
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.9,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.1604
+  },
+  {
+    "id": "q224",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.3427
+  },
+  {
+    "id": "q225",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.6318
+  },
+  {
+    "id": "q226",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.2514
+  },
+  {
+    "id": "q227",
+    "model": "llama3:8b",
+    "prompt": "current",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.7,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.5389
+  },
+  {
+    "id": "q010",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 16.0954
+  },
+  {
+    "id": "q011",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7315
+  },
+  {
+    "id": "q012",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8377
+  },
+  {
+    "id": "q025",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.96,
+        "high": 0.04
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.99,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4619
+  },
+  {
+    "id": "q026",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.2024
+  },
+  {
+    "id": "q027",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.94,
+        "high": 0.06
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.6097
+  },
+  {
+    "id": "q040",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.2226
+  },
+  {
+    "id": "q041",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4496
+  },
+  {
+    "id": "q042",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.12,
+        "complex": 0.86
+      },
+      "reasoning": {
+        "low": 0.02,
+        "medium": 0.16,
+        "high": 0.82
+      },
+      "context": {
+        "low": 0.88,
+        "medium": 0.08,
+        "high": 0.04
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.618
+  },
+  {
+    "id": "q085",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.88,
+        "medium": 0.1,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.2735
+  },
+  {
+    "id": "q086",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.7806
+  },
+  {
+    "id": "q087",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.7236
+  },
+  {
+    "id": "q088",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4097
+  },
+  {
+    "id": "q089",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.5522
+  },
+  {
+    "id": "q090",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.18,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.0161
+  },
+  {
+    "id": "q091",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.9753
+  },
+  {
+    "id": "q092",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6738
+  },
+  {
+    "id": "q093",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.2681
+  },
+  {
+    "id": "q094",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.3783
+  },
+  {
+    "id": "q095",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4352
+  },
+  {
+    "id": "q096",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4779
+  },
+  {
+    "id": "q097",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.157
+  },
+  {
+    "id": "q150",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0483
+  },
+  {
+    "id": "q151",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.0325
+  },
+  {
+    "id": "q152",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.1875
+  },
+  {
+    "id": "q153",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.88,
+        "medium": 0.1,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0744
+  },
+  {
+    "id": "q154",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4611
+  },
+  {
+    "id": "q155",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.88,
+        "medium": 0.1,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0995
+  },
+  {
+    "id": "q156",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.8,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4186
+  },
+  {
+    "id": "q157",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.07,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.6122
+  },
+  {
+    "id": "q158",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.6711
+  },
+  {
+    "id": "q159",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.96,
+        "high": 0.04
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.95,
+        "high": 0.05
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.5089
+  },
+  {
+    "id": "q160",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.92,
+        "complex": 0.06
+      },
+      "reasoning": {
+        "low": 0.02,
+        "medium": 0.94,
+        "high": 0.04
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 15.3381
+  },
+  {
+    "id": "q161",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.92,
+        "complex": 0.06
+      },
+      "reasoning": {
+        "low": 0.14,
+        "medium": 0.78,
+        "high": 0.08
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.9269
+  },
+  {
+    "id": "q162",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.05,
+        "high": 0.05
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.7054
+  },
+  {
+    "id": "q215",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8807
+  },
+  {
+    "id": "q216",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.92,
+        "high": 0.08
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.95,
+        "high": 0.05
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.1681
+  },
+  {
+    "id": "q217",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.12,
+        "medium": 0.76,
+        "complex": 0.12
+      },
+      "reasoning": {
+        "low": 0.04,
+        "medium": 0.84,
+        "high": 0.12
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8052
+  },
+  {
+    "id": "q218",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.8403
+  },
+  {
+    "id": "q219",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.0207
+  },
+  {
+    "id": "q220",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.8,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.6,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.9943
+  },
+  {
+    "id": "q221",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.92,
+        "high": 0.08
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.98,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.4242
+  },
+  {
+    "id": "q222",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 1,
+        "medium": 0.0,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.3655
+  },
+  {
+    "id": "q223",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.6239
+  },
+  {
+    "id": "q224",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.96,
+        "high": 0.04
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.1495
+  },
+  {
+    "id": "q225",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 12.5552
+  },
+  {
+    "id": "q226",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.0,
+        "complex": 1
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 1
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 1,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 13.755
+  },
+  {
+    "id": "q227",
+    "model": "llama3:8b",
+    "prompt": "candidate",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.0,
+        "medium": 0.98,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.0,
+        "medium": 0.96,
+        "high": 0.04
+      },
+      "context": {
+        "low": 0.0,
+        "medium": 0.95,
+        "high": 0.05
+      }
+    },
+    "output_valid": true,
+    "latency_seconds": 14.3064
+  }
+]

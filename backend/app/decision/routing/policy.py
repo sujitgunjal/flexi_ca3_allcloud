@@ -82,7 +82,7 @@ def _load_rules() -> dict:
         rules = json.loads(RULES_PATH.read_text(encoding="utf-8"))
     else:
         rules = {
-            "confidence_threshold": 0.55,
+            "confidence_threshold": 0.45,
             "models": {
                 "simple_low_reasoning": "local",
                 "medium": "cheap",

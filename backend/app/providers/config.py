@@ -7,7 +7,7 @@ load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 OLLAMA_MODEL = os.getenv(
     "OLLAMA_MODEL",
-    "llama3.2:3b",
+    "llama3:8b",
 )
 
 OLLAMA_API_BASE = os.getenv(

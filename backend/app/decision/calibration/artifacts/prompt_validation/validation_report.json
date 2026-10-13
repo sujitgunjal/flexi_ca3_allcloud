@@ -1,0 +1,480 @@
+{
+  "split": "validation",
+  "rows": 48,
+  "test_split_used": false,
+  "calibrator_refit": false,
+  "rationale": "The live prompt defines the three class names and shows only a simple arithmetic example. On the archived llama3.2:3b validation predictions, most complex questions were labeled simple or medium. llama3:8b previously labeled every held-out complex question as medium. Those errors follow from a missing boundary, so a rubric and four class examples may correct them. The examples are new and are not validation or test rows.",
+  "conditions": [
+    {
+      "model": "llama3.2:3b",
+      "prompt": "current",
+      "count": 48,
+      "invalid_outputs": 0,
+      "invalid_ids": [],
+      "tasks": {
+        "complexity": {
+          "accuracy": 0.5,
+          "macro_precision": 0.5019,
+          "macro_recall": 0.5,
+          "macro_f1": 0.4599,
+          "per_class_recall": {
+            "simple": 0.9375,
+            "medium": 0.25,
+            "complex": 0.3125
+          },
+          "confusion_matrix": {
+            "labels": [
+              "simple",
+              "medium",
+              "complex"
+            ],
+            "matrix": [
+              [
+                15,
+                0,
+                1
+              ],
+              [
+                10,
+                4,
+                2
+              ],
+              [
+                4,
+                7,
+                5
+              ]
+            ]
+          },
+          "support": 48
+        },
+        "reasoning": {
+          "accuracy": 0.4583,
+          "macro_precision": 0.4656,
+          "macro_recall": 0.4778,
+          "macro_f1": 0.4211,
+          "per_class_recall": {
+            "low": 0.5,
+            "medium": 0.1,
+            "high": 0.8333
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                5,
+                0,
+                5
+              ],
+              [
+                4,
+                2,
+                14
+              ],
+              [
+                0,
+                3,
+                15
+              ]
+            ]
+          },
+          "support": 48
+        },
+        "context": {
+          "accuracy": 0.25,
+          "macro_precision": 0.3627,
+          "macro_recall": 0.2986,
+          "macro_f1": 0.2507,
+          "per_class_recall": {
+            "low": 0.1786,
+            "medium": 0.4444,
+            "high": 0.2727
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                5,
+                16,
+                7
+              ],
+              [
+                2,
+                4,
+                3
+              ],
+              [
+                0,
+                8,
+                3
+              ]
+            ]
+          },
+          "support": 48
+        }
+      }
+    },
+    {
+      "model": "llama3.2:3b",
+      "prompt": "candidate",
+      "count": 48,
+      "invalid_outputs": 1,
+      "invalid_ids": [
+        "q227"
+      ],
+      "tasks": {
+        "complexity": {
+          "accuracy": 0.5745,
+          "macro_precision": 0.5686,
+          "macro_recall": 0.5792,
+          "macro_f1": 0.5385,
+          "per_class_recall": {
+            "simple": 0.75,
+            "medium": 0.1875,
+            "complex": 0.8
+          },
+          "confusion_matrix": {
+            "labels": [
+              "simple",
+              "medium",
+              "complex"
+            ],
+            "matrix": [
+              [
+                12,
+                0,
+                4
+              ],
+              [
+                5,
+                3,
+                8
+              ],
+              [
+                0,
+                3,
+                12
+              ]
+            ]
+          },
+          "support": 47
+        },
+        "reasoning": {
+          "accuracy": 0.5745,
+          "macro_precision": 0.6236,
+          "macro_recall": 0.5988,
+          "macro_f1": 0.5454,
+          "per_class_recall": {
+            "low": 0.7,
+            "medium": 0.2632,
+            "high": 0.8333
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                7,
+                0,
+                3
+              ],
+              [
+                7,
+                5,
+                7
+              ],
+              [
+                2,
+                1,
+                15
+              ]
+            ]
+          },
+          "support": 47
+        },
+        "context": {
+          "accuracy": 0.4043,
+          "macro_precision": 0.3071,
+          "macro_recall": 0.3333,
+          "macro_f1": 0.3112,
+          "per_class_recall": {
+            "low": 0.5,
+            "medium": 0.0,
+            "high": 0.5
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                14,
+                5,
+                9
+              ],
+              [
+                7,
+                0,
+                2
+              ],
+              [
+                2,
+                3,
+                5
+              ]
+            ]
+          },
+          "support": 47
+        }
+      }
+    },
+    {
+      "model": "llama3:8b",
+      "prompt": "current",
+      "count": 48,
+      "invalid_outputs": 0,
+      "invalid_ids": [],
+      "tasks": {
+        "complexity": {
+          "accuracy": 0.5417,
+          "macro_precision": 0.7722,
+          "macro_recall": 0.5417,
+          "macro_f1": 0.4972,
+          "per_class_recall": {
+            "simple": 0.5625,
+            "medium": 0.9375,
+            "complex": 0.125
+          },
+          "confusion_matrix": {
+            "labels": [
+              "simple",
+              "medium",
+              "complex"
+            ],
+            "matrix": [
+              [
+                9,
+                7,
+                0
+              ],
+              [
+                1,
+                15,
+                0
+              ],
+              [
+                0,
+                14,
+                2
+              ]
+            ]
+          },
+          "support": 48
+        },
+        "reasoning": {
+          "accuracy": 0.5208,
+          "macro_precision": 0.6667,
+          "macro_recall": 0.5037,
+          "macro_f1": 0.4476,
+          "per_class_recall": {
+            "low": 0.5,
+            "medium": 0.9,
+            "high": 0.1111
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                5,
+                5,
+                0
+              ],
+              [
+                2,
+                18,
+                0
+              ],
+              [
+                3,
+                13,
+                2
+              ]
+            ]
+          },
+          "support": 48
+        },
+        "context": {
+          "accuracy": 0.2917,
+          "macro_precision": 0.6207,
+          "macro_recall": 0.3359,
+          "macro_f1": 0.2653,
+          "per_class_recall": {
+            "low": 0.25,
+            "medium": 0.6667,
+            "high": 0.0909
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                7,
+                21,
+                0
+              ],
+              [
+                3,
+                6,
+                0
+              ],
+              [
+                0,
+                10,
+                1
+              ]
+            ]
+          },
+          "support": 48
+        }
+      }
+    },
+    {
+      "model": "llama3:8b",
+      "prompt": "candidate",
+      "count": 48,
+      "invalid_outputs": 0,
+      "invalid_ids": [],
+      "tasks": {
+        "complexity": {
+          "accuracy": 0.7083,
+          "macro_precision": 0.7556,
+          "macro_recall": 0.7083,
+          "macro_f1": 0.7002,
+          "per_class_recall": {
+            "simple": 1.0,
+            "medium": 0.5625,
+            "complex": 0.5625
+          },
+          "confusion_matrix": {
+            "labels": [
+              "simple",
+              "medium",
+              "complex"
+            ],
+            "matrix": [
+              [
+                16,
+                0,
+                0
+              ],
+              [
+                7,
+                9,
+                0
+              ],
+              [
+                1,
+                6,
+                9
+              ]
+            ]
+          },
+          "support": 48
+        },
+        "reasoning": {
+          "accuracy": 0.5,
+          "macro_precision": 0.5389,
+          "macro_recall": 0.5778,
+          "macro_f1": 0.4966,
+          "per_class_recall": {
+            "low": 1.0,
+            "medium": 0.4,
+            "high": 0.3333
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                10,
+                0,
+                0
+              ],
+              [
+                9,
+                8,
+                3
+              ],
+              [
+                5,
+                7,
+                6
+              ]
+            ]
+          },
+          "support": 48
+        },
+        "context": {
+          "accuracy": 0.5625,
+          "macro_precision": 0.2919,
+          "macro_recall": 0.3717,
+          "macro_f1": 0.3266,
+          "per_class_recall": {
+            "low": 0.8929,
+            "medium": 0.2222,
+            "high": 0.0
+          },
+          "confusion_matrix": {
+            "labels": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "matrix": [
+              [
+                25,
+                3,
+                0
+              ],
+              [
+                6,
+                2,
+                1
+              ],
+              [
+                6,
+                5,
+                0
+              ]
+            ]
+          },
+          "support": 48
+        }
+      }
+    }
+  ],
+  "decision": "Selected llama3:8b with the candidate prompt on validation. Complex recall 0.3125 -> 0.5625, macro-F1 0.4599 -> 0.7002."
+}
