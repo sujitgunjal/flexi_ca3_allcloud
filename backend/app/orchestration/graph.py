@@ -7,6 +7,7 @@ from app.agents.generate_agent import GenerateAgent
 from app.agents.quality_agent import QualityAgent
 from app.agents.router_agent import RouterAgent
 from app.orchestration.state import RequestState
+from app.quality.escalation import max_quality_escalations, next_stronger_tier
 
 
 cache_agent = CacheAgent()
@@ -18,20 +19,26 @@ quality_agent = QualityAgent()
 
 
 def route_after_quality(state: RequestState) -> str:
+    attempts = int(state.get("quality_escalation_count") or 0)
+    current = state.get("actual_model") or state.get("selected_model")
     if (
         state.get("escalation")
-        and not state.get("escalation_attempted")
-        and state.get("actual_model") != "strong"
+        and attempts < max_quality_escalations()
+        and next_stronger_tier(current) is not None
     ):
         return "escalate"
     return "end"
 
 
 def prepare_escalation(state: RequestState) -> RequestState:
+    current = state.get("actual_model") or state.get("selected_model")
+    stronger = next_stronger_tier(current)
+    state["quality_escalation_count"] = int(state.get("quality_escalation_count") or 0) + 1
     state["escalation_attempted"] = True
-    state["selected_model"] = "strong"
+    state["selected_model"] = stronger
     state["routing_reason"] = (
-        "Quality check failed; retrying with strong model"
+        "Quality check failed; retrying with the next stronger model "
+        f"'{stronger}'"
     )
     return state
 

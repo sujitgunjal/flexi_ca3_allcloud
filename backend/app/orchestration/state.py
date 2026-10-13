@@ -27,6 +27,12 @@ class RequestState(TypedDict, total=False):
     cached_response: bool
 
     quality_score: float
+    quality_reason: str
+    quality_relevant: str
+    quality_complete: str
+    quality_escalate: str
+    quality_evaluation: dict[str, Any]
+    quality_escalation_count: int
     escalation: bool
 
     cost: float
