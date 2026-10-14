@@ -7,3 +7,5 @@ langgraph
 litellm
 SQLAlchemy>=2.0,<3.0
 redis>=5.0,<7.0
+pymongo>=4.6,<5.0
+mongomock>=4.1,<5.0

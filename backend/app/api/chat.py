@@ -42,6 +42,25 @@ class ChatRequest(BaseModel):
     history: List[ChatMessage] = Field(default_factory=list)
 
 
+class ChatDetails(BaseModel):
+    model_tier: str | None = None
+    actual_model: str | None = None
+    complexity: str | None = None
+    quality_score: float | None = None
+    quality_status: str | None = None
+    quality_relevant: str | None = None
+    quality_complete: str | None = None
+    quality_escalate: str | None = None
+    latency_ms: float | None = None
+    input_tokens: int | None = None
+    output_tokens: int | None = None
+    estimated_cost: float | None = None
+    cache_hit: bool | None = None
+    escalated: bool | None = None
+    fallback_used: bool | None = None
+    routing_reason: str | None = None
+
+
 class ChatResponse(BaseModel):
     request_id: str
     conversation_id: str
@@ -49,6 +68,7 @@ class ChatResponse(BaseModel):
     message: str
     note: str
     decision: dict | None = None
+    details: ChatDetails | None = None
 
 
 @router.post("", response_model=ChatResponse)
@@ -239,6 +259,24 @@ def chat(request: ChatRequest, background_tasks: BackgroundTasks):
         status="success",
         message=response_text,
         decision=decision or None,
+        details=ChatDetails(
+            model_tier=selected_model,
+            actual_model=answer_model,
+            complexity=result.get("complexity"),
+            quality_score=quality_score,
+            quality_status=quality_status,
+            quality_relevant=result.get("quality_relevant"),
+            quality_complete=result.get("quality_complete"),
+            quality_escalate=result.get("quality_escalate"),
+            latency_ms=elapsed_ms,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+            estimated_cost=estimated_cost,
+            cache_hit=result.get("cache_hit"),
+            escalated=bool(result.get("escalation_attempted", False)),
+            fallback_used=bool(result.get("fallback_used", False)),
+            routing_reason=result.get("routing_reason"),
+        ),
         note=(
             f"Decision engine: {decision.get('provider', 'n/a')} "
             f"({decision.get('decision_model', 'n/a')}). "

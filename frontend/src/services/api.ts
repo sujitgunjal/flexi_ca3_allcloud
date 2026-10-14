@@ -1,4 +1,10 @@
-import type { GatewayMetrics, ModelInfo, RequestRecord } from "../types";
+import type {
+	Conversation,
+	ConversationSummary,
+	GatewayMetrics,
+	ModelInfo,
+	RequestRecord,
+} from "../types";
 
 export const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000")
 	.replace(/\/$/, "");
@@ -12,7 +18,16 @@ async function getJson<T>(path: string): Promise<T> {
 	}
 
 	if (!response.ok) {
-		throw new Error(`${path} returned ${response.status} ${response.statusText}.`);
+		let detail = `${path} returned ${response.status} ${response.statusText}.`;
+		try {
+			const payload = await response.json() as { detail?: unknown };
+			if (typeof payload.detail === "string" && payload.detail) {
+				detail = payload.detail;
+			}
+		} catch {
+			// Keep the status line when the error body is not JSON.
+		}
+		throw new Error(detail);
 	}
 
 	try {
@@ -117,6 +132,65 @@ function isMetricsSummary(value: unknown): value is MetricsSummaryPayload {
 
 export function getModels(): Promise<ModelInfo[]> {
 	return getJson<ModelInfo[]>("/models");
+}
+
+async function sendJson<T>(path: string, method: string, body?: unknown): Promise<T> {
+	let response: Response;
+	try {
+		response = await fetch(`${API_BASE_URL}${path}`, {
+			method,
+			headers: body === undefined ? undefined : { "Content-Type": "application/json" },
+			body: body === undefined ? undefined : JSON.stringify(body),
+		});
+	} catch (error) {
+		throw new Error(`Can't reach the gateway at ${API_BASE_URL}.`, { cause: error });
+	}
+
+	if (!response.ok) {
+		let detail = `${path} returned ${response.status} ${response.statusText}.`;
+		try {
+			const payload = await response.json() as { detail?: unknown };
+			if (typeof payload.detail === "string" && payload.detail) {
+				detail = payload.detail;
+			}
+		} catch {
+			// The status line is enough when the body is not JSON.
+		}
+		throw new Error(detail);
+	}
+
+	if (response.status === 204) {
+		return undefined as T;
+	}
+	return await response.json() as T;
+}
+
+export function listConversations(): Promise<ConversationSummary[]> {
+	return getJson<ConversationSummary[]>("/conversations");
+}
+
+export function createConversation(): Promise<Conversation> {
+	return sendJson<Conversation>("/conversations", "POST");
+}
+
+export function getConversation(id: string): Promise<Conversation> {
+	return getJson<Conversation>(`/conversations/${id}`);
+}
+
+export function renameConversation(id: string, title: string): Promise<Conversation> {
+	return sendJson<Conversation>(`/conversations/${id}`, "PATCH", { title });
+}
+
+export function deleteConversation(id: string): Promise<void> {
+	return sendJson<void>(`/conversations/${id}`, "DELETE");
+}
+
+export function sendConversationMessage(id: string, message: string): Promise<{
+	request_id: string;
+	status: string;
+	conversation: Conversation;
+}> {
+	return sendJson(`/conversations/${id}/messages`, "POST", { message });
 }
 
 export async function getRequests(): Promise<RequestRecord[]> {

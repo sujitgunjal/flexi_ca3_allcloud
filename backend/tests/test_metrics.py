@@ -564,3 +564,19 @@ def test_trace_service_chronological_metadata_and_api(isolated_database):
     assert response.status_code == 200
     assert response.json()[1]["stage"] == "cache"
     assert client.get("/metrics/99999/trace").status_code == 404
+
+
+def test_generation_metrics_store_completed_false(isolated_database):
+    record = metrics_service.log_request({"query": "timed out"})
+
+    saved = metrics_service.record_generation_metrics(
+        record.id,
+        latency_ms=12.5,
+        completed=False,
+    )
+
+    assert saved is True
+    stored = metrics_service.get_request(record.id)
+    assert stored is not None
+    assert stored.completed is False
+    assert stored.latency_ms == 12.5

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Navbar, type PageKey } from "./components/Navbar";
 import Analytics from "./pages/Analytics";
+import Chat from "./pages/Chat";
 import Dashboard from "./pages/Dashboard";
 import Evaluation from "./pages/Evaluation";
 import Models from "./pages/Models";
@@ -60,13 +61,14 @@ export default function App() {
   return (
     <div className="app-shell">
       <Navbar activePage={activePage} onNavigate={setActivePage} onRefresh={() => void refreshData()} isRefreshing={isRefreshing} endpoint={API_BASE_URL} />
-      <main className="main-content">
+      <main className={`main-content${activePage === "Chat" ? " main-content--chat" : ""}`}>
         {activePage === "Dashboard" && <Dashboard metrics={metrics} models={models} requests={requests} isLoading={isLoading} metricsError={metricsError} requestsError={requestsError} onOpenRequests={() => setActivePage("Requests")} />}
         {activePage === "Models" && <Models models={models} isLoading={isLoading} error={modelsError} />}
         {activePage === "Requests" && <Requests requests={requests} isLoading={isLoading} error={requestsError} />}
         {activePage === "Analytics" && <Analytics />}
         {activePage === "Evaluation" && <Evaluation />}
-        <footer className="app-footer"><span>SWITCHBOARD AI</span><span>INTELLIGENT LLM ROUTING</span></footer>
+        {activePage === "Chat" && <Chat />}
+        {activePage !== "Chat" && <footer className="app-footer"><span>SWITCHBOARD AI</span><span>INTELLIGENT LLM ROUTING</span></footer>}
       </main>
     </div>
   );
