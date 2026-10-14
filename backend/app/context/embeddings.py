@@ -10,9 +10,10 @@ from app.providers.config import EMBEDDING_MODEL, OLLAMA_API_BASE
 class OllamaEmbedder:
     """Embed text with the local Ollama embedding model."""
 
-    def __init__(self, model: str | None = None, api_base: str | None = None):
+    def __init__(self, model: str | None = None, api_base: str | None = None, timeout: float = 30):
         self.model = model or EMBEDDING_MODEL
         self.api_base = (api_base or OLLAMA_API_BASE).rstrip("/")
+        self.timeout = timeout
 
     def embed(self, texts: list[str]) -> list[list[float]]:
         request = urllib.request.Request(
@@ -22,7 +23,7 @@ class OllamaEmbedder:
             method="POST",
         )
         try:
-            with urllib.request.urlopen(request, timeout=30) as response:
+            with urllib.request.urlopen(request, timeout=self.timeout) as response:
                 payload = json.loads(response.read().decode("utf-8"))
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             raise RuntimeError(
