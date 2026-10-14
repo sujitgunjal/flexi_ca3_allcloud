@@ -4,6 +4,7 @@ from time import perf_counter
 from redis.exceptions import RedisError
 
 from app.cache.redis_cache import cache, generate_cache_key
+from app.context.embeddings import OllamaEmbedder
 from app.orchestration.state import RequestState
 from app.services.metrics_service import record_cache_event
 
@@ -11,8 +12,9 @@ logger = logging.getLogger(__name__)
 
 
 class CacheAgent:
-    def __init__(self, cache_service=cache):
+    def __init__(self, cache_service=cache, embedder=None):
         self.cache = cache_service
+        self.embedder = embedder or OllamaEmbedder(timeout=2)
 
     def run(self, state: RequestState) -> RequestState:
         key = generate_cache_key(state.get("query", ""))
@@ -21,8 +23,16 @@ class CacheAgent:
         hit = False
         try:
             value = self.cache.get(key)
+            if value is None:
+                try:
+                    value = self.cache.find_semantic(state.get("query", ""), self.embedder)
+                except RedisError:
+                    raise
+                except Exception:
+                    logger.warning("Semantic cache lookup failed; continuing to model flow")
             hit = value is not None
             if hit:
+                value = {name: item for name, item in value.items() if name != "_cache_query"}
                 state.update(value)
                 state["cached_response"] = True
             state["cache_unavailable"] = False

@@ -25,6 +25,9 @@ class MemoryRedis:
     def exists(self, key):
         return key in self.values
 
+    def scan_iter(self, match=None, count=None):
+        return iter(key for key in self.values if key.startswith("llm_cache:"))
+
 
 def test_json_set_get_ttl_delete_exists_and_default_ttl():
     client = MemoryRedis()
@@ -71,6 +74,146 @@ def test_cache_agent_records_event_and_falls_back_on_redis_error(monkeypatch):
     assert state["cache_unavailable"] is True
     assert events[0][0][:2] == (42, False)
     assert events[0][1]["fallback_used"] is True
+
+
+def test_exact_cache_hit_skips_semantic_lookup():
+    from app.agents.cache_agent import CacheAgent
+
+    cache = RedisCache(MemoryRedis())
+    key = generate_cache_key("What is cloud computing?")
+    cache.set(key, {"response": "exact answer"})
+    cache.find_semantic = lambda *_args: pytest.fail("semantic lookup should not run")
+    result = CacheAgent(cache).run({"query": "What is cloud computing?"})
+    assert result["cache_hit"] is True
+    assert result["response"] == "exact answer"
+
+
+def test_equivalent_wording_reuses_semantic_response(monkeypatch):
+    from app.agents.cache_agent import CacheAgent
+    import app.cache.redis_cache as redis_cache
+
+    monkeypatch.setattr(redis_cache, "SEMANTIC_CACHE_THRESHOLD", 0.8)
+    cache = RedisCache(MemoryRedis())
+    cache.set(generate_cache_key("What is cloud computing?"), {
+        "response": "A cached answer", "_cache_query": "What is cloud computing?",
+    })
+
+    class Embedder:
+        def embed(self, texts):
+            return [[1.0, 0.0] for _ in texts]
+
+    result = CacheAgent(cache, embedder=Embedder()).run({"query": "Explain cloud computing"})
+    assert result["cache_hit"] is True
+    assert result["response"] == "A cached answer"
+
+
+def test_unrelated_query_does_not_reuse_response(monkeypatch):
+    from app.cache.redis_cache import RedisCache
+    import app.cache.redis_cache as redis_cache
+
+    monkeypatch.setattr(redis_cache, "SEMANTIC_CACHE_THRESHOLD", 0.8)
+    cache = RedisCache(MemoryRedis())
+    cache.set(generate_cache_key("What is cloud computing?"), {
+        "response": "cloud", "_cache_query": "What is cloud computing?",
+    })
+
+    class Embedder:
+        def embed(self, texts):
+            return [[1.0, 0.0], [0.0, 1.0]]
+
+    assert cache.find_semantic("How do I bake bread?", Embedder()) is None
+
+
+def test_detailed_request_does_not_reuse_short_definition():
+    from app.cache.redis_cache import _compatible_queries
+
+    assert not _compatible_queries("Elaborate cloud computing", "What is cloud computing?")
+    assert _compatible_queries("Explain cloud computing", "What is cloud computing?")
+
+
+def test_semantic_embedding_failure_falls_back_to_normal_flow(monkeypatch):
+    from app.agents.cache_agent import CacheAgent
+
+    class FailingCache:
+        def get(self, _key):
+            return None
+
+        def find_semantic(self, *_args):
+            raise RuntimeError("embedding unavailable")
+
+    result = CacheAgent(FailingCache()).run({"query": "Explain cloud computing"})
+    assert result["cache_hit"] is False
+    assert result.get("cached_response") is None
+    assert result["cache_unavailable"] is False
+
+
+def test_cache_miss_retains_cache_key_for_normal_generation():
+    from app.agents.cache_agent import CacheAgent
+
+    result = CacheAgent(RedisCache(MemoryRedis())).run({"query": "new question"})
+    assert result["cache_hit"] is False
+    assert result["cache_key"] == generate_cache_key("new question")
+
+
+def test_graph_cache_hit_bypasses_model_nodes(monkeypatch):
+    import app.orchestration.graph as graph_module
+
+    calls = []
+
+    class Cached:
+        def run(self, state):
+            state.update(cached_response=True, cache_hit=True, response="cached")
+            return state
+
+    class ShouldNotRun:
+        def run(self, state):
+            calls.append(True)
+            return state
+
+    monkeypatch.setattr(graph_module, "cache_agent", Cached())
+    monkeypatch.setattr(graph_module, "complexity_agent", ShouldNotRun())
+    monkeypatch.setattr(graph_module, "context_agent", ShouldNotRun())
+    monkeypatch.setattr(graph_module, "router_agent", ShouldNotRun())
+    monkeypatch.setattr(graph_module, "generate_agent", ShouldNotRun())
+    monkeypatch.setattr(graph_module, "quality_agent", ShouldNotRun())
+
+    result = graph_module.build_graph().invoke({"query": "cached question"})
+    assert result["response"] == "cached"
+    assert calls == []
+
+
+def test_graph_cache_miss_runs_normal_model_flow(monkeypatch):
+    import app.orchestration.graph as graph_module
+
+    calls = []
+
+    class CacheMiss:
+        def run(self, state):
+            state.update(cache_hit=False, cached_response=False)
+            return state
+
+    class Node:
+        def __init__(self, name):
+            self.name = name
+
+        def run(self, state):
+            calls.append(self.name)
+            if self.name == "quality":
+                state["escalation"] = False
+            if self.name == "generate":
+                state["response"] = "generated"
+            return state
+
+    monkeypatch.setattr(graph_module, "cache_agent", CacheMiss())
+    monkeypatch.setattr(graph_module, "complexity_agent", Node("complexity"))
+    monkeypatch.setattr(graph_module, "context_agent", Node("context"))
+    monkeypatch.setattr(graph_module, "router_agent", Node("router"))
+    monkeypatch.setattr(graph_module, "generate_agent", Node("generate"))
+    monkeypatch.setattr(graph_module, "quality_agent", Node("quality"))
+
+    result = graph_module.build_graph().invoke({"query": "new question"})
+    assert result["response"] == "generated"
+    assert calls == ["complexity", "context", "router", "generate", "quality"]
 
 
 @pytest.mark.integration
