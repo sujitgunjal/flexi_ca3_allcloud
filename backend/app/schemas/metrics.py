@@ -15,8 +15,16 @@ class RequestMetrics(BaseModel):
 
     query: str = Field(min_length=1)
     complexity: str | None = Field(default=None, max_length=32)
-    selected_model: str | None = Field(default=None, max_length=128)
-    final_model: str | None = Field(default=None, max_length=128)
+    selected_model: str | None = Field(
+        default=None,
+        max_length=128,
+        description="Model tier routed for the initial inference attempt; retained across quality escalation.",
+    )
+    final_model: str | None = Field(
+        default=None,
+        max_length=128,
+        description="Model tier that produced the final response, including any provider fallback or quality escalation.",
+    )
     input_tokens: int | None = Field(default=None, ge=0)
     output_tokens: int | None = Field(default=None, ge=0)
     total_tokens: int | None = Field(default=None, ge=0)
@@ -30,8 +38,18 @@ class RequestMetrics(BaseModel):
     context_reduction_percent: float | None = None
     quality_score: float | None = Field(default=None, ge=0, le=1)
     quality_status: str | None = Field(default=None, max_length=32)
-    escalated: bool | None = None
-    fallback_used: bool | None = None
+    escalated: bool | None = Field(
+        default=None,
+        description="Whether quality-based escalation was attempted; independent of provider fallback.",
+    )
+    fallback_used: bool | None = Field(
+        default=None,
+        description="Whether provider/model fallback was used after a generation failure; independent of quality escalation.",
+    )
+    completed: bool | None = Field(
+        default=None,
+        description="Whether a non-empty response was successfully returned. Null is unknown or legacy.",
+    )
 
     @field_validator("query")
     @classmethod
@@ -66,6 +84,16 @@ class MetricsSummary(BaseModel):
     cache_hit_rate: float
     average_quality_score: float | None
     escalation_count: int
+    completed_eligible_requests: int
+    escalation_rate: float = Field(
+        description="Completed escalated requests divided by all requests with completed=true; 0.0 for an empty denominator."
+    )
+    escalation_success_rate: float = Field(
+        description="Success rate among evaluated escalations: final quality pass outcomes divided by completed escalations with final quality pass or fail; 0.0 for an empty denominator."
+    )
+    escalation_success_eligible_attempts: int = Field(
+        description="Completed escalated requests with final quality pass or fail; denominator for escalation_success_rate."
+    )
     fallback_count: int
     model_usage_count: dict[str, int]
     requests: dict[str, int]

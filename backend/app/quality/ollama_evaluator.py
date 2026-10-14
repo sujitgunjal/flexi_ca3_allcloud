@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import urllib.error
 import urllib.request
@@ -8,6 +9,8 @@ from app.quality.base import QualityEvaluatorError
 from app.quality.prompt import QUALITY_SYSTEM_PROMPT
 
 DEFAULT_QUALITY_OLLAMA_MODEL = "gemma4:31b-cloud"
+QUALITY_TIMEOUT_SECONDS = float(os.getenv("QUALITY_TIMEOUT_SECONDS", "20"))
+logger = logging.getLogger(__name__)
 
 
 class OllamaQualityEvaluator:
@@ -57,13 +60,27 @@ class OllamaQualityEvaluator:
         )
 
         try:
-            with urllib.request.urlopen(request, timeout=90) as http_response:
+            with urllib.request.urlopen(
+                request,
+                timeout=QUALITY_TIMEOUT_SECONDS,
+            ) as http_response:
                 payload = json.loads(http_response.read().decode("utf-8"))
         except urllib.error.URLError as exc:
+            reason = getattr(exc, "reason", None)
+            category = (
+                "timeout"
+                if isinstance(reason, TimeoutError)
+                else "connection_error"
+            )
+            logger.warning(
+                "Ollama quality request failed category=%s",
+                category,
+            )
             raise QualityEvaluatorError(
                 f"Local Ollama quality model is unavailable at {self.api_base}"
             ) from exc
         except TimeoutError as exc:
+            logger.warning("Ollama quality request failed category=timeout")
             raise QualityEvaluatorError("Local Ollama quality model timed out") from exc
         except json.JSONDecodeError as exc:
             raise QualityEvaluatorError(

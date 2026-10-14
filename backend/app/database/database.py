@@ -55,6 +55,8 @@ def initialize_database(database_engine: Engine = engine) -> None:
             connection.execute(text("ALTER TABLE request_logs ADD COLUMN context_after_tokens INTEGER"))
         if "context_reduction_percent" not in columns:
             connection.execute(text("ALTER TABLE request_logs ADD COLUMN context_reduction_percent FLOAT"))
+        if "completed" not in columns:
+            connection.execute(text("ALTER TABLE request_logs ADD COLUMN completed BOOLEAN"))
 
 
 def test_connection(database_engine: Engine = engine) -> bool:

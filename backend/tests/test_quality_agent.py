@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from app.agents.quality_agent import QualityAgent
 from app.decision.providers.ollama_provider import OllamaDecisionProvider
 from app.orchestration.graph import prepare_escalation, route_after_quality
@@ -74,14 +76,31 @@ def test_escalation_moves_to_the_next_stronger_model(monkeypatch):
     state = _run(_decision("NO", "NO", "YES"))
     state["actual_model"] = "local"
     state["selected_model"] = "local"
+    state["initial_selected_model"] = "cheap"
 
     assert route_after_quality(state) == "escalate"
     prepared = prepare_escalation(state)
 
     assert prepared["selected_model"] == "cheap"
+    assert prepared["initial_selected_model"] == "cheap"
     assert prepared["quality_escalation_count"] == 1
     assert prepared["escalation_attempted"] is True
     assert route_after_quality(prepared) == "end"
+
+
+def test_escalation_captures_initial_tier_before_retry_changes_selected_model():
+    state = {
+        "selected_model": "cheap",
+        "actual_model": "cheap",
+        "escalation": True,
+        "quality_escalation_count": 0,
+    }
+
+    prepared = prepare_escalation(state)
+
+    assert prepared["initial_selected_model"] == "cheap"
+    assert prepared["selected_model"] == "strong"
+    assert prepared["escalation_attempted"] is True
 
 
 def test_escalation_stops_at_the_retry_limit(monkeypatch):
@@ -158,6 +177,41 @@ def test_quality_request_sends_the_quality_model(monkeypatch):
     OllamaQualityEvaluator().evaluate_raw("What does HTTP stand for?", "A definition.")
 
     assert captured["body"]["model"] == "gemma4:31b-cloud"
+
+
+def test_quality_request_uses_configured_finite_timeout(monkeypatch):
+    from app.quality import ollama_evaluator
+    from app.quality.base import QualityEvaluatorError
+
+    monkeypatch.setattr(ollama_evaluator, "QUALITY_TIMEOUT_SECONDS", 17.5)
+    captured = {}
+
+    def _urlopen(_request, timeout=0):
+        captured["timeout"] = timeout
+        raise TimeoutError("simulated timeout")
+
+    monkeypatch.setattr(
+        "app.quality.ollama_evaluator.urllib.request.urlopen",
+        _urlopen,
+    )
+    with pytest.raises(QualityEvaluatorError):
+        OllamaQualityEvaluator().evaluate_raw("question", "answer")
+
+    assert captured["timeout"] == 17.5
+
+
+def test_quality_timeout_becomes_invalid_quality_result_not_request_failure():
+    from app.quality.base import QualityEvaluatorError
+
+    class TimedOutEvaluator:
+        name = "ollama"
+
+        def evaluate_raw(self, *_args, **_kwargs):
+            raise QualityEvaluatorError("quality provider timed out")
+
+    result = QualityService(TimedOutEvaluator()).evaluate("question", "answer")
+    assert result.output_valid is False
+    assert result.escalation_required is False
 
 
 def test_complexity_model_ignores_quality_ollama_model(monkeypatch):

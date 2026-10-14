@@ -350,6 +350,20 @@ def get_summary_metrics(
         if record.quality_score is not None
     ]
 
+    # Eligible means a completed request with an explicit escalation outcome.
+    # Older rows and incomplete/failed requests have completed=NULL/False and
+    # cannot enter either denominator.
+    completed_eligible = [
+        record for record in records if record.completed is True
+    ]
+    completed_escalations = [
+        record for record in completed_eligible if record.escalated is True
+    ]
+    evaluated_escalations = [
+        record for record in completed_escalations
+        if record.quality_status in {"pass", "fail"}
+    ]
+
     summary = {
         "total_requests": total,
         "total_tokens": tokens,
@@ -367,6 +381,20 @@ def get_summary_metrics(
         "escalation_count": sum(
             record.escalated is True for record in records
         ),
+        "completed_eligible_requests": len(completed_eligible),
+        "escalation_rate": (
+            len(completed_escalations) / len(completed_eligible)
+            if completed_eligible else 0
+        ),
+        "escalation_success_rate": (
+            sum(
+                record.quality_status == "pass"
+                for record in evaluated_escalations
+            )
+            / len(evaluated_escalations)
+            if evaluated_escalations else 0
+        ),
+        "escalation_success_eligible_attempts": len(evaluated_escalations),
         "fallback_count": sum(
             record.fallback_used is True for record in records
         ),

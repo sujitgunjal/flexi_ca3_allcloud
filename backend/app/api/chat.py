@@ -4,18 +4,21 @@ import time
 from typing import List, Optional
 from uuid import uuid4
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, BackgroundTasks
+from fastapi.responses import JSONResponse
+from starlette.background import BackgroundTask
 from pydantic import BaseModel, Field
 
 from app.orchestration.graph import llm_graph
 from app.providers.registry import get_tier
-from app.cache.redis_cache import RedisError, cache, generate_cache_key
+from app.cache.redis_cache import cache, generate_cache_key
 from app.services.cost_service import calculate_cost
 from app.services.metrics_service import (
     log_request,
     record_cache_event,
     record_generation_metrics,
 )
+from app.services.trace_service import record_event
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -49,10 +52,11 @@ class ChatResponse(BaseModel):
 
 
 @router.post("", response_model=ChatResponse)
-def chat(request: ChatRequest):
+def chat(request: ChatRequest, background_tasks: BackgroundTasks):
     request_id = str(uuid4())
     conversation_id = request.conversation_id or str(uuid4())
     metric_record = log_request({"query": request.message})
+    _record_trace_safely(metric_record.id, "gateway", "request_received")
 
     initial_state = {
         "query": request.message,
@@ -70,58 +74,64 @@ def chat(request: ChatRequest):
 
     try:
         result = llm_graph.invoke(initial_state)
+        logger.info("Chat request stage=graph_complete")
     except Exception as exc:
         elapsed_ms = round(
             (time.perf_counter() - start_time) * 1000, 2
         )
-        logger.exception("LLM graph execution failed")
+        # Avoid logging provider exception text: SDK errors can include
+        # request/response details. The category is enough to correlate with
+        # the provider/model diagnostics emitted by GenerateAgent.
+        logger.error(
+            "LLM graph execution failed category=%s",
+            type(exc).__name__,
+        )
 
-        try:
-            record_generation_metrics(
-                metric_record.id,
-                latency_ms=elapsed_ms,
-            )
-        except Exception:
-            logger.exception("Failed to save failed-request latency")
-
-        raise HTTPException(
+        return JSONResponse(
             status_code=502,
-            detail="LLM provider or orchestration error",
-        ) from exc
+            content={"detail": "LLM provider or orchestration error"},
+            background=BackgroundTask(
+                _record_failed_chat_safely,
+                metric_record.id,
+                {"latency_ms": elapsed_ms, "completed": False},
+                "generation_failed",
+                {"error_category": type(exc).__name__},
+            ),
+        )
 
     elapsed_ms = round(
         (time.perf_counter() - start_time) * 1000, 2
     )
 
     selected_model = (
-        result.get("actual_model")
-        or result.get("selected_model")
-        or "cheap"
+        result.get("initial_selected_model") or result.get("selected_model")
     )
+    answer_model_name = result.get("actual_model") or selected_model
     response_text = result.get("response") or ""
 
     if not response_text:
-        try:
-            record_generation_metrics(
-                metric_record.id,
-                latency_ms=elapsed_ms,
-                selected_model=result.get("selected_model"),
-                final_model=result.get("actual_model"),
-            )
-        except Exception:
-            logger.exception("Failed to save empty-response metrics")
-
-        raise HTTPException(
+        return JSONResponse(
             status_code=502,
-            detail="LLM provider returned an empty response",
+            content={"detail": "LLM provider returned an empty response"},
+            background=BackgroundTask(
+                _record_failed_chat_safely,
+                metric_record.id,
+                {
+                    "latency_ms": elapsed_ms,
+                    "selected_model": (
+                        result.get("initial_selected_model")
+                        or result.get("selected_model")
+                    ),
+                    "completed": False,
+                },
+                "empty_response",
+                {},
+            ),
         )
 
     input_tokens = result.get("input_tokens")
     output_tokens = result.get("output_tokens")
-    final_model = (
-        result.get("actual_model")
-        or result.get("selected_model")
-    )
+    final_model = result.get("actual_model")
 
     estimated_cost = calculate_cost(
         final_model,
@@ -129,76 +139,101 @@ def chat(request: ChatRequest):
         output_tokens,
     )
 
-    quality_score = result.get("quality_score")
+    quality_evaluation = result.get("quality_evaluation") or {}
+    quality_is_indeterminate = quality_evaluation.get("output_valid") is False
+    quality_score = (
+        None if quality_is_indeterminate else result.get("quality_score")
+    )
     quality_status = (
-        "pass"
+        "indeterminate"
+        if quality_is_indeterminate
+        else "pass"
         if quality_score is not None and quality_score >= 0.70
         else "fail"
         if quality_score is not None
         else None
     )
 
-    try:
-        record_generation_metrics(
-            metric_record.id,
-            complexity=result.get("complexity"),
-            selected_model=result.get("selected_model") or selected_model,
-            final_model=final_model or selected_model,
-            input_tokens=input_tokens,
-            output_tokens=output_tokens,
-            quality_score=quality_score,
-            quality_status=quality_status,
-            escalated=bool(
-                result.get("escalation_attempted", False)
-            ),
-            fallback_used=bool(result.get("fallback_used", False)),
-            latency_ms=elapsed_ms,
-            estimated_cost=estimated_cost,
-        )
-    except Exception:
-        logger.exception("Generation metrics could not be saved")
+    metric_values = {
+        "complexity": result.get("complexity"),
+        "selected_model": selected_model,
+        "final_model": final_model,
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "quality_score": quality_score,
+        "quality_status": quality_status,
+        "escalated": bool(result.get("escalation_attempted", False)),
+        "fallback_used": bool(result.get("fallback_used", False)),
+        "completed": True,
+        "latency_ms": elapsed_ms,
+        "estimated_cost": estimated_cost,
+    }
 
     cache_key = (
         result.get("cache_key")
         or generate_cache_key(request.message)
     )
 
+    cache_value = None
     if not result.get("cache_hit") and not result.get("cache_unavailable"):
-        try:
-            cache.set(
-                cache_key,
-                {
-                    "response": response_text,
-                    "selected_model": selected_model,
-                    "decision": result.get("decision"),
-                    "complexity": result.get("complexity"),
-                    "uncertain": result.get("uncertain"),
-                    "routing_reason": result.get("routing_reason"),
-                },
-            )
-        except RedisError:
-            logger.exception(
-                "Redis cache write failed; response returned uncached"
-            )
-            try:
-                record_cache_event(
-                    metric_record.id,
-                    False,
-                    cache_key,
-                    fallback_used=True,
-                )
-            except Exception:
-                logger.exception("Cache metrics could not be saved")
+        cache_value = {
+            "response": response_text,
+            "selected_model": selected_model,
+            "decision": result.get("decision"),
+            "complexity": result.get("complexity"),
+            "uncertain": result.get("uncertain"),
+            "routing_reason": result.get("routing_reason"),
+            "_cache_query": request.message,
+        }
+
+    # These writes are optional observations. Run them after FastAPI sends the
+    # response so a slow database or cache cannot keep the client waiting.
+    background_tasks.add_task(
+        _persist_chat_observations,
+        metric_record.id,
+        metric_values,
+        cache_key if cache_value is not None else None,
+        cache_value,
+    )
+    background_tasks.add_task(
+        _record_trace_safely,
+        metric_record.id,
+        "gateway",
+        "request_completed",
+        {
+            "selected_model": selected_model,
+            "final_model": final_model,
+            "quality_status": quality_status,
+            "escalated": bool(result.get("escalation_attempted", False)),
+            "fallback_used": bool(result.get("fallback_used", False)),
+        },
+    )
+    if result.get("escalation_attempted"):
+        background_tasks.add_task(
+            _record_trace_safely,
+            metric_record.id,
+            "escalation",
+            "escalation_attempted",
+            {"initial_model": selected_model, "final_model": final_model},
+        )
+    if result.get("fallback_used"):
+        background_tasks.add_task(
+            _record_trace_safely,
+            metric_record.id,
+            "fallback",
+            "provider_fallback_used",
+            {"final_model": final_model},
+        )
 
     decision = result.get("decision") or {}
     complexity = decision.get("complexity", {})
 
     try:
-        answer_model = get_tier(selected_model).model
+        answer_model = get_tier(answer_model_name).model
     except ValueError:
-        answer_model = selected_model
+        answer_model = answer_model_name
 
-    return ChatResponse(
+    response = ChatResponse(
         request_id=request_id,
         conversation_id=conversation_id,
         status="success",
@@ -207,7 +242,7 @@ def chat(request: ChatRequest):
         note=(
             f"Decision engine: {decision.get('provider', 'n/a')} "
             f"({decision.get('decision_model', 'n/a')}). "
-            f"Answer model: {selected_model} ({answer_model}). "
+            f"Answer model: {answer_model_name} ({answer_model}). "
             f"Complexity: {result.get('complexity')} "
             f"(raw confidence {complexity.get('raw_confidence')}, "
             f"calibrated confidence "
@@ -220,3 +255,73 @@ def chat(request: ChatRequest):
             f"({result.get('context_reduction_percent', 0)}% reduction)."
         ),
     )
+    logger.info("Chat request stage=response_ready cache_write_deferred=true")
+    return response
+
+
+def _record_generation_metrics_safely(
+    request_id: int,
+    values: dict,
+) -> None:
+    try:
+        record_generation_metrics(request_id, **values)
+    except Exception as exc:
+        logger.warning(
+            "Generation metrics write failed category=%s",
+            type(exc).__name__,
+        )
+
+
+def _record_trace_safely(
+    request_id: int,
+    stage: str,
+    event: str,
+    metadata: dict | None = None,
+) -> None:
+    try:
+        record_event(request_id, stage, event, metadata)
+    except Exception as exc:
+        logger.warning(
+            "Request trace write failed category=%s", type(exc).__name__
+        )
+
+
+def _record_failed_chat_safely(
+    request_id: int,
+    metric_values: dict,
+    event: str,
+    metadata: dict,
+) -> None:
+    _record_generation_metrics_safely(request_id, metric_values)
+    _record_trace_safely(request_id, "gateway", event, metadata)
+
+
+def _persist_chat_observations(
+    request_id: int,
+    metric_values: dict,
+    cache_key: str | None,
+    cache_value: dict | None,
+) -> None:
+    _record_generation_metrics_safely(request_id, metric_values)
+    if cache_key is None or cache_value is None:
+        return
+
+    try:
+        cache.set(cache_key, cache_value)
+    except Exception as exc:
+        logger.warning(
+            "Response cache write failed category=%s; response returned uncached",
+            type(exc).__name__,
+        )
+        try:
+            record_cache_event(
+                request_id,
+                False,
+                cache_key,
+                fallback_used=True,
+            )
+        except Exception as metrics_error:
+            logger.warning(
+                "Cache failure metrics write failed category=%s",
+                type(metrics_error).__name__,
+            )

@@ -37,6 +37,8 @@ class RequestLog(Base):
     quality_status: Mapped[str | None] = mapped_column(String(32), nullable=True)
     escalated: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
     fallback_used: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+    # Nullable keeps pre-upgrade rows distinguishable from explicit outcomes.
+    completed: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
 
 
 class RequestTraceEvent(Base):
