@@ -35,16 +35,17 @@ def generate_with_cloud(
     else:
         raise ValueError(f"Unknown cloud tier: {model}")
 
-    options = {}
-    if timeout is not None:
-        options["timeout"] = timeout
-
     response = completion(
         model=cloud_model,
         messages=messages,
         api_key=NVIDIA_API_KEY,
         api_base=NVIDIA_API_BASE,
-        **options,
+        # LiteLLM passes this to its underlying HTTP client, covering
+        # connection setup and response reads. Disable retries so this bound
+        # is not multiplied by retry backoff, and keep response parsing finite.
+        timeout=timeout,
+        num_retries=0,
+        stream=False,
     )
 
     usage = getattr(response, "usage", None)
@@ -54,6 +55,5 @@ def generate_with_cloud(
     return {
         "response": choice.message.content or "",
         "input_tokens": getattr(usage, "prompt_tokens", None),
-        "outp"
-        "ut_tokens": getattr(usage, "completion_tokens", None),
+        "output_tokens": getattr(usage, "completion_tokens", None),
     }

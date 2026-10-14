@@ -16,6 +16,7 @@ class RequestState(TypedDict, total=False):
     context_reduction_percent: float
     embedding_source: str
     selected_model: str
+    initial_selected_model: str
     routing_reason: str
     uncertain: bool
     decision: dict[str, Any]

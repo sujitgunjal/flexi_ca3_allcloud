@@ -1,6 +1,7 @@
 
 from app.providers.litellm_client import generate_with_cloud
 from app.providers.ollama import generate_with_ollama
+from app.providers.config import OLLAMA_TIMEOUT_SECONDS, PROVIDER_TIMEOUT_SECONDS
 from app.providers.registry import get_tier
 
 
@@ -13,17 +14,18 @@ def generate_response(
     """Generate a reply and return available token usage metadata."""
 
     tier = get_tier(model)
-
+    # A caller may choose a shorter/longer finite deadline (for example a
+    # provider probe); normal chat generation uses the configured default.
     if tier.provider == "ollama":
         return generate_with_ollama(
             prompt,
             history,
-            timeout=timeout,
+            timeout=(OLLAMA_TIMEOUT_SECONDS if timeout is None else timeout),
         )
 
     return generate_with_cloud(
         model,
         prompt,
         history,
-        timeout=timeout,
+        timeout=(PROVIDER_TIMEOUT_SECONDS if timeout is None else timeout),
     )

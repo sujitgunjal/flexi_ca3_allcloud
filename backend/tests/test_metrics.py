@@ -238,6 +238,10 @@ def test_database_logging_retrieval_and_aggregation(isolated_database):
         "cache_hit_rate": 1 / 3,
         "average_quality_score": pytest.approx(0.6),
         "escalation_count": 1,
+        "completed_eligible_requests": 0,
+        "escalation_rate": 0,
+        "escalation_success_rate": 0,
+        "escalation_success_eligible_attempts": 0,
         "fallback_count": 1,
         "model_usage_count": {"cheap": 1, "strong": 1},
         "requests": {"total": 3},
@@ -296,6 +300,10 @@ def test_empty_summary(isolated_database):
         "cache_hit_rate": 0,
         "average_quality_score": None,
         "escalation_count": 0,
+        "completed_eligible_requests": 0,
+        "escalation_rate": 0,
+        "escalation_success_rate": 0,
+        "escalation_success_eligible_attempts": 0,
         "fallback_count": 0,
         "model_usage_count": {},
         "requests": {"total": 0},
@@ -336,6 +344,61 @@ def test_empty_summary(isolated_database):
             "average_per_request_reduction_percent": None,
         },
     }
+
+
+def test_escalation_rates_use_only_completed_and_determinate_outcomes(
+    isolated_database,
+):
+    outcomes = [
+        # completed non-escalated: enters rate denominator only
+        {"completed": True, "escalated": False, "quality_status": "pass"},
+        # completed escalation pass
+        {"completed": True, "escalated": True, "quality_status": "pass"},
+        # completed escalation fail
+        {"completed": True, "escalated": True, "quality_status": "fail"},
+        # invalid evaluator result is indeterminate and excluded from success
+        {"completed": True, "escalated": True, "quality_status": "indeterminate"},
+        # missing/pending final quality is also excluded
+        {"completed": True, "escalated": True, "quality_status": None},
+        # failed request and legacy record are not eligible
+        {"completed": False, "escalated": True, "quality_status": "fail"},
+        {"completed": None, "escalated": True, "quality_status": "pass"},
+    ]
+    for index, outcome in enumerate(outcomes):
+        metrics_service.log_request({"query": f"outcome {index}", **outcome})
+
+    summary = metrics_service.get_summary_metrics()
+    assert summary["completed_eligible_requests"] == 5
+    assert summary["escalation_rate"] == 4 / 5
+    assert summary["escalation_success_eligible_attempts"] == 2
+    assert summary["escalation_success_rate"] == 1 / 2
+
+
+def test_metrics_api_exposes_model_and_escalation_contract(isolated_database):
+    client = TestClient(metrics_app)
+    response = client.post(
+        "/metrics/log",
+        json={
+            "query": "tracked",
+            "selected_model": "cheap",
+            "final_model": "strong",
+            "completed": True,
+            "escalated": True,
+            "fallback_used": False,
+            "quality_status": "pass",
+        },
+    )
+    assert response.status_code == 201
+    request_id = response.json()["request_id"]
+    record = client.get(f"/metrics/{request_id}").json()
+    assert (record["selected_model"], record["final_model"]) == ("cheap", "strong")
+    assert record["escalated"] is True
+    assert record["fallback_used"] is False
+    summary = client.get("/metrics/summary").json()
+    assert summary["completed_eligible_requests"] == 1
+    assert summary["escalation_rate"] == 1.0
+    assert summary["escalation_success_eligible_attempts"] == 1
+    assert summary["escalation_success_rate"] == 1.0
 
 
 def test_metrics_api_log_recent_lookup_and_validation(

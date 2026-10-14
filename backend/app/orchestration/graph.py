@@ -32,6 +32,7 @@ def route_after_quality(state: RequestState) -> str:
 
 def prepare_escalation(state: RequestState) -> RequestState:
     current = state.get("actual_model") or state.get("selected_model")
+    state.setdefault("initial_selected_model", state.get("selected_model"))
     stronger = next_stronger_tier(current)
     state["quality_escalation_count"] = int(state.get("quality_escalation_count") or 0) + 1
     state["escalation_attempted"] = True
