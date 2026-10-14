@@ -3,12 +3,13 @@ import {
 	ChartNoAxesColumn,
 	FlaskConical,
 	LayoutDashboard,
+	MessageSquare,
 	RefreshCw,
 	Server,
 	Workflow,
 } from "lucide-react";
 
-export type PageKey = "Dashboard" | "Models" | "Requests" | "Analytics" | "Evaluation";
+export type PageKey = "Dashboard" | "Models" | "Requests" | "Analytics" | "Evaluation" | "Chat";
 
 const navigation: { label: PageKey; icon: typeof LayoutDashboard }[] = [
 	{ label: "Dashboard", icon: LayoutDashboard },
@@ -16,6 +17,7 @@ const navigation: { label: PageKey; icon: typeof LayoutDashboard }[] = [
 	{ label: "Requests", icon: Activity },
 	{ label: "Analytics", icon: ChartNoAxesColumn },
 	{ label: "Evaluation", icon: FlaskConical },
+	{ label: "Chat", icon: MessageSquare },
 ];
 
 interface NavbarProps {

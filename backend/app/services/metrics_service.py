@@ -186,6 +186,7 @@ def record_generation_metrics(
     fallback_used: bool | None = None,
     latency_ms: float | None = None,
     estimated_cost: float | None = None,
+    completed: bool | None = None,
     session: Session | None = None,
 ) -> bool:
     """Persist final generation, token usage, quality, latency, and cost."""
@@ -206,6 +207,7 @@ def record_generation_metrics(
             "fallback_used": fallback_used,
             "latency_ms": latency_ms,
             "estimated_cost": estimated_cost,
+            "completed": completed,
         }
 
         # Don't overwrite existing values with unspecified values.
