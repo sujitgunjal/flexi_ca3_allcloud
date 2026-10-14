@@ -42,4 +42,6 @@ export interface RequestRecord {
 	estimated_cost?: number | null;
 	cache_hit?: boolean | null;
 	escalated?: boolean | null;
+	quality_status?: string | null;
+	completed?: boolean | null;
 }
