@@ -28,6 +28,78 @@ export interface ModelInfo {
 	available: boolean;
 }
 
+export interface AnalyticsTrendPoint {
+	date: string;
+	requests: number;
+	successful_requests: number;
+	failed_requests: number;
+	tokens: number | null;
+}
+
+export interface AnalyticsData {
+	total_requests: number;
+	successful_requests: number;
+	failed_requests: number;
+	unknown_outcome_requests: number;
+	cache_hits: number;
+	cache_misses: number;
+	cache_hit_rate: number | null;
+	model_usage: Record<string, number>;
+	tokens_input: number | null;
+	tokens_output: number | null;
+	tokens_total: number | null;
+	average_latency_ms: number | null;
+	estimated_cost_total: number | null;
+	escalations: number;
+	fallbacks: number;
+	context_requests: number;
+	context_tokens_before: number | null;
+	context_tokens_after: number | null;
+	context_tokens_saved: number | null;
+	context_reduction_percent: number | null;
+	trend: AnalyticsTrendPoint[];
+}
+
+export interface EvaluationScore {
+	accuracy: number;
+	macro_f1: number;
+	brier_score: number;
+}
+
+export interface EvaluationTaskResult {
+	raw: EvaluationScore;
+	calibrated: EvaluationScore;
+}
+
+export interface EvaluationReport {
+	decision_model: string;
+	split: string;
+	count: number;
+	invalid_outputs: number;
+	calibration_rows: number;
+	calibration_applied: boolean;
+	dataset: {
+		rows: number;
+		splits: Record<string, number>;
+	};
+	tasks: Record<string, EvaluationTaskResult>;
+	routing: {
+		validation_selected_threshold: number;
+		deployed_threshold: number;
+		calibrated_at_selected_threshold: {
+			routing_accuracy: number;
+			uncertain_rate: number;
+			selected_model_counts: Record<string, number>;
+		};
+	};
+	note: string;
+}
+
+export interface EvaluationResults {
+	available: boolean;
+	report: EvaluationReport | null;
+}
+
 export interface ChatDetails {
 	model_tier?: string | null;
 	actual_model?: string | null;
@@ -83,5 +155,6 @@ export interface RequestRecord {
 	cache_hit?: boolean | null;
 	escalated?: boolean | null;
 	quality_status?: string | null;
+	quality_score?: number | null;
 	completed?: boolean | null;
 }

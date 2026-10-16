@@ -1,7 +1,9 @@
 
 """Provider-independent persistence and aggregation for request metrics."""
 
+from collections import defaultdict
 from collections.abc import Mapping
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from sqlalchemy import select, update
@@ -248,6 +250,115 @@ def get_recent_requests(limit: int = 100) -> list[RequestLog]:
                 .limit(limit)
             )
         )
+
+
+def get_analytics(days: int = 30) -> dict[str, Any]:
+    """Aggregate real request observations and recent daily trends."""
+    initialize_database()
+
+    with SessionLocal() as db:
+        records = list(db.scalars(select(RequestLog)))
+
+    total = len(records)
+    successful = sum(record.completed is True for record in records)
+    failed = sum(record.completed is False for record in records)
+    hits = sum(record.cache_hit is True for record in records)
+    misses = sum(record.cache_hit is False for record in records)
+    cache_observations = hits + misses
+
+    input_values = [record.input_tokens for record in records if record.input_tokens is not None]
+    output_values = [record.output_tokens for record in records if record.output_tokens is not None]
+    token_values = [
+        record.total_tokens
+        if record.total_tokens is not None
+        else record.input_tokens + record.output_tokens
+        for record in records
+        if record.total_tokens is not None
+        or (record.input_tokens is not None and record.output_tokens is not None)
+    ]
+    latency_values = [record.latency_ms for record in records if record.latency_ms is not None]
+    cost_values = [record.estimated_cost for record in records if record.estimated_cost is not None]
+
+    model_usage: dict[str, int] = {}
+    context_records = [
+        record
+        for record in records
+        if record.context_before_tokens is not None
+        and record.context_after_tokens is not None
+        and record.context_after_tokens <= record.context_before_tokens
+    ]
+    context_before = sum(record.context_before_tokens for record in context_records)
+    context_after = sum(record.context_after_tokens for record in context_records)
+
+    trends: dict[str, dict[str, int]] = defaultdict(
+        lambda: {"requests": 0, "successful_requests": 0, "failed_requests": 0, "tokens": 0, "token_records": 0}
+    )
+    first_day = datetime.now(timezone.utc).date() - timedelta(days=days - 1)
+
+    for record in records:
+        model = record.final_model or record.selected_model
+        if model:
+            model_usage[model] = model_usage.get(model, 0) + 1
+
+        timestamp = record.timestamp
+        request_day = (
+            timestamp.astimezone(timezone.utc).date()
+            if timestamp.tzinfo is not None
+            else timestamp.date()
+        )
+        if request_day < first_day:
+            continue
+        day = trends[request_day.isoformat()]
+        day["requests"] += 1
+        day["successful_requests"] += record.completed is True
+        day["failed_requests"] += record.completed is False
+        if record.total_tokens is not None:
+            day["tokens"] += record.total_tokens
+            day["token_records"] += 1
+        elif record.input_tokens is not None and record.output_tokens is not None:
+            day["tokens"] += record.input_tokens + record.output_tokens
+            day["token_records"] += 1
+
+    return {
+        "total_requests": total,
+        "successful_requests": successful,
+        "failed_requests": failed,
+        "unknown_outcome_requests": total - successful - failed,
+        "cache_hits": hits,
+        "cache_misses": misses,
+        "cache_hit_rate": hits / cache_observations if cache_observations else None,
+        "model_usage": model_usage,
+        "tokens_input": sum(input_values) if input_values else None,
+        "tokens_output": sum(output_values) if output_values else None,
+        "tokens_total": sum(token_values) if token_values else None,
+        "average_latency_ms": (
+            sum(latency_values) / len(latency_values) if latency_values else None
+        ),
+        "estimated_cost_total": sum(cost_values) if cost_values else None,
+        "escalations": sum(record.escalated is True for record in records),
+        "fallbacks": sum(record.fallback_used is True for record in records),
+        "context_requests": len(context_records),
+        "context_tokens_before": context_before if context_records else None,
+        "context_tokens_after": context_after if context_records else None,
+        "context_tokens_saved": context_before - context_after if context_records else None,
+        "context_reduction_percent": (
+            calculate_context_reduction(context_before, context_after)
+            if context_records
+            else None
+        ),
+        "trend": [
+            {
+                "date": date,
+                **{
+                    key: value
+                    for key, value in day.items()
+                    if key in {"requests", "successful_requests", "failed_requests"}
+                },
+                "tokens": day["tokens"] if day["token_records"] else None,
+            }
+            for date, day in sorted(trends.items())
+        ],
+    }
 
 
 def get_request(request_id: int) -> RequestLog | None:

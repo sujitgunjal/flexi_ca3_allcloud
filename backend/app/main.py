@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.chat import router as chat_router
 from app.api.conversations import router as conversations_router
 from app.api.decisions import router as decisions_router
+from app.api.evaluation import router as evaluation_router
 from app.api.health import router as health_router
 from app.api.metrics import router as metrics_router
 from app.api.models import router as models_router
@@ -21,6 +22,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:3000",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:3000",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -50,6 +53,12 @@ app.include_router(
     decisions_router,
     prefix="/decisions",
     tags=["Decisions"],
+)
+
+app.include_router(
+    evaluation_router,
+    prefix="/evaluation",
+    tags=["Evaluation"],
 )
 
 app.include_router(

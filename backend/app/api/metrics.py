@@ -1,8 +1,15 @@
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
-from app.schemas.metrics import MetricsSummary, RequestLogResponse, RequestMetrics, TraceEventResponse
+from app.schemas.metrics import (
+    AnalyticsResponse,
+    MetricsSummary,
+    RequestLogResponse,
+    RequestMetrics,
+    TraceEventResponse,
+)
 from app.services.metrics_service import (
+    get_analytics,
     get_recent_requests,
     get_request,
     get_summary_metrics,
@@ -27,6 +34,11 @@ def create_metrics_log(metrics: RequestMetrics):
 @router.get("/recent", response_model=list[RequestLogResponse])
 def recent_metrics():
     return get_recent_requests()
+
+
+@router.get("/analytics", response_model=AnalyticsResponse)
+def analytics(days: int = Query(default=30, ge=1, le=365)):
+    return get_analytics(days=days)
 
 
 @router.get("", response_model=MetricsSummary)
