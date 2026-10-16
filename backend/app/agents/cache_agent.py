@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class CacheAgent:
     def __init__(self, cache_service=cache, embedder=None):
         self.cache = cache_service
-        self.embedder = embedder or OllamaEmbedder(timeout=2)
+        self.embedder = embedder or OllamaEmbedder()
 
     def run(self, state: RequestState) -> RequestState:
         key = generate_cache_key(state.get("query", ""))
@@ -23,14 +23,29 @@ class CacheAgent:
         hit = False
         try:
             value = self.cache.get(key)
+            logger.debug(
+                "Response cache exact lookup result=%s key=%s",
+                "hit" if value is not None else "miss",
+                key.rsplit(":", 1)[-1][:12],
+            )
             if value is None:
                 try:
+                    logger.debug(
+                        "Response cache semantic lookup started query_fingerprint=%s",
+                        key.rsplit(":", 1)[-1][:12],
+                    )
                     value = self.cache.find_semantic(state.get("query", ""), self.embedder)
                 except RedisError:
                     raise
                 except Exception:
-                    logger.warning("Semantic cache lookup failed; continuing to model flow")
+                    logger.warning(
+                        "Semantic cache lookup failed category=embedding_or_lookup_error; continuing to model flow"
+                    )
             hit = value is not None
+            if value is None:
+                logger.debug("Response cache final result=miss")
+            else:
+                logger.debug("Response cache final result=hit")
             if hit:
                 value = {name: item for name, item in value.items() if name != "_cache_query"}
                 state.update(value)

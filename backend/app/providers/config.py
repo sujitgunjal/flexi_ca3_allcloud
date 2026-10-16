@@ -48,11 +48,11 @@ REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
 REDIS_DB = int(os.getenv("REDIS_DB", "0"))
 REDIS_TTL = int(os.getenv("REDIS_TTL", "3600"))
 # Minimum cosine similarity required before a cached answer can be reused.
-SEMANTIC_CACHE_THRESHOLD = float(os.getenv("SEMANTIC_CACHE_THRESHOLD", "0.88"))
+SEMANTIC_CACHE_THRESHOLD = float(os.getenv("SEMANTIC_CACHE_THRESHOLD", "0.86"))
 SEMANTIC_CACHE_MAX_CANDIDATES = int(os.getenv("SEMANTIC_CACHE_MAX_CANDIDATES", "200"))
 
 # Local embedding model used to rank conversation history.
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "mxbai-embed-large")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:latest")
 CONTEXT_TOKEN_LIMITS = {
     "low": int(os.getenv("CONTEXT_TOKEN_LIMIT_LOW", "80")),
     "medium": int(os.getenv("CONTEXT_TOKEN_LIMIT_MEDIUM", "240")),
