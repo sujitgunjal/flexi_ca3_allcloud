@@ -1,6 +1,9 @@
 import type {
+	AnalyticsData,
 	Conversation,
 	ConversationSummary,
+	EvaluationReport,
+	EvaluationResults,
 	GatewayMetrics,
 	ModelInfo,
 	RequestRecord,
@@ -9,32 +12,74 @@ import type {
 export const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000")
 	.replace(/\/$/, "");
 
-async function getJson<T>(path: string): Promise<T> {
+async function requestJson<T>(
+	path: string,
+	init?: RequestInit,
+	timeoutMs = 15000,
+): Promise<T> {
+	const controller = new AbortController();
+	const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
 	let response: Response;
 	try {
-		response = await fetch(`${API_BASE_URL}${path}`);
+		response = await fetch(`${API_BASE_URL}${path}`, {
+			...init,
+			signal: controller.signal,
+		});
 	} catch (error) {
+		window.clearTimeout(timeout);
+		if (controller.signal.aborted) {
+			throw new Error(`${path} timed out after ${timeoutMs / 1000} seconds.`, { cause: error });
+		}
 		throw new Error(`Can't reach the gateway at ${API_BASE_URL}.`, { cause: error });
 	}
 
-	if (!response.ok) {
-		let detail = `${path} returned ${response.status} ${response.statusText}.`;
-		try {
-			const payload = await response.json() as { detail?: unknown };
-			if (typeof payload.detail === "string" && payload.detail) {
-				detail = payload.detail;
-			}
-		} catch {
-			// Keep the status line when the error body is not JSON.
-		}
-		throw new Error(detail);
-	}
-
 	try {
-		return await response.json() as T;
+		const body = response.status === 204 ? "" : await response.text();
+		if (!response.ok) {
+			let detail = `${path} returned ${response.status} ${response.statusText}.`;
+			try {
+				const payload: unknown = JSON.parse(body);
+				if (payload && typeof payload === "object" && "detail" in payload
+					&& typeof payload.detail === "string" && payload.detail) {
+					detail = payload.detail;
+				}
+			} catch {
+				// The status line remains useful when the error body is not JSON.
+			}
+			throw new GatewayResponseError(detail);
+		}
+		if (response.status === 204) {
+			return undefined as T;
+		}
+		try {
+			return JSON.parse(body) as T;
+		} catch (error) {
+			throw new Error(`${path} returned invalid JSON.`, { cause: error });
+		}
 	} catch (error) {
-		throw new Error(`${path} returned invalid JSON.`, { cause: error });
+		if (controller.signal.aborted) {
+			throw new Error(`${path} timed out after ${timeoutMs / 1000} seconds.`, { cause: error });
+		}
+		if (error instanceof GatewayResponseError) {
+			throw error;
+		}
+		if (error instanceof Error && error.message.startsWith(`${path} returned `)) {
+			throw error;
+		}
+		throw new Error(`${path} response could not be read.`, { cause: error });
+	} finally {
+		window.clearTimeout(timeout);
 	}
+}
+
+class GatewayResponseError extends Error {}
+
+function getJson<T>(path: string): Promise<T> {
+	return requestJson<T>(path);
+}
+
+function postJson<T>(path: string): Promise<T> {
+	return requestJson<T>(path, { method: "POST" }, 60000);
 }
 
 const metricFields: (keyof GatewayMetrics)[] = [
@@ -134,35 +179,136 @@ export function getModels(): Promise<ModelInfo[]> {
 	return getJson<ModelInfo[]>("/models");
 }
 
-async function sendJson<T>(path: string, method: string, body?: unknown): Promise<T> {
-	let response: Response;
-	try {
-		response = await fetch(`${API_BASE_URL}${path}`, {
-			method,
-			headers: body === undefined ? undefined : { "Content-Type": "application/json" },
-			body: body === undefined ? undefined : JSON.stringify(body),
-		});
-	} catch (error) {
-		throw new Error(`Can't reach the gateway at ${API_BASE_URL}.`, { cause: error });
+export async function getAnalytics(): Promise<AnalyticsData> {
+	const payload: unknown = await getJson<unknown>("/metrics/analytics");
+	if (isAnalyticsData(payload)) {
+		return payload;
 	}
+	throw new Error("/metrics/analytics returned an unsupported response format.");
+}
 
-	if (!response.ok) {
-		let detail = `${path} returned ${response.status} ${response.statusText}.`;
-		try {
-			const payload = await response.json() as { detail?: unknown };
-			if (typeof payload.detail === "string" && payload.detail) {
-				detail = payload.detail;
-			}
-		} catch {
-			// The status line is enough when the body is not JSON.
+export async function getEvaluationResults(): Promise<EvaluationResults> {
+	const payload: unknown = await getJson<unknown>("/evaluation/results");
+	if (!isEvaluationResults(payload)) {
+		throw new Error("/evaluation/results returned an unsupported response format.");
+	}
+	return payload;
+}
+
+export async function runEvaluation(): Promise<EvaluationReport> {
+	const payload: unknown = await postJson<unknown>("/evaluation/run");
+	if (!isEvaluationReport(payload)) {
+		throw new Error("/evaluation/run returned an unsupported response format.");
+	}
+	return payload;
+}
+
+export async function getRequests(): Promise<RequestRecord[]> {
+	const payload: unknown = await getJson<unknown>("/metrics/recent");
+
+	if (Array.isArray(payload)) {
+		if (payload.every(isRequestRecord)) {
+			return payload;
 		}
-		throw new Error(detail);
 	}
 
-	if (response.status === 204) {
-		return undefined as T;
+	if (payload && typeof payload === "object") {
+		const response = payload as { items?: unknown; requests?: unknown };
+		const records = response.items ?? response.requests;
+		if (Array.isArray(records) && records.every(isRequestRecord)) {
+			return records;
+		}
 	}
-	return await response.json() as T;
+
+	throw new Error("/requests returned an unsupported response format.");
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+	return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isNumberOrNull(value: unknown): value is number | null {
+	return value === null || isFiniteNumber(value);
+}
+
+function isFiniteNumber(value: unknown): value is number {
+	return typeof value === "number" && Number.isFinite(value);
+}
+
+function isAnalyticsData(value: unknown): value is AnalyticsData {
+	if (!isRecord(value) || !isRecord(value.model_usage) || !Array.isArray(value.trend)) {
+		return false;
+	}
+	const counts = [
+		"total_requests", "successful_requests", "failed_requests",
+		"unknown_outcome_requests", "cache_hits", "cache_misses", "escalations",
+		"fallbacks", "context_requests",
+	];
+	return counts.every((key) => typeof value[key] === "number" && Number.isFinite(value[key]))
+		&& Object.values(value.model_usage).every((count) => typeof count === "number" && Number.isFinite(count))
+		&& ["cache_hit_rate", "tokens_input", "tokens_output", "tokens_total",
+			"average_latency_ms", "estimated_cost_total", "context_tokens_before",
+			"context_tokens_after", "context_tokens_saved", "context_reduction_percent",
+		].every((key) => isNumberOrNull(value[key]))
+		&& value.trend.every((point) => isRecord(point)
+			&& typeof point.date === "string"
+			&& ["requests", "successful_requests", "failed_requests"].every(
+				(key) => typeof point[key] === "number" && Number.isFinite(point[key]),
+			)
+			&& isNumberOrNull(point.tokens));
+}
+
+function isEvaluationResults(value: unknown): value is EvaluationResults {
+	return isRecord(value)
+		&& typeof value.available === "boolean"
+		&& (value.report === null || isEvaluationReport(value.report))
+		&& (value.available ? value.report !== null : value.report === null);
+}
+
+function isEvaluationReport(value: unknown): value is EvaluationReport {
+	if (!isRecord(value) || !isRecord(value.dataset) || !isRecord(value.dataset.splits)
+		|| !isRecord(value.tasks) || !isRecord(value.routing)
+		|| !isRecord(value.routing.calibrated_at_selected_threshold)) {
+		return false;
+	}
+	const routing = value.routing.calibrated_at_selected_threshold;
+	const validTask = (task: unknown) => isRecord(task)
+		&& ["raw", "calibrated"].every((key) => {
+			const score = task[key];
+			return isRecord(score)
+				&& ["accuracy", "macro_f1", "brier_score"].every((metric) => isFiniteNumber(score[metric]));
+		});
+	return typeof value.decision_model === "string"
+		&& typeof value.split === "string"
+		&& isFiniteNumber(value.count)
+		&& isFiniteNumber(value.invalid_outputs)
+		&& isFiniteNumber(value.calibration_rows)
+		&& typeof value.calibration_applied === "boolean"
+		&& isFiniteNumber(value.dataset.rows)
+		&& isFiniteNumber(value.dataset.splits.test)
+		&& Object.values(value.dataset.splits).every(isFiniteNumber)
+		&& Object.keys(value.tasks).length > 0
+		&& Object.values(value.tasks).every(validTask)
+		&& isFiniteNumber(routing.routing_accuracy)
+		&& isFiniteNumber(routing.uncertain_rate)
+		&& isRecord(routing.selected_model_counts)
+		&& Object.values(routing.selected_model_counts).every(isFiniteNumber)
+		&& isFiniteNumber(value.routing.validation_selected_threshold)
+		&& isFiniteNumber(value.routing.deployed_threshold)
+		&& typeof value.note === "string";
+}
+
+async function sendJson<T>(
+	path: string,
+	method: string,
+	body?: unknown,
+	timeoutMs = 15000,
+): Promise<T> {
+	return requestJson<T>(path, {
+		method,
+		headers: body === undefined ? undefined : { "Content-Type": "application/json" },
+		body: body === undefined ? undefined : JSON.stringify(body),
+	}, timeoutMs);
 }
 
 export function listConversations(): Promise<ConversationSummary[]> {
@@ -190,25 +336,5 @@ export function sendConversationMessage(id: string, message: string): Promise<{
 	status: string;
 	conversation: Conversation;
 }> {
-	return sendJson(`/conversations/${id}/messages`, "POST", { message });
-}
-
-export async function getRequests(): Promise<RequestRecord[]> {
-	const payload: unknown = await getJson<unknown>("/metrics/recent");;
-
-	if (Array.isArray(payload)) {
-		if (payload.every(isRequestRecord)) {
-			return payload;
-		}
-	}
-
-	if (payload && typeof payload === "object") {
-		const response = payload as { items?: unknown; requests?: unknown };
-		const records = response.items ?? response.requests;
-		if (Array.isArray(records) && records.every(isRequestRecord)) {
-			return records;
-		}
-	}
-
-	throw new Error("/requests returned an unsupported response format.");
+	return sendJson(`/conversations/${id}/messages`, "POST", { message }, 600000);
 }

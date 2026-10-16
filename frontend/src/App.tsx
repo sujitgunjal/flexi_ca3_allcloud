@@ -6,8 +6,22 @@ import Dashboard from "./pages/Dashboard";
 import Evaluation from "./pages/Evaluation";
 import Models from "./pages/Models";
 import Requests from "./pages/Requests";
-import { API_BASE_URL, getMetrics, getModels, getRequests } from "./services/api";
-import type { GatewayMetrics, ModelInfo, RequestRecord } from "./types";
+import {
+	API_BASE_URL,
+	getAnalytics,
+	getEvaluationResults,
+	getMetrics,
+	getModels,
+	getRequests,
+} from "./services/api";
+import type {
+	AnalyticsData,
+	EvaluationReport,
+	EvaluationResults,
+	GatewayMetrics,
+	ModelInfo,
+	RequestRecord,
+} from "./types";
 import "./styles.css";
 
 export default function App() {
@@ -15,18 +29,30 @@ export default function App() {
   const [metrics, setMetrics] = useState<GatewayMetrics | null>(null);
   const [models, setModels] = useState<ModelInfo[]>([]);
   const [requests, setRequests] = useState<RequestRecord[]>([]);
+  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
+  const [evaluation, setEvaluation] = useState<EvaluationResults | null>(null);
   const [metricsError, setMetricsError] = useState<string | null>(null);
   const [modelsError, setModelsError] = useState<string | null>(null);
   const [requestsError, setRequestsError] = useState<string | null>(null);
+  const [analyticsError, setAnalyticsError] = useState<string | null>(null);
+  const [evaluationError, setEvaluationError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   const refreshData = useCallback(async () => {
     setIsRefreshing(true);
-    const [metricsResult, modelsResult, requestsResult] = await Promise.allSettled([
+    const [
+      metricsResult,
+      modelsResult,
+      requestsResult,
+      analyticsResult,
+      evaluationResult,
+    ] = await Promise.allSettled([
       getMetrics(),
       getModels(),
       getRequests(),
+      getAnalytics(),
+      getEvaluationResults(),
     ]);
 
     if (metricsResult.status === "fulfilled") {
@@ -50,6 +76,20 @@ export default function App() {
       setRequestsError(errorMessage(requestsResult.reason));
     }
 
+    if (analyticsResult.status === "fulfilled") {
+      setAnalytics(analyticsResult.value);
+      setAnalyticsError(null);
+    } else {
+      setAnalyticsError(errorMessage(analyticsResult.reason));
+    }
+
+    if (evaluationResult.status === "fulfilled") {
+      setEvaluation(evaluationResult.value);
+      setEvaluationError(null);
+    } else {
+      setEvaluationError(errorMessage(evaluationResult.reason));
+    }
+
     setIsLoading(false);
     setIsRefreshing(false);
   }, []);
@@ -65,8 +105,8 @@ export default function App() {
         {activePage === "Dashboard" && <Dashboard metrics={metrics} models={models} requests={requests} isLoading={isLoading} metricsError={metricsError} requestsError={requestsError} onOpenRequests={() => setActivePage("Requests")} />}
         {activePage === "Models" && <Models models={models} isLoading={isLoading} error={modelsError} />}
         {activePage === "Requests" && <Requests requests={requests} isLoading={isLoading} error={requestsError} />}
-        {activePage === "Analytics" && <Analytics />}
-        {activePage === "Evaluation" && <Evaluation />}
+        {activePage === "Analytics" && <Analytics data={analytics} isLoading={isLoading} isRefreshing={isRefreshing} error={analyticsError} onRefresh={() => void refreshData()} />}
+        {activePage === "Evaluation" && <Evaluation results={evaluation} isLoading={isLoading} isRefreshing={isRefreshing} error={evaluationError} onRefresh={() => void refreshData()} onReport={(report: EvaluationReport) => setEvaluation({ available: true, report })} />}
         {activePage === "Chat" && <Chat />}
         {activePage !== "Chat" && <footer className="app-footer"><span>SWITCHBOARD AI</span><span>INTELLIGENT LLM ROUTING</span></footer>}
       </main>

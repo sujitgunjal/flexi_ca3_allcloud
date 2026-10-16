@@ -105,6 +105,38 @@ class MetricsSummary(BaseModel):
     context: dict[str, int | float | None]
 
 
+class AnalyticsTrendPoint(BaseModel):
+    date: str
+    requests: int
+    successful_requests: int
+    failed_requests: int
+    tokens: int | None
+
+
+class AnalyticsResponse(BaseModel):
+    total_requests: int
+    successful_requests: int
+    failed_requests: int
+    unknown_outcome_requests: int
+    cache_hits: int
+    cache_misses: int
+    cache_hit_rate: float | None
+    model_usage: dict[str, int]
+    tokens_input: int | None
+    tokens_output: int | None
+    tokens_total: int | None
+    average_latency_ms: float | None
+    estimated_cost_total: float | None
+    escalations: int
+    fallbacks: int
+    context_requests: int
+    context_tokens_before: int | None
+    context_tokens_after: int | None
+    context_tokens_saved: int | None
+    context_reduction_percent: float | None
+    trend: list[AnalyticsTrendPoint]
+
+
 class TraceEventResponse(BaseModel):
     request_id: int
     timestamp: datetime
