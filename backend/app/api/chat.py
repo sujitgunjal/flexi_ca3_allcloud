@@ -205,6 +205,12 @@ def chat(request: ChatRequest, background_tasks: BackgroundTasks):
             "routing_reason": result.get("routing_reason"),
             "_cache_query": request.message,
         }
+        logger.debug("Chat response eligible for cache persistence")
+    else:
+        logger.debug(
+            "Chat response not cached reason=%s",
+            "cache_unavailable" if result.get("cache_unavailable") else "already_cached",
+        )
 
     # These writes are optional observations. Run them after FastAPI sends the
     # response so a slow database or cache cannot keep the client waiting.

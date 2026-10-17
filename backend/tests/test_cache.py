@@ -1,4 +1,5 @@
 import json
+import math
 import time
 
 import pytest
@@ -88,40 +89,85 @@ def test_exact_cache_hit_skips_semantic_lookup():
     assert result["response"] == "exact answer"
 
 
-def test_equivalent_wording_reuses_semantic_response(monkeypatch):
+def test_equivalent_wording_reuses_semantic_response():
     from app.agents.cache_agent import CacheAgent
-    import app.cache.redis_cache as redis_cache
 
-    monkeypatch.setattr(redis_cache, "SEMANTIC_CACHE_THRESHOLD", 0.8)
     cache = RedisCache(MemoryRedis())
-    cache.set(generate_cache_key("What is cloud computing?"), {
-        "response": "A cached answer", "_cache_query": "What is cloud computing?",
+    cache.set(generate_cache_key("What is HTTP?"), {
+        "response": "A cached answer", "_cache_query": "What is HTTP?",
     })
 
     class Embedder:
         def embed(self, texts):
-            return [[1.0, 0.0] for _ in texts]
+            assert texts == ["Define HTTP", "What is HTTP?"]
+            return [[0.9332545, 0.359216], [1.0, 0.0]]
 
-    result = CacheAgent(cache, embedder=Embedder()).run({"query": "Explain cloud computing"})
+    result = CacheAgent(cache, embedder=Embedder()).run({"query": "Define HTTP"})
     assert result["cache_hit"] is True
     assert result["response"] == "A cached answer"
 
 
-def test_unrelated_query_does_not_reuse_response(monkeypatch):
-    from app.cache.redis_cache import RedisCache
-    import app.cache.redis_cache as redis_cache
+def test_simple_terms_prompt_reuses_http_definition_at_measured_similarity():
+    from app.agents.cache_agent import CacheAgent
+    from app.providers.config import SEMANTIC_CACHE_THRESHOLD
 
-    monkeypatch.setattr(redis_cache, "SEMANTIC_CACHE_THRESHOLD", 0.8)
+    source_query = "What is HTTP?"
+    incoming_query = "Explain HTTP in simple terms"
     cache = RedisCache(MemoryRedis())
-    cache.set(generate_cache_key("What is cloud computing?"), {
-        "response": "cloud", "_cache_query": "What is cloud computing?",
+    key = generate_cache_key(source_query)
+    cache.set(key, {
+        "response": "A cached answer", "_cache_query": source_query,
+    })
+    assert cache.get(key)["_cache_query"] == source_query
+
+    measured_similarity = 0.8677494373576463
+
+    class Embedder:
+        def embed(self, texts):
+            assert texts == [incoming_query, source_query]
+            return [
+                [measured_similarity, math.sqrt(1 - measured_similarity**2)],
+                [1.0, 0.0],
+            ]
+
+    result = CacheAgent(cache, embedder=Embedder()).run({"query": incoming_query})
+
+    assert measured_similarity >= SEMANTIC_CACHE_THRESHOLD
+    assert result["cache_hit"] is True
+    assert result["response"] == "A cached answer"
+
+
+def test_unrelated_query_does_not_reuse_response():
+    from app.cache.redis_cache import RedisCache
+
+    cache = RedisCache(MemoryRedis())
+    cached_query = "Explain SMTP in simple terms"
+    incoming_query = "Explain HTTP in simple terms"
+    cache.set(generate_cache_key(cached_query), {
+        "response": "SMTP", "_cache_query": cached_query,
     })
 
     class Embedder:
         def embed(self, texts):
-            return [[1.0, 0.0], [0.0, 1.0]]
+            assert texts == [incoming_query, cached_query]
+            measured_similarity = 0.704534
+            return [
+                [measured_similarity, math.sqrt(1 - measured_similarity**2)],
+                [1.0, 0.0],
+            ]
 
-    assert cache.find_semantic("How do I bake bread?", Embedder()) is None
+    assert cache.find_semantic(incoming_query, Embedder()) is None
+
+
+def test_default_cache_agent_uses_embedder_default_timeout():
+    from app.agents.cache_agent import CacheAgent
+    from app.context.embeddings import OllamaEmbedder
+
+    default_embedder = OllamaEmbedder()
+    agent_embedder = CacheAgent(RedisCache(MemoryRedis())).embedder
+
+    assert agent_embedder.model == default_embedder.model
+    assert agent_embedder.timeout == default_embedder.timeout
 
 
 def test_detailed_request_does_not_reuse_short_definition():

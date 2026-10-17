@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import logging
 import math
 import re
 from typing import Any
@@ -13,6 +14,12 @@ from app.providers.config import (
     REDIS_DB, REDIS_HOST, REDIS_PORT, REDIS_TTL,
     SEMANTIC_CACHE_MAX_CANDIDATES, SEMANTIC_CACHE_THRESHOLD,
 )
+
+logger = logging.getLogger(__name__)
+
+
+def _query_fingerprint(query: str) -> str:
+    return hashlib.sha256(query.encode("utf-8")).hexdigest()[:12]
 
 
 def generate_cache_key(query: str) -> str:
@@ -39,7 +46,16 @@ class RedisCache:
     def set(self, key: str, value: Any, ttl: int | None = None) -> None:
         # Validate before writing so arbitrary Python objects never reach Redis.
         encoded = json.dumps(value, separators=(",", ":"), ensure_ascii=False)
-        self.client.set(key, encoded, ex=self.ttl if ttl is None else ttl)
+        entry_ttl = self.ttl if ttl is None else ttl
+        self.client.set(key, encoded, ex=entry_ttl)
+        if key.startswith("llm_cache:"):
+            source_query = value.get("_cache_query") if isinstance(value, dict) else None
+            logger.debug(
+                "Response cache write complete key=%s source_query_fingerprint=%s ttl_seconds=%d",
+                key.rsplit(":", 1)[-1][:12],
+                _query_fingerprint(source_query) if isinstance(source_query, str) else "missing",
+                entry_ttl,
+            )
 
     def delete(self, key: str) -> int:
         return self.client.delete(key)
@@ -51,29 +67,74 @@ class RedisCache:
         """Find a safe, similar cached response among recent live cache keys."""
         candidates = []
         scanned = 0
+        filtered = 0
         for key in self.client.scan_iter(match="llm_cache:*", count=100):
             if scanned >= SEMANTIC_CACHE_MAX_CANDIDATES:
                 break
             scanned += 1
             if key == generate_cache_key(query):
+                filtered += 1
+                logger.debug(
+                    "Semantic cache candidate skipped key=%s reason=exact_key",
+                    key.rsplit(":", 1)[-1][:12],
+                )
                 continue
             value = self.get(key)
             source_query = value.get("_cache_query") if isinstance(value, dict) else None
-            if source_query and _compatible_queries(query, source_query):
-                candidates.append((key, source_query, value))
+            if not isinstance(source_query, str) or not source_query:
+                filtered += 1
+                logger.debug(
+                    "Semantic cache candidate skipped key=%s reason=missing_source_query",
+                    key.rsplit(":", 1)[-1][:12],
+                )
+                continue
+            if not _compatible_queries(query, source_query):
+                filtered += 1
+                logger.debug(
+                    "Semantic cache candidate skipped key=%s source_query_fingerprint=%s reason=intent_or_depth_mismatch",
+                    key.rsplit(":", 1)[-1][:12],
+                    _query_fingerprint(source_query),
+                )
+                continue
+            candidates.append((key, source_query, value))
             if len(candidates) >= SEMANTIC_CACHE_MAX_CANDIDATES:
                 break
+        logger.debug(
+            "Semantic cache scan complete examined=%d eligible=%d filtered=%d candidate_limit=%d",
+            scanned, len(candidates), filtered, SEMANTIC_CACHE_MAX_CANDIDATES,
+        )
         if not candidates:
+            logger.debug("Semantic cache lookup miss reason=no_eligible_candidates")
             return None
         vectors = embedder.embed([query] + [item[1] for item in candidates])
         if len(vectors) != len(candidates) + 1:
             raise ValueError("Unexpected semantic cache embedding count")
-        best = max(
-            ((_cosine(vectors[0], vectors[index + 1]), item)
-             for index, item in enumerate(candidates)),
-            key=lambda pair: pair[0],
+        scored = [
+            (_cosine(vectors[0], vectors[index + 1]), item)
+            for index, item in enumerate(candidates)
+        ]
+        for score, (key, source_query, _value) in scored:
+            logger.debug(
+                "Semantic cache candidate score key=%s source_query_fingerprint=%s cosine=%.6f threshold=%.4f",
+                key.rsplit(":", 1)[-1][:12],
+                _query_fingerprint(source_query),
+                score,
+                SEMANTIC_CACHE_THRESHOLD,
+            )
+        best_score, best_candidate = max(scored, key=lambda pair: pair[0])
+        if best_score < SEMANTIC_CACHE_THRESHOLD:
+            logger.debug(
+                "Semantic cache lookup miss reason=below_threshold best_score=%.6f threshold=%.4f",
+                best_score,
+                SEMANTIC_CACHE_THRESHOLD,
+            )
+            return None
+        logger.debug(
+            "Semantic cache lookup hit score=%.6f threshold=%.4f",
+            best_score,
+            SEMANTIC_CACHE_THRESHOLD,
         )
-        return best[1][2] if best[0] >= SEMANTIC_CACHE_THRESHOLD else None
+        return best_candidate[2]
 
 
 def _compatible_queries(query: str, cached_query: str) -> bool:
