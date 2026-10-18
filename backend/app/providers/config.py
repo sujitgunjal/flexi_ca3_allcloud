@@ -15,6 +15,12 @@ OLLAMA_API_BASE = os.getenv(
     "http://localhost:11434",
 )
 
+# Model that writes user-facing replies for the local routing tier.
+LOCAL_RESPONSE_MODEL = os.getenv(
+    "LOCAL_RESPONSE_MODEL",
+    "openai/gpt-oss-20b",
+)
+
 CHEAP_MODEL = os.getenv(
     "CHEAP_MODEL",
     "nvidia/nemotron-3.5-lightning-30b-a3b",
@@ -51,8 +57,14 @@ REDIS_TTL = int(os.getenv("REDIS_TTL", "3600"))
 SEMANTIC_CACHE_THRESHOLD = float(os.getenv("SEMANTIC_CACHE_THRESHOLD", "0.86"))
 SEMANTIC_CACHE_MAX_CANDIDATES = int(os.getenv("SEMANTIC_CACHE_MAX_CANDIDATES", "200"))
 
-# Local embedding model used to rank conversation history.
+# Embedding provider for context ranking and the semantic cache.
+# voyage is the deployed default. ollama remains available.
+EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "voyage").strip().lower() or "voyage"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:latest")
+EMBEDDING_TIMEOUT_SECONDS = float(os.getenv("EMBEDDING_TIMEOUT_SECONDS", "30"))
+VOYAGE_API_KEY = os.getenv("VOYAGE_API_KEY", "")
+VOYAGE_API_BASE = os.getenv("VOYAGE_API_BASE", "https://api.voyageai.com/v1").rstrip("/")
+VOYAGE_EMBEDDING_MODEL = os.getenv("VOYAGE_EMBEDDING_MODEL", "voyage-4-lite")
 CONTEXT_TOKEN_LIMITS = {
     "low": int(os.getenv("CONTEXT_TOKEN_LIMIT_LOW", "80")),
     "medium": int(os.getenv("CONTEXT_TOKEN_LIMIT_MEDIUM", "240")),

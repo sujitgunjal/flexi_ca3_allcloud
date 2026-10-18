@@ -1,6 +1,6 @@
 # Local decision layer
 
-The permanent decision engine is the **local Ollama model** `llama3:8b`, using the candidate classification prompt. It is a Jev-inspired classifier: it returns structured decisions, not an answer to the user. It does not use or require the paid TypeSafe Jev API.
+The decision engine is the Ollama cloud model `gemma4:31b-cloud`, using the candidate classification prompt. It is a Jev-inspired classifier: it returns structured decisions, not an answer to the user. It does not use or require the paid TypeSafe Jev API. Answer generation still uses `OLLAMA_MODEL` (`llama3:8b` locally). The decision model is selected only by `DECISION_OLLAMA_MODEL`.
 
 TypeSafe's Jev model, described in [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), is a proprietary system that emits typed decisions with probabilities. This project copies that *role* only. `OllamaDecisionProvider` is the default. `JevDecisionProvider` is an optional adapter and stays inactive unless `DECISION_PROVIDER=jev` and both `JEV_API_KEY` and `JEV_API_BASE` are set.
 
@@ -30,7 +30,7 @@ query
 | Calibration | `calibration/calibrator.py` | One-vs-rest isotonic regression, separate from the prompt |
 | Trainer | `calibration/trainer.py` | Runs Ollama on the dataset and saves the calibrator |
 | Dataset | `calibration/dataset.json` | 240 hand-labeled queries |
-| Fitted calibrator | `calibration/artifacts/llama3-8b-candidate/calibrator.json` | Loaded on each decision. Fitted on llama3:8b calibration rows |
+| Fitted calibrator | `calibration/artifacts/gemma4-31b-cloud/calibrator.json` | Loaded on each decision. Fitted on gemma4:31b-cloud calibration rows |
 | Raw predictions | `calibration/artifacts/raw_predictions.json` | Saved by the trainer |
 | Routing | `routing/rules.json` and `routing/policy.py` | Thresholds and model choice |
 | Evaluation | `evaluation/runner.py` | Test-split accuracy, macro-F1, confusion matrix, Brier score, reliability diagram, routing accuracy |
@@ -58,7 +58,7 @@ From the `backend` folder:
 ..\.venv\Scripts\python.exe -m app.decision.calibration.trainer
 ```
 
-The trainer calls only the local Ollama model. It writes `calibration/artifacts/raw_predictions.json` after every row, so a stopped run can resume. It fits isotonic regression on the calibration split only and writes the calibrator path in `paths.py`. The live file is the llama3:8b calibrator.
+The live calibrator is the gemma4:31b-cloud file. It was fit with `python -m app.decision.evaluation.finalize_gemma`, which writes only `calibration/artifacts/gemma4-31b-cloud/` and does not replace the dataset or the llama artifact folders. The older trainer still writes `calibration/artifacts/raw_predictions.json` and the path in `paths.py`; do not run it against a different model if those llama files must stay unchanged.
 
 Inference loads that file from disk. Until the file exists, decisions still run, raw and calibrated values match, and `calibration_applied` is `false`.
 
@@ -66,7 +66,7 @@ Raw confidence is the highest raw class probability. Calibrated confidence is th
 
 ## Confidence threshold
 
-`routing/rules.json` sets `confidence_threshold` to `0.45`, the threshold selected for llama3:8b on the validation split. If calibrated complexity confidence is below that value, the route is uncertain and uses `uncertain_fallback` (`cheap` by default).
+`routing/rules.json` sets `confidence_threshold` to `0.5`, the threshold selected for gemma4:31b-cloud on the validation split. If calibrated complexity confidence is below that value, the route is uncertain and uses `uncertain_fallback` (`cheap` by default).
 
 The evaluation report prints two validation-only suggestions. `suggested_confidence_threshold` is the lowest candidate at which validation complexity accuracy is at least 0.75. The routing section also picks the threshold with the best validation routing accuracy. Copy a number into `rules.json` only after reading that sweep. The runner does not edit `rules.json`, and it does not look at the test split while choosing. `DECISION_CONFIDENCE_THRESHOLD` overrides the file.
 

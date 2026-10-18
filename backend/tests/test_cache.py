@@ -1,3 +1,4 @@
+import fnmatch
 import json
 import math
 import time
@@ -27,7 +28,10 @@ class MemoryRedis:
         return key in self.values
 
     def scan_iter(self, match=None, count=None):
-        return iter(key for key in self.values if key.startswith("llm_cache:"))
+        keys = [key for key in self.values if key.startswith("llm_cache:")]
+        if match:
+            keys = [key for key in keys if fnmatch.fnmatch(key, match)]
+        return iter(keys)
 
 
 def test_json_set_get_ttl_delete_exists_and_default_ttl():
@@ -159,15 +163,19 @@ def test_unrelated_query_does_not_reuse_response():
     assert cache.find_semantic(incoming_query, Embedder()) is None
 
 
-def test_default_cache_agent_uses_embedder_default_timeout():
+def test_default_cache_agent_uses_shared_embedder():
     from app.agents.cache_agent import CacheAgent
-    from app.context.embeddings import OllamaEmbedder
+    from app.agents.context_agent import ContextAgent
+    from app.context.embeddings import get_embedder
 
-    default_embedder = OllamaEmbedder()
-    agent_embedder = CacheAgent(RedisCache(MemoryRedis())).embedder
+    shared = get_embedder()
+    cache_embedder = CacheAgent(RedisCache(MemoryRedis())).embedder
+    context_embedder, source = ContextAgent()._embedder()
 
-    assert agent_embedder.model == default_embedder.model
-    assert agent_embedder.timeout == default_embedder.timeout
+    assert type(cache_embedder) is type(shared)
+    assert type(context_embedder) is type(shared)
+    assert cache_embedder.model == shared.model == context_embedder.model
+    assert source == f"{shared.provider}:{shared.model}"
 
 
 def test_detailed_request_does_not_reuse_short_definition():

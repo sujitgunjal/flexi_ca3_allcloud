@@ -4,8 +4,8 @@ from pathlib import Path
 DECISION_ROOT = Path(__file__).resolve().parent
 DATASET_PATH = DECISION_ROOT / "calibration" / "dataset.json"
 ARTIFACT_DIR = DECISION_ROOT / "calibration" / "artifacts"
-# Fitted on llama3:8b calibration rows. The llama3.2:3b map stays at calibrator.json.
-CALIBRATOR_PATH = ARTIFACT_DIR / "llama3-8b-candidate" / "calibrator.json"
+# Fitted on gemma4:31b-cloud calibration rows. Llama maps stay in their own artifact folders.
+CALIBRATOR_PATH = ARTIFACT_DIR / "gemma4-31b-cloud" / "calibrator.json"
 PREDICTIONS_PATH = ARTIFACT_DIR / "raw_predictions.json"
 REPORT_PATH = ARTIFACT_DIR / "evaluation_report.json"
 REPORT_MD_PATH = ARTIFACT_DIR / "evaluation_report.md"

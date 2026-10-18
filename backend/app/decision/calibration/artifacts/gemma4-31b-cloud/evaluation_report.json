@@ -1,0 +1,2237 @@
+{
+  "decision_model": "ollama/gemma4:31b-cloud",
+  "prompt": "candidate",
+  "calibration_rows": 144,
+  "validation_rows": 48,
+  "test_rows": 48,
+  "invalid_ids": [],
+  "validation_selected_threshold": 0.5,
+  "validation_sweep": [
+    {
+      "threshold": 0.4,
+      "count": 48,
+      "routing_accuracy": 0.7917,
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
+      "selected_model_counts": {
+        "local": 13,
+        "cheap": 15,
+        "strong": 20
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            7,
+            1,
+            0
+          ],
+          [
+            4,
+            11,
+            0
+          ],
+          [
+            2,
+            3,
+            20
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q095",
+          "query": "Using the bucket name from my last message, say where the logs are stored.",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.45,
+      "count": 48,
+      "routing_accuracy": 0.7917,
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
+      "selected_model_counts": {
+        "local": 13,
+        "cheap": 15,
+        "strong": 20
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            7,
+            1,
+            0
+          ],
+          [
+            4,
+            11,
+            0
+          ],
+          [
+            2,
+            3,
+            20
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q095",
+          "query": "Using the bucket name from my last message, say where the logs are stored.",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.5,
+      "count": 48,
+      "routing_accuracy": 0.7917,
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
+      "selected_model_counts": {
+        "local": 13,
+        "cheap": 15,
+        "strong": 20
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            7,
+            1,
+            0
+          ],
+          [
+            4,
+            11,
+            0
+          ],
+          [
+            2,
+            3,
+            20
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q095",
+          "query": "Using the bucket name from my last message, say where the logs are stored.",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.55,
+      "count": 48,
+      "routing_accuracy": 0.7917,
+      "uncertain_count": 2,
+      "uncertain_rate": 0.0417,
+      "selected_model_counts": {
+        "local": 13,
+        "cheap": 15,
+        "strong": 20
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            7,
+            1,
+            0
+          ],
+          [
+            4,
+            11,
+            0
+          ],
+          [
+            2,
+            3,
+            20
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q095",
+          "query": "Using the bucket name from my last message, say where the logs are stored.",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.6,
+      "count": 48,
+      "routing_accuracy": 0.7917,
+      "uncertain_count": 4,
+      "uncertain_rate": 0.0833,
+      "selected_model_counts": {
+        "local": 13,
+        "cheap": 15,
+        "strong": 20
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            7,
+            1,
+            0
+          ],
+          [
+            4,
+            11,
+            0
+          ],
+          [
+            2,
+            3,
+            20
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q095",
+          "query": "Using the bucket name from my last message, say where the logs are stored.",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.65,
+      "count": 48,
+      "routing_accuracy": 0.7917,
+      "uncertain_count": 6,
+      "uncertain_rate": 0.125,
+      "selected_model_counts": {
+        "local": 13,
+        "cheap": 15,
+        "strong": 20
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            7,
+            1,
+            0
+          ],
+          [
+            4,
+            11,
+            0
+          ],
+          [
+            2,
+            3,
+            20
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": true,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q095",
+          "query": "Using the bucket name from my last message, say where the logs are stored.",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.7,
+      "count": 48,
+      "routing_accuracy": 0.5,
+      "uncertain_count": 20,
+      "uncertain_rate": 0.4167,
+      "selected_model_counts": {
+        "local": 13,
+        "cheap": 29,
+        "strong": 6
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            7,
+            1,
+            0
+          ],
+          [
+            4,
+            11,
+            0
+          ],
+          [
+            2,
+            17,
+            6
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": true,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q095",
+          "query": "Using the bucket name from my last message, say where the logs are stored.",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.75,
+      "count": 48,
+      "routing_accuracy": 0.5,
+      "uncertain_count": 25,
+      "uncertain_rate": 0.5208,
+      "selected_model_counts": {
+        "local": 11,
+        "cheap": 31,
+        "strong": 6
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            6,
+            2,
+            0
+          ],
+          [
+            3,
+            12,
+            0
+          ],
+          [
+            2,
+            17,
+            6
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q089",
+          "query": "Translate the sentence I just wrote into French.",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": true,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": true,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "threshold": 0.8,
+      "count": 48,
+      "routing_accuracy": 0.5,
+      "uncertain_count": 25,
+      "uncertain_rate": 0.5208,
+      "selected_model_counts": {
+        "local": 11,
+        "cheap": 31,
+        "strong": 6
+      },
+      "gold_model_counts": {
+        "local": 8,
+        "cheap": 15,
+        "strong": 25
+      },
+      "confusion_matrix": {
+        "labels": [
+          "local",
+          "cheap",
+          "strong"
+        ],
+        "matrix": [
+          [
+            6,
+            2,
+            0
+          ],
+          [
+            3,
+            12,
+            0
+          ],
+          [
+            2,
+            17,
+            6
+          ]
+        ]
+      },
+      "mismatches": [
+        {
+          "id": "q085",
+          "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q086",
+          "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q087",
+          "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+          "gold_model": "strong",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q088",
+          "query": "What does the command docker ps show?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q089",
+          "query": "Translate the sentence I just wrote into French.",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": true,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "high"
+          }
+        },
+        {
+          "id": "q090",
+          "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+          "gold_model": "strong",
+          "selected_model": "cheap",
+          "uncertain": true,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "high",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q092",
+          "query": "What is 15 percent of 80?",
+          "gold_model": "cheap",
+          "selected_model": "local",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "medium",
+            "context": "low"
+          }
+        },
+        {
+          "id": "q097",
+          "query": "In the pipeline file above, which step runs first?",
+          "gold_model": "local",
+          "selected_model": "cheap",
+          "uncertain": false,
+          "labels": {
+            "complexity": "simple",
+            "reasoning": "low",
+            "context": "medium"
+          }
+        }
+      ]
+    }
+  ],
+  "test_raw": {
+    "complexity": {
+      "accuracy": 0.6667,
+      "macro_precision": 0.7,
+      "macro_recall": 0.6667,
+      "macro_f1": 0.6584,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            15,
+            1,
+            0
+          ],
+          [
+            10,
+            6,
+            0
+          ],
+          [
+            0,
+            5,
+            11
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.6,
+          "recall": 0.9375,
+          "f1": 0.7317,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.5,
+          "recall": 0.375,
+          "f1": 0.4286,
+          "support": 16
+        },
+        {
+          "label": "complex",
+          "precision": 1.0,
+          "recall": 0.6875,
+          "f1": 0.8148,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.5176
+    },
+    "reasoning": {
+      "accuracy": 0.7708,
+      "macro_precision": 0.7306,
+      "macro_recall": 0.7295,
+      "macro_f1": 0.7271,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            17,
+            1,
+            0
+          ],
+          [
+            4,
+            5,
+            2
+          ],
+          [
+            0,
+            4,
+            15
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.8095,
+          "recall": 0.9444,
+          "f1": 0.8718,
+          "support": 18
+        },
+        {
+          "label": "medium",
+          "precision": 0.5,
+          "recall": 0.4545,
+          "f1": 0.4762,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 0.8824,
+          "recall": 0.7895,
+          "f1": 0.8334,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.349
+    },
+    "context": {
+      "accuracy": 0.7917,
+      "macro_precision": 0.5385,
+      "macro_recall": 0.6667,
+      "macro_f1": 0.5873,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            22,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            16
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.6154,
+          "recall": 1.0,
+          "f1": 0.7619,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.2823
+    }
+  },
+  "test_calibrated": {
+    "complexity": {
+      "accuracy": 0.7292,
+      "macro_precision": 0.763,
+      "macro_recall": 0.7292,
+      "macro_f1": 0.6846,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            15,
+            1,
+            0
+          ],
+          [
+            10,
+            4,
+            2
+          ],
+          [
+            0,
+            0,
+            16
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.6,
+          "recall": 0.9375,
+          "f1": 0.7317,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.8,
+          "recall": 0.25,
+          "f1": 0.381,
+          "support": 16
+        },
+        {
+          "label": "complex",
+          "precision": 0.8889,
+          "recall": 1.0,
+          "f1": 0.9412,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.3884
+    },
+    "reasoning": {
+      "accuracy": 0.7292,
+      "macro_precision": 0.7423,
+      "macro_recall": 0.718,
+      "macro_f1": 0.7139,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            15,
+            3,
+            0
+          ],
+          [
+            4,
+            7,
+            0
+          ],
+          [
+            0,
+            6,
+            13
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.7895,
+          "recall": 0.8333,
+          "f1": 0.8108,
+          "support": 18
+        },
+        {
+          "label": "medium",
+          "precision": 0.4375,
+          "recall": 0.6364,
+          "f1": 0.5185,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 1.0,
+          "recall": 0.6842,
+          "f1": 0.8125,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.3196
+    },
+    "context": {
+      "accuracy": 0.7917,
+      "macro_precision": 0.5385,
+      "macro_recall": 0.6667,
+      "macro_f1": 0.5873,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            22,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            16
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.6154,
+          "recall": 1.0,
+          "f1": 0.7619,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.2934
+    }
+  },
+  "llama3_8b_candidate_test_raw": {
+    "complexity": {
+      "accuracy": 0.5625,
+      "macro_precision": 0.5761,
+      "macro_recall": 0.5625,
+      "macro_f1": 0.5374,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            15,
+            1,
+            0
+          ],
+          [
+            12,
+            3,
+            1
+          ],
+          [
+            0,
+            7,
+            9
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.5556,
+          "recall": 0.9375,
+          "f1": 0.6977,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.2727,
+          "recall": 0.1875,
+          "f1": 0.2222,
+          "support": 16
+        },
+        {
+          "label": "complex",
+          "precision": 0.9,
+          "recall": 0.5625,
+          "f1": 0.6923,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.7435
+    },
+    "reasoning": {
+      "accuracy": 0.6042,
+      "macro_precision": 0.5828,
+      "macro_recall": 0.5518,
+      "macro_f1": 0.5342,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            18,
+            0,
+            0
+          ],
+          [
+            8,
+            2,
+            1
+          ],
+          [
+            1,
+            9,
+            9
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 18
+        },
+        {
+          "label": "medium",
+          "precision": 0.1818,
+          "recall": 0.1818,
+          "f1": 0.1818,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 0.9,
+          "recall": 0.4737,
+          "f1": 0.6207,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.6337
+    },
+    "context": {
+      "accuracy": 0.5417,
+      "macro_precision": 0.3975,
+      "macro_recall": 0.4223,
+      "macro_f1": 0.3762,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            21,
+            0,
+            1
+          ],
+          [
+            8,
+            0,
+            2
+          ],
+          [
+            8,
+            3,
+            5
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.5676,
+          "recall": 0.9545,
+          "f1": 0.7119,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.625,
+          "recall": 0.3125,
+          "f1": 0.4167,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.8264
+    }
+  },
+  "llama3_8b_candidate_test_calibrated": {
+    "complexity": {
+      "accuracy": 0.7083,
+      "macro_precision": 0.7185,
+      "macro_recall": 0.7083,
+      "macro_f1": 0.7122,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            11,
+            5,
+            0
+          ],
+          [
+            4,
+            10,
+            2
+          ],
+          [
+            0,
+            3,
+            13
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.7333,
+          "recall": 0.6875,
+          "f1": 0.7097,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.5556,
+          "recall": 0.625,
+          "f1": 0.5883,
+          "support": 16
+        },
+        {
+          "label": "complex",
+          "precision": 0.8667,
+          "recall": 0.8125,
+          "f1": 0.8387,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.4487
+    },
+    "reasoning": {
+      "accuracy": 0.6042,
+      "macro_precision": 0.5828,
+      "macro_recall": 0.5518,
+      "macro_f1": 0.5342,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            18,
+            0,
+            0
+          ],
+          [
+            8,
+            2,
+            1
+          ],
+          [
+            1,
+            9,
+            9
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 18
+        },
+        {
+          "label": "medium",
+          "precision": 0.1818,
+          "recall": 0.1818,
+          "f1": 0.1818,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 0.9,
+          "recall": 0.4737,
+          "f1": 0.6207,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.5129
+    },
+    "context": {
+      "accuracy": 0.5417,
+      "macro_precision": 0.3833,
+      "macro_recall": 0.4223,
+      "macro_f1": 0.3647,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            21,
+            0,
+            1
+          ],
+          [
+            8,
+            0,
+            2
+          ],
+          [
+            11,
+            0,
+            5
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.525,
+          "recall": 0.9545,
+          "f1": 0.6774,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.625,
+          "recall": 0.3125,
+          "f1": 0.4167,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.6456
+    }
+  },
+  "baseline_test_raw": {
+    "complexity": {
+      "accuracy": 0.4255,
+      "macro_precision": 0.4001,
+      "macro_recall": 0.4208,
+      "macro_f1": 0.3923,
+      "confusion_matrix": {
+        "labels": [
+          "simple",
+          "medium",
+          "complex"
+        ],
+        "matrix": [
+          [
+            13,
+            2,
+            1
+          ],
+          [
+            8,
+            3,
+            4
+          ],
+          [
+            3,
+            9,
+            4
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "simple",
+          "precision": 0.5417,
+          "recall": 0.8125,
+          "f1": 0.65,
+          "support": 16
+        },
+        {
+          "label": "medium",
+          "precision": 0.2143,
+          "recall": 0.2,
+          "f1": 0.2069,
+          "support": 15
+        },
+        {
+          "label": "complex",
+          "precision": 0.4444,
+          "recall": 0.25,
+          "f1": 0.32,
+          "support": 16
+        }
+      ],
+      "brier_score": 0.7668
+    },
+    "reasoning": {
+      "accuracy": 0.4681,
+      "macro_precision": 0.5149,
+      "macro_recall": 0.4238,
+      "macro_f1": 0.4198,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            6,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            8
+          ],
+          [
+            0,
+            5,
+            14
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.8571,
+          "recall": 0.3529,
+          "f1": 0.5,
+          "support": 17
+        },
+        {
+          "label": "medium",
+          "precision": 0.25,
+          "recall": 0.1818,
+          "f1": 0.2105,
+          "support": 11
+        },
+        {
+          "label": "high",
+          "precision": 0.4375,
+          "recall": 0.7368,
+          "f1": 0.549,
+          "support": 19
+        }
+      ],
+      "brier_score": 0.7793
+    },
+    "context": {
+      "accuracy": 0.3404,
+      "macro_precision": 0.4179,
+      "macro_recall": 0.3758,
+      "macro_f1": 0.3443,
+      "confusion_matrix": {
+        "labels": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "matrix": [
+          [
+            5,
+            12,
+            5
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            8,
+            6
+          ]
+        ]
+      },
+      "per_class": [
+        {
+          "label": "low",
+          "precision": 0.625,
+          "recall": 0.2273,
+          "f1": 0.3334,
+          "support": 22
+        },
+        {
+          "label": "medium",
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.2857,
+          "support": 10
+        },
+        {
+          "label": "high",
+          "precision": 0.4286,
+          "recall": 0.4,
+          "f1": 0.4138,
+          "support": 15
+        }
+      ],
+      "brier_score": 0.9587
+    }
+  },
+  "routing_at_selected_threshold": {
+    "threshold": 0.5,
+    "count": 48,
+    "routing_accuracy": 0.75,
+    "uncertain_count": 0,
+    "uncertain_rate": 0.0,
+    "selected_model_counts": {
+      "local": 19,
+      "cheap": 11,
+      "strong": 18
+    },
+    "gold_model_counts": {
+      "local": 10,
+      "cheap": 17,
+      "strong": 21
+    },
+    "confusion_matrix": {
+      "labels": [
+        "local",
+        "cheap",
+        "strong"
+      ],
+      "matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          9,
+          8,
+          0
+        ],
+        [
+          0,
+          3,
+          18
+        ]
+      ]
+    },
+    "mismatches": [
+      {
+        "id": "q029",
+        "query": "How does a TCP three-way handshake work?",
+        "gold_model": "cheap",
+        "selected_model": "local",
+        "uncertain": false,
+        "labels": {
+          "complexity": "medium",
+          "reasoning": "medium",
+          "context": "low"
+        }
+      },
+      {
+        "id": "q100",
+        "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
+        "gold_model": "strong",
+        "selected_model": "cheap",
+        "uncertain": false,
+        "labels": {
+          "complexity": "simple",
+          "reasoning": "high",
+          "context": "high"
+        }
+      },
+      {
+        "id": "q101",
+        "query": "Did the model you just described use a transformer or a decision tree?",
+        "gold_model": "cheap",
+        "selected_model": "local",
+        "uncertain": false,
+        "labels": {
+          "complexity": "simple",
+          "reasoning": "medium",
+          "context": "high"
+        }
+      },
+      {
+        "id": "q106",
+        "query": "What does stateless mean for an API server, in one sentence?",
+        "gold_model": "cheap",
+        "selected_model": "local",
+        "uncertain": false,
+        "labels": {
+          "complexity": "simple",
+          "reasoning": "medium",
+          "context": "low"
+        }
+      },
+      {
+        "id": "q108",
+        "query": "Precision is true positives divided by predicted positives. We predicted 10 positives and 8 were correct. What is the precision?",
+        "gold_model": "strong",
+        "selected_model": "cheap",
+        "uncertain": false,
+        "labels": {
+          "complexity": "simple",
+          "reasoning": "high",
+          "context": "low"
+        }
+      },
+      {
+        "id": "q109",
+        "query": "Name one difference between a region and an availability zone.",
+        "gold_model": "cheap",
+        "selected_model": "local",
+        "uncertain": false,
+        "labels": {
+          "complexity": "simple",
+          "reasoning": "medium",
+          "context": "low"
+        }
+      },
+      {
+        "id": "q163",
+        "query": "What causes ocean tides?",
+        "gold_model": "cheap",
+        "selected_model": "local",
+        "uncertain": false,
+        "labels": {
+          "complexity": "medium",
+          "reasoning": "low",
+          "context": "low"
+        }
+      },
+      {
+        "id": "q166",
+        "query": "Using the system of equations from my last message, solve for y and show the substitution.",
+        "gold_model": "strong",
+        "selected_model": "cheap",
+        "uncertain": false,
+        "labels": {
+          "complexity": "medium",
+          "reasoning": "high",
+          "context": "high"
+        }
+      }
+    ]
+  },
+  "latency": {
+    "count": 240,
+    "mean_ms": 3264.25,
+    "median_ms": 2955.11,
+    "p95_ms": 4487.97
+  },
+  "tokens": {
+    "rows_with_prompt_tokens": 240,
+    "rows_with_output_tokens": 240,
+    "prompt_tokens": 251277,
+    "output_tokens": 25440
+  },
+  "estimated_cost": null,
+  "cost_note": "Ollama does not return a dollar cost for gemma4:31b-cloud. Token counts are prompt_eval_count and eval_count when the provider sent them.",
+  "note": "gemma4:31b-cloud was scored with the existing candidate prompt and labeled dataset. The calibrator was fit on this model's calibration rows only. The threshold was selected on this model's validation rows only. The test split was scored once. Llama predictions and calibrators were not reused.",
+  "conclusion": "On the untouched test split, calibrated gemma4:31b-cloud accuracy is 0.7292 against calibrated llama3:8b 0.7083. Macro-F1 0.7122 -> 0.6846. Complex recall 0.8125 -> 1.0."
+}

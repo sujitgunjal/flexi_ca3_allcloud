@@ -4,7 +4,7 @@ from time import perf_counter
 from redis.exceptions import RedisError
 
 from app.cache.redis_cache import cache, generate_cache_key
-from app.context.embeddings import OllamaEmbedder
+from app.context.embeddings import get_embedder
 from app.orchestration.state import RequestState
 from app.services.metrics_service import record_cache_event
 
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class CacheAgent:
     def __init__(self, cache_service=cache, embedder=None):
         self.cache = cache_service
-        self.embedder = embedder or OllamaEmbedder()
+        self.embedder = embedder or get_embedder()
 
     def run(self, state: RequestState) -> RequestState:
         key = generate_cache_key(state.get("query", ""))

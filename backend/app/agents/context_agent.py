@@ -1,6 +1,6 @@
 import logging
 
-from app.context.embeddings import HashEmbedder, OllamaEmbedder
+from app.context.embeddings import HashEmbedder, get_embedder
 from app.context.selector import (
     context_budget,
     render_context,
@@ -28,14 +28,17 @@ class ContextAgent:
         embedder, embedding_source = self._embedder()
         selected = []
         if history:
-            texts = [query] + [str(message.get("content", "")) for message in history]
+            documents = [str(message.get("content", "")) for message in history]
             try:
-                embeddings = embedder.embed(texts)
+                embeddings = embedder.embed([query], input_type="query") + embedder.embed(
+                    documents,
+                    input_type="document",
+                )
             except Exception:
-                logger.exception("Ollama embeddings failed; using local hash similarity")
+                logger.exception("Embeddings failed; using local hash similarity")
                 embedder = HashEmbedder()
                 embedding_source = "local_hash"
-                embeddings = embedder.embed(texts)
+                embeddings = embedder.embed([query] + documents)
             selected = select_relevant_messages(
                 query,
                 history,
@@ -78,8 +81,8 @@ class ContextAgent:
     def _embedder(self):
         if self.embedder is not None:
             return self.embedder, "injected"
-        embedder = OllamaEmbedder()
-        return embedder, f"ollama:{embedder.model}"
+        embedder = get_embedder()
+        return embedder, f"{embedder.provider}:{embedder.model}"
 
 
 def _record_metrics(state: RequestState) -> None:

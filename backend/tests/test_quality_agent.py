@@ -222,6 +222,15 @@ def test_complexity_model_ignores_quality_ollama_model(monkeypatch):
     assert OllamaDecisionProvider().model_name == "llama3:8b"
 
 
+def test_decision_model_env_does_not_change_generation_or_quality_model(monkeypatch):
+    monkeypatch.setenv("DECISION_OLLAMA_MODEL", "gemma4:31b-cloud")
+    monkeypatch.setenv("QUALITY_OLLAMA_MODEL", "gemma4:31b-cloud")
+
+    assert OllamaDecisionProvider().model_name == "gemma4:31b-cloud"
+    assert OllamaQualityEvaluator().model_name == "gemma4:31b-cloud"
+    assert OLLAMA_MODEL == "llama3:8b"
+
+
 def test_empty_response_asks_for_one_escalation():
     state = _run(_decision("YES", "YES", "NO"), response="   ")
 

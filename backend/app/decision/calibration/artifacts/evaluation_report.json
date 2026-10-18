@@ -1,13 +1,10 @@
 {
-  "decision_model": "ollama/llama3.2:3b",
+  "decision_model": "ollama/llama3:8b",
   "split": "test",
-  "count": 47,
-  "invalid_outputs": 2,
-  "invalid_ids": [
-    "q129",
-    "q174"
-  ],
-  "calibration_rows": 143,
+  "count": 9,
+  "invalid_outputs": 0,
+  "invalid_ids": [],
+  "calibration_rows": 27,
   "calibration_applied": true,
   "dataset": {
     "rows": 240,
@@ -70,10 +67,10 @@
   "tasks": {
     "complexity": {
       "raw": {
-        "accuracy": 0.4255,
-        "macro_precision": 0.4001,
-        "macro_recall": 0.4208,
-        "macro_f1": 0.3923,
+        "accuracy": 0.6667,
+        "macro_precision": 0.5,
+        "macro_recall": 0.6667,
+        "macro_f1": 0.5556,
         "confusion_matrix": {
           "labels": [
             "simple",
@@ -82,46 +79,46 @@
           ],
           "matrix": [
             [
-              13,
-              2,
-              1
-            ],
-            [
-              8,
               3,
-              4
+              0,
+              0
             ],
             [
               3,
-              9,
-              4
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3
             ]
           ]
         },
         "per_class": [
           {
             "label": "simple",
-            "precision": 0.5417,
-            "recall": 0.8125,
-            "f1": 0.65,
-            "support": 16
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667,
+            "support": 3
           },
           {
             "label": "medium",
-            "precision": 0.2143,
-            "recall": 0.2,
-            "f1": 0.2069,
-            "support": 15
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
           },
           {
             "label": "complex",
-            "precision": 0.4444,
-            "recall": 0.25,
-            "f1": 0.32,
-            "support": 16
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
           }
         ],
-        "brier_score": 0.7668,
+        "brier_score": 0.5178,
         "reliability": [
           {
             "lower": 0.0,
@@ -140,31 +137,31 @@
           {
             "lower": 0.4,
             "upper": 0.6,
-            "count": 9,
-            "mean_confidence": 0.5778,
-            "accuracy": 0.2222
+            "count": 2,
+            "mean_confidence": 0.6,
+            "accuracy": 1.0
           },
           {
             "lower": 0.6,
             "upper": 0.8,
-            "count": 2,
-            "mean_confidence": 0.7,
-            "accuracy": 0.5
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null
           },
           {
             "lower": 0.8,
             "upper": 1,
-            "count": 36,
-            "mean_confidence": 0.8472,
-            "accuracy": 0.4722
+            "count": 7,
+            "mean_confidence": 0.8429,
+            "accuracy": 0.5714
           }
         ]
       },
       "calibrated": {
-        "accuracy": 0.5957,
-        "macro_precision": 0.6784,
-        "macro_recall": 0.5944,
-        "macro_f1": 0.5926,
+        "accuracy": 0.6667,
+        "macro_precision": 0.5,
+        "macro_recall": 0.6667,
+        "macro_f1": 0.5556,
         "confusion_matrix": {
           "labels": [
             "simple",
@@ -173,46 +170,46 @@
           ],
           "matrix": [
             [
-              7,
-              7,
-              2
-            ],
-            [
               0,
-              8,
-              7
+              3,
+              0
             ],
             [
               0,
               3,
-              13
+              0
+            ],
+            [
+              0,
+              0,
+              3
             ]
           ]
         },
         "per_class": [
           {
             "label": "simple",
-            "precision": 1.0,
-            "recall": 0.4375,
-            "f1": 0.6087,
-            "support": 16
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
           },
           {
             "label": "medium",
-            "precision": 0.4444,
-            "recall": 0.5333,
-            "f1": 0.4848,
-            "support": 15
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667,
+            "support": 3
           },
           {
             "label": "complex",
-            "precision": 0.5909,
-            "recall": 0.8125,
-            "f1": 0.6842,
-            "support": 16
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
           }
         ],
-        "brier_score": 0.5592,
+        "brier_score": 0.4147,
         "reliability": [
           {
             "lower": 0.0,
@@ -231,33 +228,33 @@
           {
             "lower": 0.4,
             "upper": 0.6,
-            "count": 33,
-            "mean_confidence": 0.5299,
-            "accuracy": 0.5758
+            "count": 8,
+            "mean_confidence": 0.5799,
+            "accuracy": 0.625
           },
           {
             "lower": 0.6,
             "upper": 0.8,
-            "count": 9,
-            "mean_confidence": 0.7772,
-            "accuracy": 0.7778
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null
           },
           {
             "lower": 0.8,
             "upper": 1,
-            "count": 5,
-            "mean_confidence": 0.8599,
-            "accuracy": 0.4
+            "count": 1,
+            "mean_confidence": 0.9375,
+            "accuracy": 1.0
           }
         ]
       }
     },
     "reasoning": {
       "raw": {
-        "accuracy": 0.4681,
-        "macro_precision": 0.5149,
-        "macro_recall": 0.4238,
-        "macro_f1": 0.4198,
+        "accuracy": 0.5556,
+        "macro_precision": 0.4762,
+        "macro_recall": 0.5556,
+        "macro_f1": 0.4667,
         "confusion_matrix": {
           "labels": [
             "low",
@@ -266,46 +263,46 @@
           ],
           "matrix": [
             [
-              6,
-              1,
-              10
-            ],
-            [
-              1,
               2,
-              8
+              0,
+              1
             ],
             [
               0,
-              5,
-              14
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              3
             ]
           ]
         },
         "per_class": [
           {
             "label": "low",
-            "precision": 0.8571,
-            "recall": 0.3529,
-            "f1": 0.5,
-            "support": 17
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8,
+            "support": 3
           },
           {
             "label": "medium",
-            "precision": 0.25,
-            "recall": 0.1818,
-            "f1": 0.2105,
-            "support": 11
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
           },
           {
             "label": "high",
-            "precision": 0.4375,
-            "recall": 0.7368,
-            "f1": 0.549,
-            "support": 19
+            "precision": 0.4286,
+            "recall": 1.0,
+            "f1": 0.6,
+            "support": 3
           }
         ],
-        "brier_score": 0.7793,
+        "brier_score": 0.4872,
         "reliability": [
           {
             "lower": 0.0,
@@ -324,9 +321,9 @@
           {
             "lower": 0.4,
             "upper": 0.6,
-            "count": 26,
+            "count": 3,
             "mean_confidence": 0.6,
-            "accuracy": 0.3846
+            "accuracy": 0.0
           },
           {
             "lower": 0.6,
@@ -338,17 +335,17 @@
           {
             "lower": 0.8,
             "upper": 1,
-            "count": 21,
-            "mean_confidence": 0.9071,
-            "accuracy": 0.5714
+            "count": 6,
+            "mean_confidence": 0.8917,
+            "accuracy": 0.8333
           }
         ]
       },
       "calibrated": {
-        "accuracy": 0.4043,
-        "macro_precision": 0.5292,
-        "macro_recall": 0.4478,
-        "macro_f1": 0.4111,
+        "accuracy": 0.8889,
+        "macro_precision": 0.9167,
+        "macro_recall": 0.8889,
+        "macro_f1": 0.8857,
         "confusion_matrix": {
           "labels": [
             "low",
@@ -357,46 +354,46 @@
           ],
           "matrix": [
             [
-              6,
-              7,
-              4
-            ],
-            [
-              1,
-              8,
-              2
+              2,
+              0,
+              1
             ],
             [
               0,
-              14,
-              5
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              3
             ]
           ]
         },
         "per_class": [
           {
             "label": "low",
-            "precision": 0.8571,
-            "recall": 0.3529,
-            "f1": 0.5,
-            "support": 17
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8,
+            "support": 3
           },
           {
             "label": "medium",
-            "precision": 0.2759,
-            "recall": 0.7273,
-            "f1": 0.4,
-            "support": 11
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
           },
           {
             "label": "high",
-            "precision": 0.4545,
-            "recall": 0.2632,
-            "f1": 0.3334,
-            "support": 19
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571,
+            "support": 3
           }
         ],
-        "brier_score": 0.6635,
+        "brier_score": 0.4955,
         "reliability": [
           {
             "lower": 0.0,
@@ -415,33 +412,33 @@
           {
             "lower": 0.4,
             "upper": 0.6,
-            "count": 32,
-            "mean_confidence": 0.4789,
-            "accuracy": 0.3438
+            "count": 5,
+            "mean_confidence": 0.518,
+            "accuracy": 1.0
           },
           {
             "lower": 0.6,
             "upper": 0.8,
-            "count": 15,
-            "mean_confidence": 0.6701,
-            "accuracy": 0.5333
+            "count": 2,
+            "mean_confidence": 0.6255,
+            "accuracy": 1.0
           },
           {
             "lower": 0.8,
             "upper": 1,
-            "count": 0,
-            "mean_confidence": null,
-            "accuracy": null
+            "count": 2,
+            "mean_confidence": 0.8191,
+            "accuracy": 0.5
           }
         ]
       }
     },
     "context": {
       "raw": {
-        "accuracy": 0.3404,
-        "macro_precision": 0.4179,
-        "macro_recall": 0.3758,
-        "macro_f1": 0.3443,
+        "accuracy": 0.5556,
+        "macro_precision": 0.6667,
+        "macro_recall": 0.5555,
+        "macro_f1": 0.5222,
         "confusion_matrix": {
           "labels": [
             "low",
@@ -450,46 +447,46 @@
           ],
           "matrix": [
             [
-              5,
-              12,
-              5
-            ],
-            [
-              2,
-              5,
-              3
-            ],
-            [
               1,
-              8,
-              6
+              1,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              2,
+              1
             ]
           ]
         },
         "per_class": [
           {
             "label": "low",
-            "precision": 0.625,
-            "recall": 0.2273,
-            "f1": 0.3334,
-            "support": 22
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "support": 3
           },
           {
             "label": "medium",
-            "precision": 0.2,
-            "recall": 0.5,
-            "f1": 0.2857,
-            "support": 10
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667,
+            "support": 3
           },
           {
             "label": "high",
-            "precision": 0.4286,
-            "recall": 0.4,
-            "f1": 0.4138,
-            "support": 15
+            "precision": 0.5,
+            "recall": 0.3333,
+            "f1": 0.4,
+            "support": 3
           }
         ],
-        "brier_score": 0.9587,
+        "brier_score": 0.6933,
         "reliability": [
           {
             "lower": 0.0,
@@ -508,9 +505,9 @@
           {
             "lower": 0.4,
             "upper": 0.6,
-            "count": 24,
+            "count": 5,
             "mean_confidence": 0.6,
-            "accuracy": 0.2083
+            "accuracy": 0.6
           },
           {
             "lower": 0.6,
@@ -522,17 +519,17 @@
           {
             "lower": 0.8,
             "upper": 1,
-            "count": 23,
-            "mean_confidence": 0.9174,
-            "accuracy": 0.4783
+            "count": 4,
+            "mean_confidence": 0.95,
+            "accuracy": 0.5
           }
         ]
       },
       "calibrated": {
-        "accuracy": 0.4681,
-        "macro_precision": 0.156,
-        "macro_recall": 0.3333,
-        "macro_f1": 0.2126,
+        "accuracy": 0.5556,
+        "macro_precision": 0.4762,
+        "macro_recall": 0.5556,
+        "macro_f1": 0.4667,
         "confusion_matrix": {
           "labels": [
             "low",
@@ -541,46 +538,46 @@
           ],
           "matrix": [
             [
-              22,
+              2,
               0,
-              0
+              1
             ],
             [
-              10,
               0,
-              0
+              0,
+              3
             ],
             [
-              15,
               0,
-              0
+              0,
+              3
             ]
           ]
         },
         "per_class": [
           {
             "label": "low",
-            "precision": 0.4681,
-            "recall": 1.0,
-            "f1": 0.6377,
-            "support": 22
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8,
+            "support": 3
           },
           {
             "label": "medium",
             "precision": 0.0,
             "recall": 0.0,
             "f1": 0.0,
-            "support": 10
+            "support": 3
           },
           {
             "label": "high",
-            "precision": 0.0,
-            "recall": 0.0,
-            "f1": 0.0,
-            "support": 15
+            "precision": 0.4286,
+            "recall": 1.0,
+            "f1": 0.6,
+            "support": 3
           }
         ],
-        "brier_score": 0.765,
+        "brier_score": 0.6953,
         "reliability": [
           {
             "lower": 0.0,
@@ -599,47 +596,47 @@
           {
             "lower": 0.4,
             "upper": 0.6,
-            "count": 0,
-            "mean_confidence": null,
-            "accuracy": null
+            "count": 6,
+            "mean_confidence": 0.483,
+            "accuracy": 0.5
           },
           {
             "lower": 0.6,
             "upper": 0.8,
-            "count": 47,
-            "mean_confidence": 0.7626,
-            "accuracy": 0.4681
+            "count": 2,
+            "mean_confidence": 0.6466,
+            "accuracy": 0.5
           },
           {
             "lower": 0.8,
             "upper": 1,
-            "count": 0,
-            "mean_confidence": null,
-            "accuracy": null
+            "count": 1,
+            "mean_confidence": 0.8534,
+            "accuracy": 1.0
           }
         ]
       }
     }
   },
-  "suggested_confidence_threshold": 0.75,
+  "suggested_confidence_threshold": 0.55,
   "routing": {
     "validation_selected_threshold": 0.5,
     "validation_sweep": [
       {
         "threshold": 0.4,
-        "count": 48,
-        "routing_accuracy": 0.5208,
+        "count": 9,
+        "routing_accuracy": 0.5556,
         "uncertain_count": 0,
         "uncertain_rate": 0.0,
         "selected_model_counts": {
-          "local": 3,
-          "cheap": 25,
-          "strong": 20
+          "local": 0,
+          "cheap": 7,
+          "strong": 2
         },
         "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
         },
         "confusion_matrix": {
           "labels": [
@@ -649,19 +646,19 @@
           ],
           "matrix": [
             [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              9,
-              4
+              0,
+              3,
+              0
             ],
             [
               0,
-              10,
-              15
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              2
             ]
           ]
         },
@@ -691,6 +688,18 @@
             }
           },
           {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": false,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
             "id": "q040",
             "query": "Explain how to keep a shared cache correct across threads and processes.",
             "gold_model": "strong",
@@ -699,86 +708,26 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q088",
-            "query": "What does the command docker ps show?",
-            "gold_model": "cheap",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "medium",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q089",
-            "query": "Translate the sentence I just wrote into French.",
-            "gold_model": "local",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
               "context": "high"
-            }
-          },
-          {
-            "id": "q090",
-            "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
             }
           }
         ]
       },
       {
         "threshold": 0.45,
-        "count": 48,
-        "routing_accuracy": 0.5208,
+        "count": 9,
+        "routing_accuracy": 0.5556,
         "uncertain_count": 0,
         "uncertain_rate": 0.0,
         "selected_model_counts": {
-          "local": 3,
-          "cheap": 25,
-          "strong": 20
+          "local": 0,
+          "cheap": 7,
+          "strong": 2
         },
         "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
         },
         "confusion_matrix": {
           "labels": [
@@ -788,19 +737,19 @@
           ],
           "matrix": [
             [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              9,
-              4
+              0,
+              3,
+              0
             ],
             [
               0,
-              10,
-              15
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              2
             ]
           ]
         },
@@ -830,6 +779,18 @@
             }
           },
           {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": false,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
             "id": "q040",
             "query": "Explain how to keep a shared cache correct across threads and processes.",
             "gold_model": "strong",
@@ -838,86 +799,26 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q088",
-            "query": "What does the command docker ps show?",
-            "gold_model": "cheap",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "medium",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q089",
-            "query": "Translate the sentence I just wrote into French.",
-            "gold_model": "local",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
               "context": "high"
-            }
-          },
-          {
-            "id": "q090",
-            "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
             }
           }
         ]
       },
       {
         "threshold": 0.5,
-        "count": 48,
-        "routing_accuracy": 0.5208,
+        "count": 9,
+        "routing_accuracy": 0.5556,
         "uncertain_count": 0,
         "uncertain_rate": 0.0,
         "selected_model_counts": {
-          "local": 3,
-          "cheap": 25,
-          "strong": 20
+          "local": 0,
+          "cheap": 7,
+          "strong": 2
         },
         "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
         },
         "confusion_matrix": {
           "labels": [
@@ -927,19 +828,19 @@
           ],
           "matrix": [
             [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              9,
-              4
+              0,
+              3,
+              0
             ],
             [
               0,
-              10,
-              15
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              2
             ]
           ]
         },
@@ -969,6 +870,18 @@
             }
           },
           {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": false,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
             "id": "q040",
             "query": "Explain how to keep a shared cache correct across threads and processes.",
             "gold_model": "strong",
@@ -977,86 +890,26 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q088",
-            "query": "What does the command docker ps show?",
-            "gold_model": "cheap",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "medium",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q089",
-            "query": "Translate the sentence I just wrote into French.",
-            "gold_model": "local",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
               "context": "high"
-            }
-          },
-          {
-            "id": "q090",
-            "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
             }
           }
         ]
       },
       {
         "threshold": 0.55,
-        "count": 48,
-        "routing_accuracy": 0.3542,
-        "uncertain_count": 29,
-        "uncertain_rate": 0.6042,
+        "count": 9,
+        "routing_accuracy": 0.4444,
+        "uncertain_count": 1,
+        "uncertain_rate": 0.1111,
         "selected_model_counts": {
-          "local": 3,
-          "cheap": 33,
-          "strong": 12
+          "local": 0,
+          "cheap": 8,
+          "strong": 1
         },
         "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
         },
         "confusion_matrix": {
           "labels": [
@@ -1066,19 +919,19 @@
           ],
           "matrix": [
             [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              9,
-              4
+              0,
+              3,
+              0
             ],
             [
               0,
-              18,
-              7
+              3,
+              0
+            ],
+            [
+              0,
+              2,
+              1
             ]
           ]
         },
@@ -1088,7 +941,7 @@
             "query": "What does the len() function do in Python?",
             "gold_model": "local",
             "selected_model": "cheap",
-            "uncertain": true,
+            "uncertain": false,
             "labels": {
               "complexity": "simple",
               "reasoning": "low",
@@ -1100,7 +953,19 @@
             "query": "What is a square root?",
             "gold_model": "local",
             "selected_model": "cheap",
-            "uncertain": true,
+            "uncertain": false,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": false,
             "labels": {
               "complexity": "simple",
               "reasoning": "low",
@@ -1112,11 +977,11 @@
             "query": "Explain how to keep a shared cache correct across threads and processes.",
             "gold_model": "strong",
             "selected_model": "cheap",
-            "uncertain": true,
+            "uncertain": false,
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
+              "context": "high"
             }
           },
           {
@@ -1128,54 +993,6 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q088",
-            "query": "What does the command docker ps show?",
-            "gold_model": "cheap",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "medium",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q089",
-            "query": "Translate the sentence I just wrote into French.",
-            "gold_model": "local",
-            "selected_model": "strong",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
               "context": "high"
             }
           }
@@ -1183,19 +1000,19 @@
       },
       {
         "threshold": 0.6,
-        "count": 48,
-        "routing_accuracy": 0.2708,
-        "uncertain_count": 37,
-        "uncertain_rate": 0.7708,
+        "count": 9,
+        "routing_accuracy": 0.4444,
+        "uncertain_count": 8,
+        "uncertain_rate": 0.8889,
         "selected_model_counts": {
-          "local": 3,
-          "cheap": 43,
-          "strong": 2
+          "local": 0,
+          "cheap": 8,
+          "strong": 1
         },
         "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
         },
         "confusion_matrix": {
           "labels": [
@@ -1205,19 +1022,19 @@
           ],
           "matrix": [
             [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              12,
-              1
+              0,
+              3,
+              0
             ],
             [
               0,
-              25,
+              3,
               0
+            ],
+            [
+              0,
+              2,
+              1
             ]
           ]
         },
@@ -1247,6 +1064,18 @@
             }
           },
           {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
             "id": "q040",
             "query": "Explain how to keep a shared cache correct across threads and processes.",
             "gold_model": "strong",
@@ -1255,7 +1084,7 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
+              "context": "high"
             }
           },
           {
@@ -1267,491 +1096,26 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q042",
-            "query": "How would you shard a social graph, and which queries become difficult after sharding?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q087",
-            "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
+              "context": "high"
             }
           }
         ]
       },
       {
         "threshold": 0.65,
-        "count": 48,
-        "routing_accuracy": 0.2708,
-        "uncertain_count": 37,
-        "uncertain_rate": 0.7708,
-        "selected_model_counts": {
-          "local": 3,
-          "cheap": 43,
-          "strong": 2
-        },
-        "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
-        },
-        "confusion_matrix": {
-          "labels": [
-            "local",
-            "cheap",
-            "strong"
-          ],
-          "matrix": [
-            [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              12,
-              1
-            ],
-            [
-              0,
-              25,
-              0
-            ]
-          ]
-        },
-        "mismatches": [
-          {
-            "id": "q010",
-            "query": "What does the len() function do in Python?",
-            "gold_model": "local",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q011",
-            "query": "What is a square root?",
-            "gold_model": "local",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q040",
-            "query": "Explain how to keep a shared cache correct across threads and processes.",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q041",
-            "query": "Design a feature store that prevents training-serving skew.",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q042",
-            "query": "How would you shard a social graph, and which queries become difficult after sharding?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q087",
-            "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          }
-        ]
-      },
-      {
-        "threshold": 0.7,
-        "count": 48,
-        "routing_accuracy": 0.2708,
-        "uncertain_count": 37,
-        "uncertain_rate": 0.7708,
-        "selected_model_counts": {
-          "local": 3,
-          "cheap": 43,
-          "strong": 2
-        },
-        "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
-        },
-        "confusion_matrix": {
-          "labels": [
-            "local",
-            "cheap",
-            "strong"
-          ],
-          "matrix": [
-            [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              12,
-              1
-            ],
-            [
-              0,
-              25,
-              0
-            ]
-          ]
-        },
-        "mismatches": [
-          {
-            "id": "q010",
-            "query": "What does the len() function do in Python?",
-            "gold_model": "local",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q011",
-            "query": "What is a square root?",
-            "gold_model": "local",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q040",
-            "query": "Explain how to keep a shared cache correct across threads and processes.",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q041",
-            "query": "Design a feature store that prevents training-serving skew.",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q042",
-            "query": "How would you shard a social graph, and which queries become difficult after sharding?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q087",
-            "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          }
-        ]
-      },
-      {
-        "threshold": 0.75,
-        "count": 48,
-        "routing_accuracy": 0.2708,
-        "uncertain_count": 41,
-        "uncertain_rate": 0.8542,
-        "selected_model_counts": {
-          "local": 3,
-          "cheap": 43,
-          "strong": 2
-        },
-        "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
-        },
-        "confusion_matrix": {
-          "labels": [
-            "local",
-            "cheap",
-            "strong"
-          ],
-          "matrix": [
-            [
-              1,
-              6,
-              1
-            ],
-            [
-              2,
-              12,
-              1
-            ],
-            [
-              0,
-              25,
-              0
-            ]
-          ]
-        },
-        "mismatches": [
-          {
-            "id": "q010",
-            "query": "What does the len() function do in Python?",
-            "gold_model": "local",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q011",
-            "query": "What is a square root?",
-            "gold_model": "local",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "low",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q040",
-            "query": "Explain how to keep a shared cache correct across threads and processes.",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q041",
-            "query": "Design a feature store that prevents training-serving skew.",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q042",
-            "query": "How would you shard a social graph, and which queries become difficult after sharding?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "complex",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": true,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          },
-          {
-            "id": "q087",
-            "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
-            "gold_model": "strong",
-            "selected_model": "cheap",
-            "uncertain": false,
-            "labels": {
-              "complexity": "simple",
-              "reasoning": "high",
-              "context": "low"
-            }
-          }
-        ]
-      },
-      {
-        "threshold": 0.8,
-        "count": 48,
-        "routing_accuracy": 0.2917,
-        "uncertain_count": 46,
-        "uncertain_rate": 0.9583,
+        "count": 9,
+        "routing_accuracy": 0.3333,
+        "uncertain_count": 9,
+        "uncertain_rate": 1.0,
         "selected_model_counts": {
           "local": 0,
-          "cheap": 46,
-          "strong": 2
+          "cheap": 9,
+          "strong": 0
         },
         "gold_model_counts": {
-          "local": 8,
-          "cheap": 15,
-          "strong": 25
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
         },
         "confusion_matrix": {
           "labels": [
@@ -1762,17 +1126,17 @@
           "matrix": [
             [
               0,
-              7,
-              1
+              3,
+              0
             ],
             [
               0,
-              14,
-              1
+              3,
+              0
             ],
             [
               0,
-              25,
+              3,
               0
             ]
           ]
@@ -1823,7 +1187,7 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
+              "context": "high"
             }
           },
           {
@@ -1835,7 +1199,7 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
+              "context": "high"
             }
           },
           {
@@ -1847,57 +1211,378 @@
             "labels": {
               "complexity": "complex",
               "reasoning": "high",
-              "context": "low"
+              "context": "high"
             }
-          },
+          }
+        ]
+      },
+      {
+        "threshold": 0.7,
+        "count": 9,
+        "routing_accuracy": 0.3333,
+        "uncertain_count": 9,
+        "uncertain_rate": 1.0,
+        "selected_model_counts": {
+          "local": 0,
+          "cheap": 9,
+          "strong": 0
+        },
+        "gold_model_counts": {
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
+        },
+        "confusion_matrix": {
+          "labels": [
+            "local",
+            "cheap",
+            "strong"
+          ],
+          "matrix": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        "mismatches": [
           {
-            "id": "q085",
-            "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
-            "gold_model": "strong",
+            "id": "q010",
+            "query": "What does the len() function do in Python?",
+            "gold_model": "local",
             "selected_model": "cheap",
             "uncertain": true,
             "labels": {
               "complexity": "simple",
-              "reasoning": "high",
+              "reasoning": "low",
               "context": "low"
             }
           },
           {
-            "id": "q086",
-            "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
-            "gold_model": "strong",
+            "id": "q011",
+            "query": "What is a square root?",
+            "gold_model": "local",
             "selected_model": "cheap",
             "uncertain": true,
             "labels": {
               "complexity": "simple",
-              "reasoning": "high",
+              "reasoning": "low",
               "context": "low"
+            }
+          },
+          {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q040",
+            "query": "Explain how to keep a shared cache correct across threads and processes.",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          },
+          {
+            "id": "q041",
+            "query": "Design a feature store that prevents training-serving skew.",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          },
+          {
+            "id": "q042",
+            "query": "How would you shard a social graph, and which queries become difficult after sharding?",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          }
+        ]
+      },
+      {
+        "threshold": 0.75,
+        "count": 9,
+        "routing_accuracy": 0.3333,
+        "uncertain_count": 9,
+        "uncertain_rate": 1.0,
+        "selected_model_counts": {
+          "local": 0,
+          "cheap": 9,
+          "strong": 0
+        },
+        "gold_model_counts": {
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
+        },
+        "confusion_matrix": {
+          "labels": [
+            "local",
+            "cheap",
+            "strong"
+          ],
+          "matrix": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        "mismatches": [
+          {
+            "id": "q010",
+            "query": "What does the len() function do in Python?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q011",
+            "query": "What is a square root?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q040",
+            "query": "Explain how to keep a shared cache correct across threads and processes.",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          },
+          {
+            "id": "q041",
+            "query": "Design a feature store that prevents training-serving skew.",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          },
+          {
+            "id": "q042",
+            "query": "How would you shard a social graph, and which queries become difficult after sharding?",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          }
+        ]
+      },
+      {
+        "threshold": 0.8,
+        "count": 9,
+        "routing_accuracy": 0.3333,
+        "uncertain_count": 9,
+        "uncertain_rate": 1.0,
+        "selected_model_counts": {
+          "local": 0,
+          "cheap": 9,
+          "strong": 0
+        },
+        "gold_model_counts": {
+          "local": 3,
+          "cheap": 3,
+          "strong": 3
+        },
+        "confusion_matrix": {
+          "labels": [
+            "local",
+            "cheap",
+            "strong"
+          ],
+          "matrix": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        "mismatches": [
+          {
+            "id": "q010",
+            "query": "What does the len() function do in Python?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q011",
+            "query": "What is a square root?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q012",
+            "query": "What is a SQL table?",
+            "gold_model": "local",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "simple",
+              "reasoning": "low",
+              "context": "low"
+            }
+          },
+          {
+            "id": "q040",
+            "query": "Explain how to keep a shared cache correct across threads and processes.",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          },
+          {
+            "id": "q041",
+            "query": "Design a feature store that prevents training-serving skew.",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
+            }
+          },
+          {
+            "id": "q042",
+            "query": "How would you shard a social graph, and which queries become difficult after sharding?",
+            "gold_model": "strong",
+            "selected_model": "cheap",
+            "uncertain": true,
+            "labels": {
+              "complexity": "complex",
+              "reasoning": "high",
+              "context": "high"
             }
           }
         ]
       }
     ],
-    "deployed_threshold": 0.55,
+    "deployed_threshold": 0.45,
     "gold_model_counts": {
-      "local": 10,
-      "cheap": 16,
-      "strong": 21
+      "local": 3,
+      "cheap": 3,
+      "strong": 3
     },
     "raw_at_selected_threshold": {
       "threshold": 0.5,
-      "count": 47,
-      "routing_accuracy": 0.5319,
-      "uncertain_count": 1,
-      "uncertain_rate": 0.0213,
+      "count": 9,
+      "routing_accuracy": 0.5556,
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
       "selected_model_counts": {
-        "local": 7,
-        "cheap": 6,
-        "strong": 34
+        "local": 2,
+        "cheap": 0,
+        "strong": 7
       },
       "gold_model_counts": {
-        "local": 10,
-        "cheap": 16,
-        "strong": 21
+        "local": 3,
+        "cheap": 3,
+        "strong": 3
       },
       "confusion_matrix": {
         "labels": [
@@ -1907,19 +1592,19 @@
         ],
         "matrix": [
           [
-            6,
-            0,
-            4
-          ],
-          [
-            1,
             2,
-            13
+            0,
+            1
           ],
           [
             0,
-            4,
-            17
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            3
           ]
         ]
       },
@@ -1945,7 +1630,7 @@
           "labels": {
             "complexity": "medium",
             "reasoning": "medium",
-            "context": "low"
+            "context": "medium"
           }
         },
         {
@@ -1957,7 +1642,7 @@
           "labels": {
             "complexity": "medium",
             "reasoning": "medium",
-            "context": "low"
+            "context": "medium"
           }
         },
         {
@@ -1969,74 +1654,26 @@
           "labels": {
             "complexity": "medium",
             "reasoning": "medium",
-            "context": "low"
-          }
-        },
-        {
-          "id": "q099",
-          "query": "In the sketch we made, where are the images stored?",
-          "gold_model": "local",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
             "context": "medium"
-          }
-        },
-        {
-          "id": "q100",
-          "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
-          "gold_model": "strong",
-          "selected_model": "cheap",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "high",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q101",
-          "query": "Did the model you just described use a transformer or a decision tree?",
-          "gold_model": "cheap",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "medium",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q104",
-          "query": "Repeat only the DNS record type you recommended.",
-          "gold_model": "local",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
-            "context": "high"
           }
         }
       ]
     },
     "calibrated_at_selected_threshold": {
       "threshold": 0.5,
-      "count": 47,
-      "routing_accuracy": 0.5957,
+      "count": 9,
+      "routing_accuracy": 0.6667,
       "uncertain_count": 0,
       "uncertain_rate": 0.0,
       "selected_model_counts": {
-        "local": 5,
-        "cheap": 16,
-        "strong": 26
+        "local": 0,
+        "cheap": 5,
+        "strong": 4
       },
       "gold_model_counts": {
-        "local": 10,
-        "cheap": 16,
-        "strong": 21
+        "local": 3,
+        "cheap": 3,
+        "strong": 3
       },
       "confusion_matrix": {
         "labels": [
@@ -2046,19 +1683,19 @@
         ],
         "matrix": [
           [
-            4,
-            3,
-            3
-          ],
-          [
-            1,
-            8,
-            7
+            0,
+            2,
+            1
           ],
           [
             0,
-            5,
-            16
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            3
           ]
         ]
       },
@@ -2088,94 +1725,34 @@
           }
         },
         {
-          "id": "q098",
-          "query": "What was the second item on the list you gave me?",
+          "id": "q015",
+          "query": "How many bits are in a byte?",
           "gold_model": "local",
           "selected_model": "cheap",
           "uncertain": false,
           "labels": {
             "complexity": "simple",
             "reasoning": "low",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q099",
-          "query": "In the sketch we made, where are the images stored?",
-          "gold_model": "local",
-          "selected_model": "cheap",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
-            "context": "medium"
-          }
-        },
-        {
-          "id": "q100",
-          "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
-          "gold_model": "strong",
-          "selected_model": "cheap",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "high",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q101",
-          "query": "Did the model you just described use a transformer or a decision tree?",
-          "gold_model": "cheap",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "medium",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q102",
-          "query": "Add the status filter I mentioned to the query you just wrote, and do not change the selected columns.",
-          "gold_model": "cheap",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "medium",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q104",
-          "query": "Repeat only the DNS record type you recommended.",
-          "gold_model": "local",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
-            "context": "high"
+            "context": "low"
           }
         }
       ]
     },
     "raw_at_deployed_threshold": {
-      "threshold": 0.55,
-      "count": 47,
-      "routing_accuracy": 0.5319,
-      "uncertain_count": 1,
-      "uncertain_rate": 0.0213,
+      "threshold": 0.45,
+      "count": 9,
+      "routing_accuracy": 0.5556,
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
       "selected_model_counts": {
-        "local": 7,
-        "cheap": 6,
-        "strong": 34
+        "local": 2,
+        "cheap": 0,
+        "strong": 7
       },
       "gold_model_counts": {
-        "local": 10,
-        "cheap": 16,
-        "strong": 21
+        "local": 3,
+        "cheap": 3,
+        "strong": 3
       },
       "confusion_matrix": {
         "labels": [
@@ -2185,19 +1762,19 @@
         ],
         "matrix": [
           [
-            6,
-            0,
-            4
-          ],
-          [
-            1,
             2,
-            13
+            0,
+            1
           ],
           [
             0,
-            4,
-            17
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            3
           ]
         ]
       },
@@ -2223,7 +1800,7 @@
           "labels": {
             "complexity": "medium",
             "reasoning": "medium",
-            "context": "low"
+            "context": "medium"
           }
         },
         {
@@ -2235,7 +1812,7 @@
           "labels": {
             "complexity": "medium",
             "reasoning": "medium",
-            "context": "low"
+            "context": "medium"
           }
         },
         {
@@ -2247,74 +1824,26 @@
           "labels": {
             "complexity": "medium",
             "reasoning": "medium",
-            "context": "low"
-          }
-        },
-        {
-          "id": "q099",
-          "query": "In the sketch we made, where are the images stored?",
-          "gold_model": "local",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
             "context": "medium"
-          }
-        },
-        {
-          "id": "q100",
-          "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
-          "gold_model": "strong",
-          "selected_model": "cheap",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "high",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q101",
-          "query": "Did the model you just described use a transformer or a decision tree?",
-          "gold_model": "cheap",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "medium",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q104",
-          "query": "Repeat only the DNS record type you recommended.",
-          "gold_model": "local",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
-            "context": "high"
           }
         }
       ]
     },
     "calibrated_at_deployed_threshold": {
-      "threshold": 0.55,
-      "count": 47,
-      "routing_accuracy": 0.4468,
-      "uncertain_count": 27,
-      "uncertain_rate": 0.5745,
+      "threshold": 0.45,
+      "count": 9,
+      "routing_accuracy": 0.6667,
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
       "selected_model_counts": {
-        "local": 5,
-        "cheap": 29,
-        "strong": 13
+        "local": 0,
+        "cheap": 5,
+        "strong": 4
       },
       "gold_model_counts": {
-        "local": 10,
-        "cheap": 16,
-        "strong": 21
+        "local": 3,
+        "cheap": 3,
+        "strong": 3
       },
       "confusion_matrix": {
         "labels": [
@@ -2324,19 +1853,19 @@
         ],
         "matrix": [
           [
-            4,
-            3,
-            3
-          ],
-          [
-            1,
-            11,
-            4
+            0,
+            2,
+            1
           ],
           [
             0,
-            15,
-            6
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            3
           ]
         ]
       },
@@ -2346,7 +1875,7 @@
           "query": "What port does HTTP use by default?",
           "gold_model": "local",
           "selected_model": "cheap",
-          "uncertain": true,
+          "uncertain": false,
           "labels": {
             "complexity": "simple",
             "reasoning": "low",
@@ -2366,74 +1895,14 @@
           }
         },
         {
-          "id": "q098",
-          "query": "What was the second item on the list you gave me?",
+          "id": "q015",
+          "query": "How many bits are in a byte?",
           "gold_model": "local",
           "selected_model": "cheap",
-          "uncertain": true,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q099",
-          "query": "In the sketch we made, where are the images stored?",
-          "gold_model": "local",
-          "selected_model": "cheap",
-          "uncertain": true,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "low",
-            "context": "medium"
-          }
-        },
-        {
-          "id": "q100",
-          "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
-          "gold_model": "strong",
-          "selected_model": "cheap",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "high",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q101",
-          "query": "Did the model you just described use a transformer or a decision tree?",
-          "gold_model": "cheap",
-          "selected_model": "strong",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "medium",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q104",
-          "query": "Repeat only the DNS record type you recommended.",
-          "gold_model": "local",
-          "selected_model": "strong",
           "uncertain": false,
           "labels": {
             "complexity": "simple",
             "reasoning": "low",
-            "context": "high"
-          }
-        },
-        {
-          "id": "q106",
-          "query": "What does stateless mean for an API server, in one sentence?",
-          "gold_model": "cheap",
-          "selected_model": "local",
-          "uncertain": false,
-          "labels": {
-            "complexity": "simple",
-            "reasoning": "medium",
             "context": "low"
           }
         }
@@ -2446,7 +1915,7 @@
         {
           "true": "simple",
           "predicted": "medium",
-          "count": 7,
+          "count": 3,
           "examples": [
             {
               "id": "q013",
@@ -2457,61 +1926,8 @@
               "query": "What is a Git commit?"
             },
             {
-              "id": "q098",
-              "query": "What was the second item on the list you gave me?"
-            }
-          ]
-        },
-        {
-          "true": "medium",
-          "predicted": "complex",
-          "count": 7,
-          "examples": [
-            {
-              "id": "q163",
-              "query": "What causes ocean tides?"
-            },
-            {
-              "id": "q164",
-              "query": "Your previous design uses one database. What fails first if write traffic doubles?"
-            },
-            {
-              "id": "q166",
-              "query": "Using the system of equations from my last message, solve for y and show the substitution."
-            }
-          ]
-        },
-        {
-          "true": "complex",
-          "predicted": "medium",
-          "count": 3,
-          "examples": [
-            {
-              "id": "q229",
-              "query": "Notifications can be sent by email, push, or SMS, and a worker may retry. Design deduplication so the user gets one alert. Include the key and how long you k..."
-            },
-            {
-              "id": "q231",
-              "query": "A fair coin is flipped until the first heads. Derive the expected number of flips and show each step."
-            },
-            {
-              "id": "q232",
-              "query": "The ablation table above removes one component at a time. Which component would you drop, and what new result would change that choice?"
-            }
-          ]
-        },
-        {
-          "true": "simple",
-          "predicted": "complex",
-          "count": 2,
-          "examples": [
-            {
-              "id": "q101",
-              "query": "Did the model you just described use a transformer or a decision tree?"
-            },
-            {
-              "id": "q102",
-              "query": "Add the status filter I mentioned to the query you just wrote, and do not change the selected columns."
+              "id": "q015",
+              "query": "How many bits are in a byte?"
             }
           ]
         }
@@ -2520,85 +1936,13 @@
     "reasoning": {
       "pairs": [
         {
-          "true": "high",
-          "predicted": "medium",
-          "count": 14,
-          "examples": [
-            {
-              "id": "q100",
-              "query": "From the proof you started, is the next step to add 2 to both sides or to factor?"
-            },
-            {
-              "id": "q108",
-              "query": "Precision is true positives divided by predicted positives. We predicted 10 positives and 8 were correct. What is the precision?"
-            },
-            {
-              "id": "q164",
-              "query": "Your previous design uses one database. What fails first if write traffic doubles?"
-            }
-          ]
-        },
-        {
-          "true": "low",
-          "predicted": "medium",
-          "count": 7,
-          "examples": [
-            {
-              "id": "q099",
-              "query": "In the sketch we made, where are the images stored?"
-            },
-            {
-              "id": "q163",
-              "query": "What causes ocean tides?"
-            },
-            {
-              "id": "q165",
-              "query": "Add a one-line docstring to the function in the previous message. Do not change the code."
-            }
-          ]
-        },
-        {
           "true": "low",
           "predicted": "high",
-          "count": 4,
+          "count": 1,
           "examples": [
             {
               "id": "q014",
               "query": "What is a Git commit?"
-            },
-            {
-              "id": "q104",
-              "query": "Repeat only the DNS record type you recommended."
-            },
-            {
-              "id": "q110",
-              "query": "State the quadratic formula. Do not solve an equation."
-            }
-          ]
-        },
-        {
-          "true": "medium",
-          "predicted": "high",
-          "count": 2,
-          "examples": [
-            {
-              "id": "q101",
-              "query": "Did the model you just described use a transformer or a decision tree?"
-            },
-            {
-              "id": "q109",
-              "query": "Name one difference between a region and an availability zone."
-            }
-          ]
-        },
-        {
-          "true": "medium",
-          "predicted": "low",
-          "count": 1,
-          "examples": [
-            {
-              "id": "q106",
-              "query": "What does stateless mean for an API server, in one sentence?"
             }
           ]
         }
@@ -2607,45 +1951,37 @@
     "context": {
       "pairs": [
         {
-          "true": "high",
-          "predicted": "low",
-          "count": 15,
+          "true": "medium",
+          "predicted": "high",
+          "count": 3,
           "examples": [
             {
-              "id": "q098",
-              "query": "What was the second item on the list you gave me?"
+              "id": "q028",
+              "query": "Explain the difference between an inner join and a left join."
             },
             {
-              "id": "q100",
-              "query": "From the proof you started, is the next step to add 2 to both sides or to factor?"
+              "id": "q029",
+              "query": "How does a TCP three-way handshake work?"
             },
             {
-              "id": "q101",
-              "query": "Did the model you just described use a transformer or a decision tree?"
+              "id": "q030",
+              "query": "What is the difference between CI and CD?"
             }
           ]
         },
         {
-          "true": "medium",
-          "predicted": "low",
-          "count": 10,
+          "true": "low",
+          "predicted": "high",
+          "count": 1,
           "examples": [
             {
-              "id": "q099",
-              "query": "In the sketch we made, where are the images stored?"
-            },
-            {
-              "id": "q165",
-              "query": "Add a one-line docstring to the function in the previous message. Do not change the code."
-            },
-            {
-              "id": "q171",
-              "query": "The itinerary above has flights listed by day. Is there a day with two flights, and which day is it?"
+              "id": "q014",
+              "query": "What is a Git commit?"
             }
           ]
         }
       ]
     }
   },
-  "recommendation_summary": "Keep llama3.2:3b as the decision model. Do not treat the calibrator as training. On complexity, calibration lowered the Brier score from 0.7668 to 0.5592, so the probabilities are closer to the observed frequencies. On reasoning, calibration lowered the Brier score from 0.7793 to 0.6635, so the probabilities are closer to the observed frequencies. On reasoning, calibrated accuracy (0.4043) is not higher than raw accuracy (0.4681). On context, calibration lowered the Brier score from 0.9587 to 0.765, so the probabilities are closer to the observed frequencies. Every calibrated context prediction on the test split is low. Accuracy can rise because that class is common, while macro-F1 falls because the other classes are never selected. The map adjusted probabilities toward the majority class. It did not learn to read phrases such as 'you just wrote'. The most common complexity mistake is true simple predicted as medium (7 test rows). Add two or three of those boundary cases to the decision prompt as labeled examples. The most common reasoning mistake is true high predicted as medium (14 test rows). On the validation sweep, threshold(s) 0.4, 0.45, 0.5 lead with routing accuracy 0.5208 and fallback rate 0.0. At the deployed 0.55 threshold, validation fallback is 0.6042, and the test fallback rate is 0.5745. That drop is a confidence cutoff, not a change in the Ollama class. Copy the validation-selected threshold into routing/rules.json only after reading the validation sweep. Do not retune it on the test split."
+  "recommendation_summary": "Keep llama3.2:3b as the decision model. Do not treat the calibrator as training. On complexity, calibration lowered the Brier score from 0.5178 to 0.4147, so the probabilities are closer to the observed frequencies. On complexity, calibrated accuracy (0.6667) is not higher than raw accuracy (0.6667). On reasoning, calibration raised the Brier score from 0.4872 to 0.4955. The class ranking should be fixed in the prompt or the model before trusting the map. On context, calibration raised the Brier score from 0.6933 to 0.6953. The class ranking should be fixed in the prompt or the model before trusting the map. On context, calibrated accuracy (0.5556) is not higher than raw accuracy (0.5556). The most common complexity mistake is true simple predicted as medium (3 test rows). Add two or three of those boundary cases to the decision prompt as labeled examples. The most common reasoning mistake is true low predicted as high (1 test rows). On the validation sweep, threshold(s) 0.4, 0.45, 0.5 lead with routing accuracy 0.5556 and fallback rate 0.0. At the deployed 0.45 threshold, validation fallback is 0.0, and the test fallback rate is 0.0. That drop is a confidence cutoff, not a change in the Ollama class. Copy the validation-selected threshold into routing/rules.json only after reading the validation sweep. Do not retune it on the test split."
 }

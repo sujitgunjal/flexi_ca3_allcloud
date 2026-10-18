@@ -10,6 +10,7 @@ from typing import Any
 import redis
 from redis.exceptions import RedisError
 
+from app.context.embeddings import embedding_identity
 from app.providers.config import (
     REDIS_DB, REDIS_HOST, REDIS_PORT, REDIS_TTL,
     SEMANTIC_CACHE_MAX_CANDIDATES, SEMANTIC_CACHE_THRESHOLD,
@@ -26,7 +27,9 @@ def generate_cache_key(query: str) -> str:
     """Build a stable key from a query without changing its semantics."""
     normalized = re.sub(r"\s+", " ", query.strip())
     digest = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
-    return f"llm_cache:{digest}"
+    # The prefix includes the embedding provider and model so vectors from
+    # nomic-embed-text are never compared with voyage-4-lite vectors.
+    return f"llm_cache:{embedding_identity()}:{digest}"
 
 
 class RedisCache:
@@ -68,7 +71,7 @@ class RedisCache:
         candidates = []
         scanned = 0
         filtered = 0
-        for key in self.client.scan_iter(match="llm_cache:*", count=100):
+        for key in self.client.scan_iter(match=f"llm_cache:{embedding_identity()}:*", count=100):
             if scanned >= SEMANTIC_CACHE_MAX_CANDIDATES:
                 break
             scanned += 1

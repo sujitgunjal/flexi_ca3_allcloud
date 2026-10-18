@@ -31,9 +31,8 @@ def test_cloud_success_and_configured_timeout_reach_litellm(monkeypatch):
 def test_tier_labels_resolve_to_configured_providers_and_models():
     from app.providers.config import (
         CHEAP_MODEL,
+        LOCAL_RESPONSE_MODEL,
         NVIDIA_API_BASE,
-        OLLAMA_API_BASE,
-        OLLAMA_MODEL,
         STRONG_MODEL,
     )
     from app.providers.registry import get_tier
@@ -42,8 +41,9 @@ def test_tier_labels_resolve_to_configured_providers_and_models():
     cheap = get_tier("cheap")
     strong = get_tier("strong")
 
-    assert (local.provider, local.model) == ("ollama", OLLAMA_MODEL)
-    assert local.api_base == OLLAMA_API_BASE
+    assert (local.provider, local.model) == ("nvidia", LOCAL_RESPONSE_MODEL)
+    assert local.model == "openai/gpt-oss-20b"
+    assert local.api_base == NVIDIA_API_BASE
     assert cheap.provider == "nvidia"
     assert cheap.model == CHEAP_MODEL
     assert cheap.api_base == NVIDIA_API_BASE
@@ -158,23 +158,39 @@ def test_primary_and_fallback_errors_propagate_without_retry(monkeypatch):
     assert calls == ["strong", "cheap", "local"]
 
 
-def test_local_generation_uses_ollama_timeout_and_override(monkeypatch):
+def test_local_generation_uses_nvidia_nim_and_timeout(monkeypatch):
     import app.providers as providers
-    import app.providers.ollama as ollama
+    import app.providers.local_nim as nim
 
-    calls = []
-    monkeypatch.setattr(ollama, "completion", lambda **kwargs: calls.append(kwargs) or _completion_response("local answer"))
+    created = []
+
+    class FakeCompletions:
+        def create(self, **kwargs):
+            created.append(kwargs)
+            return _completion_response("local answer")
+
+    class FakeClient:
+        def __init__(self, **kwargs):
+            created.append(kwargs)
+            self.chat = SimpleNamespace(completions=FakeCompletions())
+
+    monkeypatch.setattr(nim, "OpenAI", FakeClient)
+    monkeypatch.setattr(nim, "NVIDIA_API_KEY", "test-key")
     monkeypatch.setattr(providers, "OLLAMA_TIMEOUT_SECONDS", 31)
 
-    result = providers.generate_response("local", "question")
+    result = providers.generate_response("local", "question", history=[{"role": "user", "content": "earlier"}])
+
     assert result["response"] == "local answer"
-    assert calls[0]["model"].startswith("ollama/")
-    assert calls[0]["api_base"] == ollama.OLLAMA_API_BASE
-    assert calls[0]["timeout"] == 31
-    assert calls[0]["stream"] is False
+    assert created[0]["base_url"] == "https://integrate.api.nvidia.com/v1"
+    assert created[0]["api_key"] == "test-key"
+    assert created[0]["timeout"] == 31
+    assert created[0]["max_retries"] == 0
+    assert created[1]["model"] == "openai/gpt-oss-20b"
+    assert created[1]["stream"] is False
+    assert created[1]["messages"][-1]["content"] == "question"
 
     providers.generate_response("local", "question", timeout=2)
-    assert calls[1]["timeout"] == 2
+    assert created[2]["timeout"] == 2
 
 
 def test_chat_returns_controlled_502_when_generation_and_fallback_fail(monkeypatch):

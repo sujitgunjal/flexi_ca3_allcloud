@@ -5,6 +5,7 @@ pydantic-settings
 python-dotenv
 langgraph
 litellm
+openai>=1.40,<3
 SQLAlchemy>=2.0,<3.0
 redis>=5.0,<7.0
 pymongo>=4.6,<5.0

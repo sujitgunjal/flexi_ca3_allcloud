@@ -1,0 +1,8162 @@
+[
+  {
+    "id": "q001",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "What is a variable in Python?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 4968.22,
+    "prompt_tokens": 1034,
+    "output_tokens": 106
+  },
+  {
+    "id": "q002",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "What is 15 + 27?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3352.83,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q003",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "What does AI stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3022.08,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q004",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "What is a primary key?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2939.07,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q005",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "What is a virtual machine?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3675.88,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q006",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "What does DNS stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3008.52,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q007",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "What is a Docker container?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2798.57,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q008",
+    "split": "calibration",
+    "domain": "general",
+    "query": "What is the capital of Japan?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3774.4,
+    "prompt_tokens": 1034,
+    "output_tokens": 106
+  },
+  {
+    "id": "q009",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "What is a client-server architecture in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3473.04,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q010",
+    "split": "validation",
+    "domain": "programming",
+    "query": "What does the len() function do in Python?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3783.38,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q011",
+    "split": "validation",
+    "domain": "mathematics",
+    "query": "What is a square root?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3048.65,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q012",
+    "split": "validation",
+    "domain": "databases",
+    "query": "What is a SQL table?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.96,
+        "medium": 0.03,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2910.31,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q013",
+    "split": "test",
+    "domain": "networking",
+    "query": "What port does HTTP use by default?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.97,
+        "medium": 0.02,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3833.33,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q014",
+    "split": "test",
+    "domain": "devops",
+    "query": "What is a Git commit?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3024.08,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q015",
+    "split": "test",
+    "domain": "general",
+    "query": "How many bits are in a byte?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2825.82,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q016",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Write a Python function that returns the largest number in a list.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.85,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3171.63,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q017",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Solve 3x + 6 = 21 and show the steps.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2879.44,
+    "prompt_tokens": 1043,
+    "output_tokens": 106
+  },
+  {
+    "id": "q018",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "Explain the difference between classification and regression.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2856.74,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q019",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Write a SQL query to find users who signed up in the last 7 days.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.85,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3166.56,
+    "prompt_tokens": 1044,
+    "output_tokens": 106
+  },
+  {
+    "id": "q020",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Explain the difference between horizontal and vertical scaling.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3642.07,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q021",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Explain the difference between TCP and UDP.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.15,
+        "medium": 0.75,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3642.21,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q022",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "How do you write a Dockerfile for a small Python web app?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2822.7,
+    "prompt_tokens": 1041,
+    "output_tokens": 106
+  },
+  {
+    "id": "q023",
+    "split": "calibration",
+    "domain": "general",
+    "query": "Explain why seasons happen on Earth.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2916.2,
+    "prompt_tokens": 1034,
+    "output_tokens": 106
+  },
+  {
+    "id": "q024",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Describe how a URL shortener stores a link and redirects it.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2808.61,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q025",
+    "split": "validation",
+    "domain": "programming",
+    "query": "How does a hash map handle collisions?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.7,
+        "medium": 0.25,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.6,
+        "medium": 0.35,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2990.39,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q026",
+    "split": "validation",
+    "domain": "ai_ml",
+    "query": "What is overfitting and how does a validation set help?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.7,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2941.91,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q027",
+    "split": "validation",
+    "domain": "cloud",
+    "query": "How does an autoscaling group decide to add instances?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.7,
+        "medium": 0.25,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.75,
+        "medium": 0.2,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2986.11,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q028",
+    "split": "test",
+    "domain": "databases",
+    "query": "Explain the difference between an inner join and a left join.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2802.29,
+    "prompt_tokens": 1039,
+    "output_tokens": 106
+  },
+  {
+    "id": "q029",
+    "split": "test",
+    "domain": "networking",
+    "query": "How does a TCP three-way handshake work?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.7,
+        "medium": 0.25,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3068.09,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q030",
+    "split": "test",
+    "domain": "devops",
+    "query": "What is the difference between CI and CD?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2900.9,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q031",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Design a rate limiter for an API running on 20 servers. Include the data model and failure behavior.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2954.26,
+    "prompt_tokens": 1049,
+    "output_tokens": 106
+  },
+  {
+    "id": "q032",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "A recursive tree walk is too slow and allocates on every call. Propose a faster design and explain the complexity change.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2880.67,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q033",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "You have an unfair coin that lands heads 70 percent of the time. How can you use it to make a fair 50/50 choice?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3180.63,
+    "prompt_tokens": 1060,
+    "output_tokens": 106
+  },
+  {
+    "id": "q034",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "A production classifier lost 12 percent accuracy after a feature pipeline change. Outline the investigation.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2947.16,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q035",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Design a migration plan for splitting a monolithic orders table across regions without downtime.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3246.5,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q036",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Design a multi-AZ deployment for a stateful service that must survive one availability zone failing.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3506.78,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q037",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "A BGP session between two routers is flapping. Reason about likely causes and a safe mitigation sequence.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3081.37,
+    "prompt_tokens": 1047,
+    "output_tokens": 106
+  },
+  {
+    "id": "q038",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Design a zero-downtime Kubernetes rollout that also runs a backward-compatible database migration.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.3,
+        "high": 0.65
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3118.81,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q039",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Design an event-driven order system where a duplicate message must not charge the customer twice.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2990.42,
+    "prompt_tokens": 1045,
+    "output_tokens": 106
+  },
+  {
+    "id": "q040",
+    "split": "validation",
+    "domain": "programming",
+    "query": "Explain how to keep a shared cache correct across threads and processes.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.3,
+        "high": 0.65
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3132.49,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q041",
+    "split": "validation",
+    "domain": "ai_ml",
+    "query": "Design a feature store that prevents training-serving skew.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.2,
+        "complex": 0.75
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3113.12,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q042",
+    "split": "validation",
+    "domain": "databases",
+    "query": "How would you shard a social graph, and which queries become difficult after sharding?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.3,
+        "high": 0.65
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2843.74,
+    "prompt_tokens": 1044,
+    "output_tokens": 106
+  },
+  {
+    "id": "q043",
+    "split": "test",
+    "domain": "cloud",
+    "query": "Design a three-VPC network with private subnets, NAT, and a shared services VPC.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.3,
+        "high": 0.65
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3004.89,
+    "prompt_tokens": 1047,
+    "output_tokens": 106
+  },
+  {
+    "id": "q044",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Design a URL shortener for 100 million requests per day, including caching and failure modes.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2876.89,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q045",
+    "split": "test",
+    "domain": "devops",
+    "query": "Compare blue-green and rolling deploys when a release includes a backward-incompatible API change, then recommend one and explain rollback.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.35,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2828.4,
+    "prompt_tokens": 1054,
+    "output_tokens": 106
+  },
+  {
+    "id": "q046",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "What was the function name I asked you to rename?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2791.09,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q047",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "What is 18 plus 27?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3262.6,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q048",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "What does GPU stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2843.28,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q049",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "What does SQL stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2854.97,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q050",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "What does the S in Amazon S3 stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.96,
+        "medium": 0.03,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3065.22,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q051",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "What does HTTP stand for?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2773.88,
+    "prompt_tokens": 1033,
+    "output_tokens": 106
+  },
+  {
+    "id": "q052",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "What does CI stand for in CI/CD?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.96,
+        "medium": 0.03,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3056.52,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q053",
+    "split": "calibration",
+    "domain": "general",
+    "query": "What is the boiling point of water in Celsius at sea level?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2829.55,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q054",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "What is a load balancer, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2943.64,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q055",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "In the snippet I pasted earlier, what type is the variable user?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2882.35,
+    "prompt_tokens": 1041,
+    "output_tokens": 106
+  },
+  {
+    "id": "q056",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "What number did I ask you to square?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.08,
+        "high": 0.9
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2936.72,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q057",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "Which loss function did you say we were using?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 9923.76,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q058",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Which table did I ask you to query?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3153.45,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q059",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Which cloud region did I tell you to deploy to?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3183.25,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q060",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "What port did I say the API listens on?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2994.48,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q061",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "What branch name did I ask you to deploy?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2918.35,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q062",
+    "split": "calibration",
+    "domain": "general",
+    "query": "Which city did I say I was visiting?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.08,
+        "high": 0.9
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3025.87,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q063",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Which service did we decide would store user sessions?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3220.05,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q064",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Is [1, 2, 3] a Python list, a dict, or a string?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3882.11,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q065",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Which is larger, 3/7 or 5/12?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.15,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3007.57,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q066",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "In one sentence, what is a feature in a machine-learning model?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3169.83,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q067",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Can a primary key column contain two identical values?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3001.65,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q068",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Is a cloud region one data center, or a group of data centers?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3523.61,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q069",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Is 192.168.1.10 a private IPv4 address?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3003.85,
+    "prompt_tokens": 1047,
+    "output_tokens": 106
+  },
+  {
+    "id": "q070",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Does git status create a new commit?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3112.36,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q071",
+    "split": "calibration",
+    "domain": "general",
+    "query": "Which planet is closest to the Sun?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.97,
+        "medium": 0.02,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2980.8,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q072",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Name one reason to put a cache in front of a database.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3127.65,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q073",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "A function returns None when n is less than or equal to 0, and returns n otherwise. If n is 4, what does it return?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3001.47,
+    "prompt_tokens": 1058,
+    "output_tokens": 106
+  },
+  {
+    "id": "q074",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "A prime number has exactly two positive divisors, 1 and itself. Is 1 prime?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3039.36,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q075",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "Is predicting tomorrow's temperature a classification task or a regression task?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3081.64,
+    "prompt_tokens": 1041,
+    "output_tokens": 106
+  },
+  {
+    "id": "q076",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "What character usually ends a SQL statement?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.96,
+        "medium": 0.03,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2997.67,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q077",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "From the diagram you described, which service stores the files?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.1,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2987.41,
+    "prompt_tokens": 1039,
+    "output_tokens": 106
+  },
+  {
+    "id": "q078",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "In one sentence, how is a TCP port different from an IP address?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2833.78,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q079",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "A pipeline runs tests before deploy, and the tests failed. Does the deploy stage run?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2921.07,
+    "prompt_tokens": 1045,
+    "output_tokens": 106
+  },
+  {
+    "id": "q080",
+    "split": "calibration",
+    "domain": "general",
+    "query": "All bloops are razzes, and all razzes are lazzes. Is every bloop a lazz?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.1,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.7,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2786.62,
+    "prompt_tokens": 1053,
+    "output_tokens": 106
+  },
+  {
+    "id": "q081",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "What availability target did I give you?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 6749.71,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q082",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Which keyword starts a function definition in Python?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.97,
+        "medium": 0.02,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2855.8,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q083",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Using the formula you gave, what is the area when the radius is 3?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.1,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3203.41,
+    "prompt_tokens": 1044,
+    "output_tokens": 106
+  },
+  {
+    "id": "q084",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "A classifier predicts the positive class only when the score is above 0.5. The score is 0.2. Which class does it predict?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.85,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3240.65,
+    "prompt_tokens": 1058,
+    "output_tokens": 106
+  },
+  {
+    "id": "q085",
+    "split": "validation",
+    "domain": "databases",
+    "query": "A unique constraint rejects duplicate emails. The address a@x.com is already stored. Can a second row use that same address?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.88,
+        "medium": 0.1,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2831.56,
+    "prompt_tokens": 1054,
+    "output_tokens": 106
+  },
+  {
+    "id": "q086",
+    "split": "validation",
+    "domain": "cloud",
+    "query": "An autoscaler adds a machine only when CPU stays above 70 percent. CPU is at 40 percent. Will it add a machine?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 9796.45,
+    "prompt_tokens": 1057,
+    "output_tokens": 106
+  },
+  {
+    "id": "q087",
+    "split": "validation",
+    "domain": "networking",
+    "query": "A firewall allows only port 443. A client connects to port 80. Is that connection allowed?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3154.82,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q088",
+    "split": "validation",
+    "domain": "devops",
+    "query": "What does the command docker ps show?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3145.23,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q089",
+    "split": "validation",
+    "domain": "general",
+    "query": "Translate the sentence I just wrote into French.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.1,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3429.31,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q090",
+    "split": "validation",
+    "domain": "system_design",
+    "query": "Requests must return to the same server so its memory stays valid. Is that design stateless or sticky?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3115.2,
+    "prompt_tokens": 1047,
+    "output_tokens": 106
+  },
+  {
+    "id": "q091",
+    "split": "validation",
+    "domain": "programming",
+    "query": "After the loop we just wrote, what is the final value of count?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.15,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2896.38,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q092",
+    "split": "validation",
+    "domain": "mathematics",
+    "query": "What is 15 percent of 80?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.18,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3221.4,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q093",
+    "split": "validation",
+    "domain": "ai_ml",
+    "query": "In the training log above, what was the last accuracy number?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.1,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3446.07,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q094",
+    "split": "validation",
+    "domain": "databases",
+    "query": "In the schema we discussed, which column is the foreign key?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2759.22,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q095",
+    "split": "validation",
+    "domain": "cloud",
+    "query": "Using the bucket name from my last message, say where the logs are stored.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.1,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3153.64,
+    "prompt_tokens": 1043,
+    "output_tokens": 106
+  },
+  {
+    "id": "q096",
+    "split": "validation",
+    "domain": "networking",
+    "query": "In the packet capture we looked at, which IP address was the source?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.1,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 5666.64,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q097",
+    "split": "validation",
+    "domain": "devops",
+    "query": "In the pipeline file above, which step runs first?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3053.24,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q098",
+    "split": "test",
+    "domain": "general",
+    "query": "What was the second item on the list you gave me?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.86,
+        "medium": 0.12,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2890.52,
+    "prompt_tokens": 1039,
+    "output_tokens": 106
+  },
+  {
+    "id": "q099",
+    "split": "test",
+    "domain": "system_design",
+    "query": "In the sketch we made, where are the images stored?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.1,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3597.16,
+    "prompt_tokens": 1039,
+    "output_tokens": 106
+  },
+  {
+    "id": "q100",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "From the proof you started, is the next step to add 2 to both sides or to factor?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.7,
+        "medium": 0.25,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2902.99,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q101",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "Did the model you just described use a transformer or a decision tree?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.1,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2810.17,
+    "prompt_tokens": 1041,
+    "output_tokens": 106
+  },
+  {
+    "id": "q102",
+    "split": "test",
+    "domain": "databases",
+    "query": "Add the status filter I mentioned to the query you just wrote, and do not change the selected columns.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2956.04,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q103",
+    "split": "test",
+    "domain": "cloud",
+    "query": "What is a container registry, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.92,
+        "medium": 0.06,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2794.04,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q104",
+    "split": "test",
+    "domain": "networking",
+    "query": "Repeat only the DNS record type you recommended.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.1,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2793.2,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q105",
+    "split": "test",
+    "domain": "general",
+    "query": "How many days are in a leap year?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.97,
+        "medium": 0.02,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 4487.97,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q106",
+    "split": "test",
+    "domain": "system_design",
+    "query": "What does stateless mean for an API server, in one sentence?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.88,
+        "medium": 0.1,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3035.09,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q107",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "How many degrees are in a right angle?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.98,
+        "medium": 0.01,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.97,
+        "medium": 0.02,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.99,
+        "medium": 0.01,
+        "high": 0.0
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3384.0,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q108",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "Precision is true positives divided by predicted positives. We predicted 10 positives and 8 were correct. What is the precision?",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2912.32,
+    "prompt_tokens": 1053,
+    "output_tokens": 106
+  },
+  {
+    "id": "q109",
+    "split": "test",
+    "domain": "cloud",
+    "query": "Name one difference between a region and an availability zone.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2903.71,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q110",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "State the quadratic formula. Do not solve an equation.",
+    "labels": {
+      "complexity": "simple",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.95,
+        "medium": 0.04,
+        "complex": 0.01
+      },
+      "reasoning": {
+        "low": 0.96,
+        "medium": 0.03,
+        "high": 0.01
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2916.19,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q111",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Write a Python function that takes a string and returns how many characters it contains.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2956.54,
+    "prompt_tokens": 1043,
+    "output_tokens": 106
+  },
+  {
+    "id": "q112",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "A rectangle is 5 units by 8 units. What are its area and its perimeter?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.85,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2970.24,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q113",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "Explain the bias-variance tradeoff in two sentences.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2891.43,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q114",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Write a SQL query that counts rows in orders grouped by customer_id. The table has columns customer_id and id.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.85,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2879.17,
+    "prompt_tokens": 1052,
+    "output_tokens": 106
+  },
+  {
+    "id": "q115",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "How is a managed Kubernetes service different from running the same containers on virtual machines you patch yourself?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3068.05,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q116",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "What messages are exchanged when a TCP connection closes, in order?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.15,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.1,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3142.73,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q117",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Write a Dockerfile that starts from python:3.12-slim, copies the app, and runs python app.py.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.85,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2917.86,
+    "prompt_tokens": 1054,
+    "output_tokens": 106
+  },
+  {
+    "id": "q118",
+    "split": "calibration",
+    "domain": "general",
+    "query": "Why do we have leap years? Answer in two sentences.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2962.17,
+    "prompt_tokens": 1039,
+    "output_tokens": 106
+  },
+  {
+    "id": "q119",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "What is a message queue used for? Give one example.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2896.76,
+    "prompt_tokens": 1039,
+    "output_tokens": 106
+  },
+  {
+    "id": "q120",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "This function is supposed to return the largest number in a list, but the body says return min(values). What is the bug, and what should the return line be?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2869.31,
+    "prompt_tokens": 1062,
+    "output_tokens": 106
+  },
+  {
+    "id": "q121",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Show that the sum of two even integers is even. A short proof is enough.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 6561.32,
+    "prompt_tokens": 1044,
+    "output_tokens": 106
+  },
+  {
+    "id": "q122",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "A model is very accurate on its training data and poor on new data. What is that problem called, and name one change that often helps?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2762.11,
+    "prompt_tokens": 1056,
+    "output_tokens": 106
+  },
+  {
+    "id": "q123",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "This query is slow: SELECT * FROM events WHERE YEAR(created_at) = 2024. Why does that pattern block a normal index, and how would you write the date filter instead?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.6,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2824.78,
+    "prompt_tokens": 1069,
+    "output_tokens": 106
+  },
+  {
+    "id": "q124",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "A storage bucket that holds invoices is world-readable. What is the risk, and what access change removes it?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.15,
+        "medium": 0.7,
+        "high": 0.15
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2954.5,
+    "prompt_tokens": 1050,
+    "output_tokens": 106
+  },
+  {
+    "id": "q125",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Users can open the site by IP address but not by its name. Where do you look first, and why?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2779.22,
+    "prompt_tokens": 1050,
+    "output_tokens": 106
+  },
+  {
+    "id": "q126",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "A container exits at once with status 127. What does that status usually mean, and what would you check in the image?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.7,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.15,
+        "medium": 0.75,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3478.46,
+    "prompt_tokens": 1055,
+    "output_tokens": 106
+  },
+  {
+    "id": "q127",
+    "split": "calibration",
+    "domain": "general",
+    "query": "Explain how a solar eclipse happens, in three sentences.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.8,
+        "medium": 0.15,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2857.72,
+    "prompt_tokens": 1038,
+    "output_tokens": 106
+  },
+  {
+    "id": "q128",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "A blog is read often and updated a few times a day. Choose a cache or a read replica, and give one reason.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.6,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2862.96,
+    "prompt_tokens": 1053,
+    "output_tokens": 106
+  },
+  {
+    "id": "q129",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Show Python code that reads a JSON file named data.json and prints the value of the name field.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.85,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3763.25,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q130",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Solve 5x - 5 = 20 and check the result.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3141.09,
+    "prompt_tokens": 1043,
+    "output_tokens": 106
+  },
+  {
+    "id": "q131",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "How does a train, validation, and test split differ from using only a train and test split?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2788.76,
+    "prompt_tokens": 1047,
+    "output_tokens": 106
+  },
+  {
+    "id": "q132",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "When is a composite index on (user_id, created_at) more useful than an index on user_id alone?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.75,
+        "complex": 0.15
+      },
+      "reasoning": {
+        "low": 0.15,
+        "medium": 0.65,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3006.28,
+    "prompt_tokens": 1053,
+    "output_tokens": 106
+  },
+  {
+    "id": "q133",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Give one example of object storage and one example of block storage, and say how a server uses each.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.15,
+        "medium": 0.75,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2775.46,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q134",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "What is the difference between HTTP status 301 and HTTP status 404?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.85,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3147.77,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q135",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "What is the difference between CMD and ENTRYPOINT in a Dockerfile?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.12,
+        "medium": 0.78,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2767.19,
+    "prompt_tokens": 1041,
+    "output_tokens": 106
+  },
+  {
+    "id": "q136",
+    "split": "calibration",
+    "domain": "general",
+    "query": "The shop is closed on Tuesday. Today is Tuesday. Can an order be picked up in the shop today? Say why.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.8,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2907.82,
+    "prompt_tokens": 1052,
+    "output_tokens": 106
+  },
+  {
+    "id": "q137",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "How does a rate limiter protect a login endpoint?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.15,
+        "medium": 0.75,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3243.12,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q138",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Rename the variables in the function you just wrote so a new reader can tell what they store.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 7396.47,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q139",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Use the same method you just used to compute the next value.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.6,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.4,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2792.03,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q140",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "Apply the preprocessing steps you listed to this sentence: Order cancelled.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3224.73,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q141",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Change the query you wrote so it keeps only rows where status is open.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2924.48,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q142",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Attach the access policy you drafted to a bucket named logs-prod. Do not rewrite the rules.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2976.01,
+    "prompt_tokens": 1047,
+    "output_tokens": 106
+  },
+  {
+    "id": "q143",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Using the subnet from my previous message, is 10.0.4.8 inside it? Show the comparison.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.7,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3195.9,
+    "prompt_tokens": 1052,
+    "output_tokens": 106
+  },
+  {
+    "id": "q144",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Add the environment variable I mentioned to the compose file you wrote.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2841.31,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q145",
+    "split": "calibration",
+    "domain": "general",
+    "query": "In two sentences, how is a republic different from a monarchy?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.15,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.3,
+        "medium": 0.6,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2939.01,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q146",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Add the billing service I mentioned to the component list you proposed.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.2,
+        "medium": 0.7,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.3,
+        "medium": 0.5,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3003.6,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q147",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "The traceback I pasted points at line 40 of parser.py. Explain the most likely cause and a one-line fix.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.6,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2910.8,
+    "prompt_tokens": 1054,
+    "output_tokens": 106
+  },
+  {
+    "id": "q148",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "In your last answer, you differentiated x squared plus 3x and wrote 2x. Recompute the derivative and correct it.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.7,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2972.12,
+    "prompt_tokens": 1054,
+    "output_tokens": 106
+  },
+  {
+    "id": "q149",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "What does each cell of a confusion matrix count?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.88,
+        "medium": 0.1,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2953.05,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q150",
+    "split": "validation",
+    "domain": "databases",
+    "query": "What is the difference between WHERE and HAVING?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.15,
+        "medium": 0.75,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3047.67,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q151",
+    "split": "validation",
+    "domain": "cloud",
+    "query": "What does an availability-zone outage do to a database that runs in only one zone?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3092.93,
+    "prompt_tokens": 1045,
+    "output_tokens": 106
+  },
+  {
+    "id": "q152",
+    "split": "validation",
+    "domain": "networking",
+    "query": "What is a subnet mask used for?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.92,
+        "medium": 0.06,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.88,
+        "medium": 0.1,
+        "high": 0.02
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2955.11,
+    "prompt_tokens": 1035,
+    "output_tokens": 106
+  },
+  {
+    "id": "q153",
+    "split": "validation",
+    "domain": "devops",
+    "query": "What does a green CI build tell you, and what does it not tell you?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.15,
+        "medium": 0.75,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2839.29,
+    "prompt_tokens": 1044,
+    "output_tokens": 106
+  },
+  {
+    "id": "q154",
+    "split": "validation",
+    "domain": "general",
+    "query": "Add one sentence to the summary you started.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.15,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.3,
+        "medium": 0.5,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2832.96,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q155",
+    "split": "validation",
+    "domain": "system_design",
+    "query": "What is the difference between latency and throughput?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2775.78,
+    "prompt_tokens": 1036,
+    "output_tokens": 106
+  },
+  {
+    "id": "q156",
+    "split": "validation",
+    "domain": "programming",
+    "query": "Explain the difference between a Python list and a tuple, with one example of when a tuple is the better choice.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3173.53,
+    "prompt_tokens": 1050,
+    "output_tokens": 106
+  },
+  {
+    "id": "q157",
+    "split": "validation",
+    "domain": "mathematics",
+    "query": "Convert 0.125 to a fraction in lowest terms.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2855.09,
+    "prompt_tokens": 1041,
+    "output_tokens": 106
+  },
+  {
+    "id": "q158",
+    "split": "validation",
+    "domain": "ai_ml",
+    "query": "The learning curve I described is still rising at the last point. Should we collect more data or enlarge the model first? Give the reason.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.6,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2823.88,
+    "prompt_tokens": 1055,
+    "output_tokens": 106
+  },
+  {
+    "id": "q159",
+    "split": "validation",
+    "domain": "databases",
+    "query": "The query plan above is a full scan of orders. Which index would you add, and which predicate should it match?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2843.68,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q160",
+    "split": "validation",
+    "domain": "cloud",
+    "query": "The deploy described in the last note rolled back after health checks failed. What is the most likely configuration mistake?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.6,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2905.91,
+    "prompt_tokens": 1049,
+    "output_tokens": 106
+  },
+  {
+    "id": "q161",
+    "split": "validation",
+    "domain": "networking",
+    "query": "A traceroute stops responding at hop 4. What does that suggest, and what would you check next?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.4,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2773.43,
+    "prompt_tokens": 1049,
+    "output_tokens": 106
+  },
+  {
+    "id": "q162",
+    "split": "validation",
+    "domain": "devops",
+    "query": "The rollback script from the last message failed on the second host. What should it check before touching another host?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2826.04,
+    "prompt_tokens": 1049,
+    "output_tokens": 106
+  },
+  {
+    "id": "q163",
+    "split": "test",
+    "domain": "general",
+    "query": "What causes ocean tides?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.98,
+        "medium": 0.01,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2946.23,
+    "prompt_tokens": 1032,
+    "output_tokens": 106
+  },
+  {
+    "id": "q164",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Your previous design uses one database. What fails first if write traffic doubles?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.6,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2868.77,
+    "prompt_tokens": 1042,
+    "output_tokens": 106
+  },
+  {
+    "id": "q165",
+    "split": "test",
+    "domain": "programming",
+    "query": "Add a one-line docstring to the function in the previous message. Do not change the code.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.12,
+        "complex": 0.03
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2824.32,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q166",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "Using the system of equations from my last message, solve for y and show the substitution.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.7,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2870.13,
+    "prompt_tokens": 1045,
+    "output_tokens": 106
+  },
+  {
+    "id": "q167",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "In the notebook we were looking at, which metric was logged on each epoch?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2939.06,
+    "prompt_tokens": 1043,
+    "output_tokens": 106
+  },
+  {
+    "id": "q168",
+    "split": "test",
+    "domain": "cloud",
+    "query": "Name the three cloud resources from the architecture in my previous message.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.1,
+        "high": 0.88
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2793.32,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q169",
+    "split": "test",
+    "domain": "networking",
+    "query": "In the curl output we reviewed, which header set the cookie?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.7,
+        "medium": 0.25,
+        "high": 0.05
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3095.05,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q170",
+    "split": "test",
+    "domain": "devops",
+    "query": "Which image tag did the pipeline log in my last message show for the failed deploy?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.08,
+        "high": 0.9
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2783.21,
+    "prompt_tokens": 1044,
+    "output_tokens": 106
+  },
+  {
+    "id": "q171",
+    "split": "test",
+    "domain": "general",
+    "query": "The itinerary above has flights listed by day. Is there a day with two flights, and which day is it?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.85,
+        "medium": 0.1,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2790.88,
+    "prompt_tokens": 1050,
+    "output_tokens": 106
+  },
+  {
+    "id": "q172",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Which two stores did you offer for session data?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.9,
+        "medium": 0.08,
+        "complex": 0.02
+      },
+      "reasoning": {
+        "low": 0.85,
+        "medium": 0.12,
+        "high": 0.03
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2881.73,
+    "prompt_tokens": 1037,
+    "output_tokens": 106
+  },
+  {
+    "id": "q173",
+    "split": "test",
+    "domain": "networking",
+    "query": "Update the firewall rule we discussed so it also allows port 22 from the office address.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.7,
+        "high": 0.1
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2818.08,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q174",
+    "split": "test",
+    "domain": "general",
+    "query": "Shorten the paragraph you just wrote to fewer than twenty words.",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "low",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.8,
+        "medium": 0.15,
+        "complex": 0.05
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2857.96,
+    "prompt_tokens": 1040,
+    "output_tokens": 106
+  },
+  {
+    "id": "q175",
+    "split": "test",
+    "domain": "general",
+    "query": "Using the constraints I listed earlier, which of the two cities is the better place to meet?",
+    "labels": {
+      "complexity": "medium",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.5,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2832.17,
+    "prompt_tokens": 1046,
+    "output_tokens": 106
+  },
+  {
+    "id": "q176",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Design a Python service that receives webhook events, ignores duplicates for 24 hours, and retries a failed handler with backoff. Describe the modules, the data you would store, and what happens if the process dies after the handler starts.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 6474.94,
+    "prompt_tokens": 1076,
+    "output_tokens": 106
+  },
+  {
+    "id": "q177",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Prove that there are infinitely many prime numbers. Write the argument as clear steps.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3042.51,
+    "prompt_tokens": 1043,
+    "output_tokens": 106
+  },
+  {
+    "id": "q178",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "Design an evaluation for a document retriever that must not leak test documents into training. Include the split, the metrics, and one failure those metrics can miss.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2906.29,
+    "prompt_tokens": 1058,
+    "output_tokens": 106
+  },
+  {
+    "id": "q179",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Design a schema for orders that belong to tenants, where one tenant must never read another tenant's rows. Include keys, the index you would rely on, and how the database enforces isolation.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3114.57,
+    "prompt_tokens": 1066,
+    "output_tokens": 106
+  },
+  {
+    "id": "q180",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Design an active-passive deployment of a payments API in two regions. Include how traffic moves, how data is replicated, and the recovery point you would promise.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2792.59,
+    "prompt_tokens": 1059,
+    "output_tokens": 106
+  },
+  {
+    "id": "q181",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Design address space for three environments that cannot route to each other by default, plus one controlled path for the deploy system. Include how you would test that isolation holds.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2896.42,
+    "prompt_tokens": 1060,
+    "output_tokens": 106
+  },
+  {
+    "id": "q182",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Design a deploy pipeline that can reverse a bad release in under five minutes. Include the build, the canary, the metric that aborts it, and who is allowed to force it through.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2816.79,
+    "prompt_tokens": 1065,
+    "output_tokens": 106
+  },
+  {
+    "id": "q183",
+    "split": "calibration",
+    "domain": "general",
+    "query": "A city may replace a fixed bus route with vans that come on request. Compare cost, waiting, coverage, and name one group of riders who are worse off. Recommend one option.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.85,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.65,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2807.51,
+    "prompt_tokens": 1064,
+    "output_tokens": 106
+  },
+  {
+    "id": "q184",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Design a chat system for 10 million accounts with presence, history, and groups of up to 500 members. Include storage, how a message reaches the group, and the first bottleneck you expect.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.01,
+        "medium": 0.14,
+        "complex": 0.85
+      },
+      "reasoning": {
+        "low": 0.01,
+        "medium": 0.19,
+        "high": 0.8
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2948.22,
+    "prompt_tokens": 1070,
+    "output_tokens": 106
+  },
+  {
+    "id": "q185",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "A Python worker spends most of its time waiting on HTTP APIs. Compare threads and asyncio, recommend one, and state the main tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.85,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.45,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3101.0,
+    "prompt_tokens": 1054,
+    "output_tokens": 106
+  },
+  {
+    "id": "q186",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Compare bisection and Newton-Raphson for a root of a function that is expensive to differentiate. Recommend one, and state the failure if the derivative is zero at the root.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.85,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.45,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3041.27,
+    "prompt_tokens": 1064,
+    "output_tokens": 106
+  },
+  {
+    "id": "q187",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "Compare LoRA fine-tuning and full fine-tuning of a 7-billion-parameter model on one GPU, for a task with 10,000 examples. Recommend one and state the tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.85,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.45,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2819.41,
+    "prompt_tokens": 1071,
+    "output_tokens": 106
+  },
+  {
+    "id": "q188",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Compare optimistic and pessimistic locking for a seat-booking update that lasts a few milliseconds. Choose one and say what fails if you choose badly.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2910.2,
+    "prompt_tokens": 1055,
+    "output_tokens": 106
+  },
+  {
+    "id": "q189",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Compare spot capacity and on-demand capacity for a batch job that runs every night and can restart. Recommend one and state the failure you accept.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.8,
+        "complex": 0.15
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2819.51,
+    "prompt_tokens": 1056,
+    "output_tokens": 106
+  },
+  {
+    "id": "q190",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Compare terminating TLS at a load balancer with terminating it at the application. Choose one for an internal admin API and justify it.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2941.62,
+    "prompt_tokens": 1052,
+    "output_tokens": 106
+  },
+  {
+    "id": "q191",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Compare a blue-green deploy with a rolling deploy when the release adds a required database column. Recommend one and say what breaks in the other.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.65,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2856.31,
+    "prompt_tokens": 1056,
+    "output_tokens": 106
+  },
+  {
+    "id": "q192",
+    "split": "calibration",
+    "domain": "general",
+    "query": "A council must decide whether a disputed claim about water safety is established. Compare the standard a jury uses with the standard a scientific study uses, recommend which standard the council should require before changing the water plant, and state one way that standard can still be wrong.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.35,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2925.32,
+    "prompt_tokens": 1079,
+    "output_tokens": 106
+  },
+  {
+    "id": "q193",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "Design a rate limiter shared by ten API servers that does not take a lock on one database row for every request. Include the data you store and what a dead server does to the count.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.02,
+        "medium": 0.18,
+        "complex": 0.8
+      },
+      "reasoning": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2931.08,
+    "prompt_tokens": 1065,
+    "output_tokens": 106
+  },
+  {
+    "id": "q194",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "The worker we designed loses events when the process restarts. Change the handoff so a crash after the handler starts cannot drop an event that was already accepted.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2946.19,
+    "prompt_tokens": 1058,
+    "output_tokens": 106
+  },
+  {
+    "id": "q195",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "Finish the induction proof you started for the claim that the sum of the first n odd numbers is n squared. Complete the inductive step.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.2,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 6423.06,
+    "prompt_tokens": 1054,
+    "output_tokens": 106
+  },
+  {
+    "id": "q196",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "The training run we discussed diverged right after the learning-rate change. Give a likely cause and a safer schedule.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.35,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2870.48,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q197",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "The migration you proposed takes a lock on the users table for the whole backfill. Change the plan so reads and writes continue while old rows are copied.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2913.31,
+    "prompt_tokens": 1058,
+    "output_tokens": 106
+  },
+  {
+    "id": "q198",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "The failover we designed last week can accept writes in both regions at once. Explain the split-brain risk and change the design so only one region is writable.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2806.13,
+    "prompt_tokens": 1060,
+    "output_tokens": 106
+  },
+  {
+    "id": "q199",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Packet loss on the VPN from the last session happens only for large packets. Explain the likely MTU problem and the change you would test first.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.65,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.85,
+        "medium": 0.1,
+        "high": 0.05
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2854.02,
+    "prompt_tokens": 1056,
+    "output_tokens": 106
+  },
+  {
+    "id": "q200",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Yesterday the canary metrics passed, but the business check I described failed. Change the pipeline so that check can stop the rollout.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.5,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 4206.12,
+    "prompt_tokens": 1052,
+    "output_tokens": 106
+  },
+  {
+    "id": "q201",
+    "split": "calibration",
+    "domain": "general",
+    "query": "Using the budget and the two options I described earlier, recommend one. Show the figure that would reverse the recommendation.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.45,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2821.73,
+    "prompt_tokens": 1050,
+    "output_tokens": 106
+  },
+  {
+    "id": "q202",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "A team of four is building the first version of billing. Compare one deployable service with a split into several services. Recommend one, and say what would force you to change.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2880.74,
+    "prompt_tokens": 1063,
+    "output_tokens": 106
+  },
+  {
+    "id": "q203",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "Compare a lock and a queue for handing jobs to three worker processes. Recommend one when the jobs are CPU-bound, and state what goes wrong if every worker waits on one lock.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2832.42,
+    "prompt_tokens": 1064,
+    "output_tokens": 106
+  },
+  {
+    "id": "q204",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "You need to solve thousands of linear systems that share a matrix and differ only in the right-hand side. Compare factoring the matrix once against solving each system from scratch, recommend one, and state the memory tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.45,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3787.69,
+    "prompt_tokens": 1070,
+    "output_tokens": 106
+  },
+  {
+    "id": "q205",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "A team can prompt a hosted model or fine-tune a small model on 2,000 labeled support tickets. Compare them for labels that change every month, recommend one, and state the maintenance cost you accept.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3121.38,
+    "prompt_tokens": 1072,
+    "output_tokens": 106
+  },
+  {
+    "id": "q206",
+    "split": "calibration",
+    "domain": "databases",
+    "query": "Compare storing an order total on the order row against computing it from line items on every read. Recommend one when the total is shown on every page view, and state how a partial refund can make the stored total wrong.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.8,
+        "complex": 0.15
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.45,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3008.71,
+    "prompt_tokens": 1071,
+    "output_tokens": 106
+  },
+  {
+    "id": "q207",
+    "split": "calibration",
+    "domain": "cloud",
+    "query": "Compare encrypting a whole database disk with encrypting the columns that finance staff must read. Recommend one when backups are copied to another account, and state what the copy still exposes.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2894.6,
+    "prompt_tokens": 1063,
+    "output_tokens": 106
+  },
+  {
+    "id": "q208",
+    "split": "calibration",
+    "domain": "networking",
+    "query": "Compare allowing a whole office subnet to reach an admin port against requiring a per-user VPN identity. Recommend one for a five-person team, and state the failure when a laptop is stolen.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.8,
+        "complex": 0.15
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2948.64,
+    "prompt_tokens": 1066,
+    "output_tokens": 106
+  },
+  {
+    "id": "q209",
+    "split": "calibration",
+    "domain": "devops",
+    "query": "Compare rebuilding a release from a Git tag against deploying an image digest. Recommend one when a security scan must match the bytes that were approved, and state what a movable tag can hide.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.4,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2816.93,
+    "prompt_tokens": 1064,
+    "output_tokens": 106
+  },
+  {
+    "id": "q210",
+    "split": "calibration",
+    "domain": "general",
+    "query": "A club of 90 people must pick one of four venues, and a plurality winner can be disliked by most voters. Compare plurality with an instant runoff, recommend one, and describe a case where your choice still picks a weak compromise.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3227.23,
+    "prompt_tokens": 1075,
+    "output_tokens": 106
+  },
+  {
+    "id": "q211",
+    "split": "calibration",
+    "domain": "system_design",
+    "query": "The feed design we agreed on cannot handle the write rate I added in the last message. Revise how posts reach followers, and say which consistency you would give up.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3165.57,
+    "prompt_tokens": 1061,
+    "output_tokens": 106
+  },
+  {
+    "id": "q212",
+    "split": "calibration",
+    "domain": "programming",
+    "query": "The traceback and the function from the last turn disagree about the type of the user id. Diagnose the mismatch and propose a fix that keeps the public function signature.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3195.24,
+    "prompt_tokens": 1059,
+    "output_tokens": 106
+  },
+  {
+    "id": "q213",
+    "split": "calibration",
+    "domain": "mathematics",
+    "query": "The integral in your last answer dropped the constant. Recompute it from the expression I gave and show the corrected result.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.4,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2894.69,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q214",
+    "split": "calibration",
+    "domain": "ai_ml",
+    "query": "A medical screening model has precision 0.95 and recall 0.40. Explain who is missed, who is burdened, and which metric you would move next, including the tradeoff.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2969.82,
+    "prompt_tokens": 1067,
+    "output_tokens": 106
+  },
+  {
+    "id": "q215",
+    "split": "validation",
+    "domain": "databases",
+    "query": "The plan above nests a loop over orders and items. Propose an index and a rewritten join, and say how you would confirm the plan changed.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.35,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2835.29,
+    "prompt_tokens": 1057,
+    "output_tokens": 106
+  },
+  {
+    "id": "q216",
+    "split": "validation",
+    "domain": "cloud",
+    "query": "A lifecycle rule deletes invoices 30 days after upload, but finance must keep them for 7 years. Explain the conflict and separate retention from the application bucket.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.65,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.4,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2832.82,
+    "prompt_tokens": 1060,
+    "output_tokens": 106
+  },
+  {
+    "id": "q217",
+    "split": "validation",
+    "domain": "networking",
+    "query": "Every person in one office shares a single public IP, so a rate limiter treats them as one client. Explain why, and propose an identity the limiter should use instead.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2863.49,
+    "prompt_tokens": 1061,
+    "output_tokens": 106
+  },
+  {
+    "id": "q218",
+    "split": "validation",
+    "domain": "devops",
+    "query": "A deployment has three replicas and a readiness probe that always fails. Describe what users experience and the smallest change that returns traffic without skipping the probe.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2859.8,
+    "prompt_tokens": 1056,
+    "output_tokens": 106
+  },
+  {
+    "id": "q219",
+    "split": "validation",
+    "domain": "general",
+    "query": "Three roommates share a rent of 3000. Rooms are 10, 20, and 30 square meters. Compute each share if rent follows room size, then give one fairness objection to that rule.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.8,
+        "complex": 0.1
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.6,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2976.16,
+    "prompt_tokens": 1074,
+    "output_tokens": 106
+  },
+  {
+    "id": "q220",
+    "split": "validation",
+    "domain": "system_design",
+    "query": "Compare writing a follower's feed when a post is created against building that feed when the follower opens the app. Recommend one for an account with 20 million followers, and state the cost the other design pays.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2973.3,
+    "prompt_tokens": 1071,
+    "output_tokens": 106
+  },
+  {
+    "id": "q221",
+    "split": "validation",
+    "domain": "programming",
+    "query": "Extend the parser you wrote so it accepts the optional fields from my earlier message, and describe how it reports an error.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.75,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.6,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3171.46,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q222",
+    "split": "validation",
+    "domain": "mathematics",
+    "query": "Using only the recurrence in my previous message, find a closed form and justify it.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.08,
+        "high": 0.9
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3337.95,
+    "prompt_tokens": 1044,
+    "output_tokens": 106
+  },
+  {
+    "id": "q223",
+    "split": "validation",
+    "domain": "ai_ml",
+    "query": "Adapt the feature pipeline from the previous turn to the new label I just defined, and say which features are no longer valid.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.4,
+        "high": 0.5
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3431.01,
+    "prompt_tokens": 1052,
+    "output_tokens": 106
+  },
+  {
+    "id": "q224",
+    "split": "validation",
+    "domain": "databases",
+    "query": "Apply the partitioning scheme from the last design to a new events table. State the partition key and one query that would have to touch every partition.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.6,
+        "high": 0.3
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2958.1,
+    "prompt_tokens": 1056,
+    "output_tokens": 106
+  },
+  {
+    "id": "q225",
+    "split": "validation",
+    "domain": "cloud",
+    "query": "Take the network layout from the previous message and add a private path for the workers. Describe the routes and what must not be reachable from the internet.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.65,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.5,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2997.53,
+    "prompt_tokens": 1057,
+    "output_tokens": 106
+  },
+  {
+    "id": "q226",
+    "split": "validation",
+    "domain": "networking",
+    "query": "Using the routing table from the last message, which next hop is chosen for 10.8.0.0/16, and what happens to that traffic if the hop is removed?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.5,
+        "high": 0.4
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 6144.01,
+    "prompt_tokens": 1067,
+    "output_tokens": 106
+  },
+  {
+    "id": "q227",
+    "split": "validation",
+    "domain": "devops",
+    "query": "Update the runbook you wrote so the on-call step includes the feature flag from my last note.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.2,
+        "medium": 0.6,
+        "high": 0.2
+      },
+      "context": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3913.91,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q228",
+    "split": "test",
+    "domain": "general",
+    "query": "Revise the argument you made so it answers the objection I raised about the sample being too small.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 4244.03,
+    "prompt_tokens": 1047,
+    "output_tokens": 106
+  },
+  {
+    "id": "q229",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Notifications can be sent by email, push, or SMS, and a worker may retry. Design deduplication so the user gets one alert. Include the key and how long you keep it.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3987.6,
+    "prompt_tokens": 1065,
+    "output_tokens": 106
+  },
+  {
+    "id": "q230",
+    "split": "test",
+    "domain": "programming",
+    "query": "A web handler reads an entire upload into memory before it checks the content type. Explain how a large request can take the process down, and describe a structure that validates and limits the body first.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.3,
+        "high": 0.65
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 12628.68,
+    "prompt_tokens": 1066,
+    "output_tokens": 106
+  },
+  {
+    "id": "q231",
+    "split": "test",
+    "domain": "mathematics",
+    "query": "A fair coin is flipped until the first heads. Derive the expected number of flips and show each step.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.3,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.04,
+        "high": 0.01
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2915.15,
+    "prompt_tokens": 1048,
+    "output_tokens": 106
+  },
+  {
+    "id": "q232",
+    "split": "test",
+    "domain": "ai_ml",
+    "query": "The ablation table above removes one component at a time. Which component would you drop, and what new result would change that choice?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.6,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2866.49,
+    "prompt_tokens": 1053,
+    "output_tokens": 106
+  },
+  {
+    "id": "q233",
+    "split": "test",
+    "domain": "databases",
+    "query": "A user updates a profile and the next read comes from a replica. Describe the stale read they can see, and a design that makes that read show the new profile.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.95,
+        "medium": 0.03,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2886.06,
+    "prompt_tokens": 1061,
+    "output_tokens": 106
+  },
+  {
+    "id": "q234",
+    "split": "test",
+    "domain": "cloud",
+    "query": "The cost report above rose because of traffic between availability zones. Identify the likely path and a change that reduces that traffic without dropping the second zone.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2847.18,
+    "prompt_tokens": 1056,
+    "output_tokens": 106
+  },
+  {
+    "id": "q235",
+    "split": "test",
+    "domain": "networking",
+    "query": "The capture summary above shows retransmissions after the server window reaches zero. Explain that condition and what the application should change.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.35,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2838.76,
+    "prompt_tokens": 1052,
+    "output_tokens": 106
+  },
+  {
+    "id": "q236",
+    "split": "test",
+    "domain": "devops",
+    "query": "The timeline above starts the rollback before the canary has finished. Where is the gap, and what gate would you add?",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.35,
+        "complex": 0.6
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.25,
+        "high": 0.7
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2861.28,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q237",
+    "split": "test",
+    "domain": "general",
+    "query": "The timeline above places two events on the same day that cannot both have happened. Identify the contradiction and the smallest correction.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.6,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 2789.57,
+    "prompt_tokens": 1051,
+    "output_tokens": 106
+  },
+  {
+    "id": "q238",
+    "split": "test",
+    "domain": "system_design",
+    "query": "Using the constraints from the previous review, choose a queue or an append-only log for the audit trail, and check it against the retention requirement I added.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "medium",
+      "context": "high"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.65,
+        "complex": 0.3
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.35,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3032.29,
+    "prompt_tokens": 1059,
+    "output_tokens": 106
+  },
+  {
+    "id": "q239",
+    "split": "test",
+    "domain": "general",
+    "query": "A chart says crime fell 40 percent. List the definition, the denominator, and the time window a reader must check, and say which missing piece makes the two periods incomparable.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "low"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.1,
+        "medium": 0.7,
+        "complex": 0.2
+      },
+      "reasoning": {
+        "low": 0.1,
+        "medium": 0.3,
+        "high": 0.6
+      },
+      "context": {
+        "low": 0.9,
+        "medium": 0.08,
+        "high": 0.02
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 9092.68,
+    "prompt_tokens": 1064,
+    "output_tokens": 106
+  },
+  {
+    "id": "q240",
+    "split": "test",
+    "domain": "system_design",
+    "query": "In the sequence above, the client writes to two services. Show how a failure after the first write leaves bad state, and change the flow so the user sees one outcome.",
+    "labels": {
+      "complexity": "complex",
+      "reasoning": "high",
+      "context": "medium"
+    },
+    "raw": {
+      "complexity": {
+        "simple": 0.05,
+        "medium": 0.25,
+        "complex": 0.7
+      },
+      "reasoning": {
+        "low": 0.05,
+        "medium": 0.2,
+        "high": 0.75
+      },
+      "context": {
+        "low": 0.02,
+        "medium": 0.18,
+        "high": 0.8
+      }
+    },
+    "output_valid": true,
+    "model": "gemma4:31b-cloud",
+    "prompt": "candidate",
+    "latency_ms": 3093.39,
+    "prompt_tokens": 1062,
+    "output_tokens": 106
+  }
+]

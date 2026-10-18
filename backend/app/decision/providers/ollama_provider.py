@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 
@@ -20,6 +21,8 @@ class OllamaDecisionProvider:
     def __init__(self, model: str | None = None, api_base: str | None = None):
         self.model_name = model or os.getenv("DECISION_OLLAMA_MODEL", OLLAMA_MODEL)
         self.api_base = (api_base or OLLAMA_API_BASE).rstrip("/")
+        self.timeout_seconds = float(os.getenv("DECISION_TIMEOUT_SECONDS", "180"))
+        self.last_call: dict = {}
 
     def classify_raw(
         self,
@@ -52,8 +55,9 @@ class OllamaDecisionProvider:
             method="POST",
         )
 
+        started = time.perf_counter()
         try:
-            with urllib.request.urlopen(request, timeout=90) as response:
+            with urllib.request.urlopen(request, timeout=self.timeout_seconds) as response:
                 payload = json.loads(response.read().decode("utf-8"))
         except urllib.error.URLError as exc:
             raise DecisionProviderError(
@@ -70,6 +74,11 @@ class OllamaDecisionProvider:
 
         message = payload.get("message", {})
         content = message.get("content") if isinstance(message, dict) else None
+        self.last_call = {
+            "latency_ms": round((time.perf_counter() - started) * 1000, 2),
+            "prompt_tokens": payload.get("prompt_eval_count"),
+            "output_tokens": payload.get("eval_count"),
+        }
         if not isinstance(content, str) or not content.strip():
             raise DecisionProviderError(
                 "Local Ollama decision model returned an empty classification"

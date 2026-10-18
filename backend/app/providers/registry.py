@@ -2,9 +2,8 @@ from dataclasses import dataclass
 
 from app.providers.config import (
     CHEAP_MODEL,
+    LOCAL_RESPONSE_MODEL,
     NVIDIA_API_BASE,
-    OLLAMA_API_BASE,
-    OLLAMA_MODEL,
     STRONG_MODEL,
 )
 
@@ -21,9 +20,9 @@ def list_tiers() -> list[ModelTier]:
     return [
         ModelTier(
             tier="local",
-            provider="ollama",
-            model=OLLAMA_MODEL,
-            api_base=OLLAMA_API_BASE,
+            provider="nvidia",
+            model=LOCAL_RESPONSE_MODEL,
+            api_base=NVIDIA_API_BASE,
         ),
         ModelTier(
             tier="cheap",
