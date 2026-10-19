@@ -1,5 +1,9 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from app.database.database import initialize_database, test_connection
 
 from app.api.chat import router as chat_router
 from app.api.conversations import router as conversations_router
@@ -10,10 +14,19 @@ from app.api.metrics import router as metrics_router
 from app.api.models import router as models_router
 
 
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    initialize_database()
+    if not test_connection():
+        raise RuntimeError("Database connection failed")
+    yield
+
+
 app = FastAPI(
     title="LLM Resource Optimization Gateway",
     description="Multi-agent LLM routing and resource optimization gateway.",
     version="0.1.0",
+    lifespan=lifespan,
 )
 
 
