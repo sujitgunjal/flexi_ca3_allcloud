@@ -1,3 +1,4 @@
+
 import os
 from pathlib import Path
 
@@ -5,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
+# Ollama configuration.
 OLLAMA_MODEL = os.getenv(
     "OLLAMA_MODEL",
     "llama3:8b",
@@ -31,6 +33,7 @@ STRONG_MODEL = os.getenv(
     "nvidia/nemotron-3-ultra-550b-a55b",
 )
 
+# NVIDIA provider configuration.
 NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 
 NVIDIA_API_BASE = os.getenv(
@@ -42,34 +45,78 @@ PROVIDER_TIMEOUT_SECONDS = float(
     os.getenv("PROVIDER_TIMEOUT_SECONDS", "8")
 )
 
-# Local inference can take longer than the remote provider deadline, especially
-# when Ollama is loading a model. Keep it bounded without sharing the cloud SLA.
+# Local inference can take longer than the remote provider deadline.
 OLLAMA_TIMEOUT_SECONDS = float(
     os.getenv("OLLAMA_TIMEOUT_SECONDS", "30")
 )
 
-# Redis is an optional response cache. The application continues without it.
+# Redis configuration.
+# Priority in redis_cache.py:
+# 1. Upstash REST credentials
+# 2. Native Redis URL
+# 3. Local Redis host and port
+
+REDIS_URL = os.getenv("REDIS_URL", "").strip()
+
+UPSTASH_REDIS_REST_URL = os.getenv(
+    "UPSTASH_REDIS_REST_URL",
+    "",
+).strip().rstrip("/")
+
+UPSTASH_REDIS_REST_TOKEN = os.getenv(
+    "UPSTASH_REDIS_REST_TOKEN",
+    "",
+).strip()
+
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
 REDIS_DB = int(os.getenv("REDIS_DB", "0"))
 REDIS_TTL = int(os.getenv("REDIS_TTL", "3600"))
-# Minimum cosine similarity required before a cached answer can be reused.
-SEMANTIC_CACHE_THRESHOLD = float(os.getenv("SEMANTIC_CACHE_THRESHOLD", "0.86"))
-SEMANTIC_CACHE_MAX_CANDIDATES = int(os.getenv("SEMANTIC_CACHE_MAX_CANDIDATES", "200"))
 
-# Embedding provider for context ranking and the semantic cache.
-# voyage is the deployed default. ollama remains available.
-EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "voyage").strip().lower() or "voyage"
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:latest")
-EMBEDDING_TIMEOUT_SECONDS = float(os.getenv("EMBEDDING_TIMEOUT_SECONDS", "30"))
+# Semantic cache settings.
+SEMANTIC_CACHE_THRESHOLD = float(
+    os.getenv("SEMANTIC_CACHE_THRESHOLD", "0.86")
+)
+
+SEMANTIC_CACHE_MAX_CANDIDATES = int(
+    os.getenv("SEMANTIC_CACHE_MAX_CANDIDATES", "200")
+)
+
+# Embedding provider for context ranking and semantic caching.
+# Voyage is the default; Ollama remains available.
+EMBEDDING_PROVIDER = (
+    os.getenv("EMBEDDING_PROVIDER", "voyage").strip().lower()
+    or "voyage"
+)
+
+EMBEDDING_MODEL = os.getenv(
+    "EMBEDDING_MODEL",
+    "nomic-embed-text:latest",
+)
+
+EMBEDDING_TIMEOUT_SECONDS = float(
+    os.getenv("EMBEDDING_TIMEOUT_SECONDS", "30")
+)
+
 VOYAGE_API_KEY = os.getenv("VOYAGE_API_KEY", "")
-VOYAGE_API_BASE = os.getenv("VOYAGE_API_BASE", "https://api.voyageai.com/v1").rstrip("/")
-VOYAGE_EMBEDDING_MODEL = os.getenv("VOYAGE_EMBEDDING_MODEL", "voyage-4-lite")
+
+VOYAGE_API_BASE = os.getenv(
+    "VOYAGE_API_BASE",
+    "https://api.voyageai.com/v1",
+).rstrip("/")
+
+VOYAGE_EMBEDDING_MODEL = os.getenv(
+    "VOYAGE_EMBEDDING_MODEL",
+    "voyage-4-lite",
+)
+
+# Context optimization limits.
 CONTEXT_TOKEN_LIMITS = {
     "low": int(os.getenv("CONTEXT_TOKEN_LIMIT_LOW", "80")),
     "medium": int(os.getenv("CONTEXT_TOKEN_LIMIT_MEDIUM", "240")),
     "high": int(os.getenv("CONTEXT_TOKEN_LIMIT_HIGH", "800")),
 }
+
 CONTEXT_MESSAGE_CAPS = {
     "low": int(os.getenv("CONTEXT_MESSAGE_CAP_LOW", "2")),
     "medium": int(os.getenv("CONTEXT_MESSAGE_CAP_MEDIUM", "4")),
