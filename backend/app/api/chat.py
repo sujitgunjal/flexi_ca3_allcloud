@@ -1,6 +1,7 @@
 
 import logging
 import time
+import traceback
 from typing import List, Optional
 from uuid import uuid4
 
@@ -99,13 +100,7 @@ def chat(request: ChatRequest, background_tasks: BackgroundTasks):
         elapsed_ms = round(
             (time.perf_counter() - start_time) * 1000, 2
         )
-        # Avoid logging provider exception text: SDK errors can include
-        # request/response details. The category is enough to correlate with
-        # the provider/model diagnostics emitted by GenerateAgent.
-        logger.error(
-            "LLM graph execution failed category=%s",
-            type(exc).__name__,
-        )
+        _log_workflow_failure("graph_invoke", exc)
 
         return JSONResponse(
             status_code=502,
@@ -301,6 +296,19 @@ def chat(request: ChatRequest, background_tasks: BackgroundTasks):
     )
     logger.info("Chat request stage=response_ready cache_write_deferred=true")
     return response
+
+
+def _log_workflow_failure(stage: str, exc: Exception) -> None:
+    """Log the workflow stage and traceback without request or credential text."""
+
+    cause = exc.__cause__
+    logger.error(
+        "Chat workflow failed stage=%s category=%s cause=%s\n%s",
+        stage,
+        type(exc).__name__,
+        type(cause).__name__ if cause is not None else "none",
+        "".join(traceback.format_tb(exc.__traceback__)),
+    )
 
 
 def _record_generation_metrics_safely(

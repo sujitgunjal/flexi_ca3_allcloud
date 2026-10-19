@@ -1,6 +1,11 @@
+import logging
+import traceback
+
 from app.decision.base import DecisionProviderError
 from app.decision.service import DecisionService
 from app.orchestration.state import RequestState
+
+logger = logging.getLogger(__name__)
 
 
 class ComplexityAgent:
@@ -15,6 +20,13 @@ class ComplexityAgent:
         try:
             decision = self.service.decide(query)
         except DecisionProviderError as exc:
+            cause = exc.__cause__
+            logger.error(
+                "Complexity decision failed stage=complexity category=%s cause=%s\n%s",
+                type(exc).__name__,
+                type(cause).__name__ if cause is not None else "none",
+                "".join(traceback.format_tb(exc.__traceback__)),
+            )
             raise RuntimeError(str(exc)) from exc
 
         payload = decision.model_dump()
