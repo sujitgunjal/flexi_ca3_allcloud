@@ -1,6 +1,7 @@
 """SQLite locally, Neon PostgreSQL when DATABASE_URL is set."""
 
 import os
+import threading
 from pathlib import Path
 
 from sqlalchemy import create_engine, inspect, text
@@ -55,16 +56,24 @@ def _create_engine(database_url: str | URL) -> Engine:
 
 engine = _create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
+_schema_lock = threading.Lock()
+# Stable session lock so two deploy processes cannot apply revisions together.
+POSTGRES_ADVISORY_LOCK_KEY = 202610190001
 
 
 def initialize_database(database_engine: Engine = engine) -> None:
-    """Create tables for all imported application models."""
+    """Create SQLite tables for local development and tests.
+
+    PostgreSQL schema changes are not applied here. Request handlers call this
+    function, and Alembic's EnvironmentContext proxy is process-global:
+    overlapping upgrades delete ``config`` or ``script`` and raise KeyError in
+    ``_remove_proxy``. Apply Neon revisions with ``python -m app.database.migrate``.
+    """
+    if database_engine.dialect.name == "postgresql":
+        return
+
     # Import registers model tables on Base.metadata without coupling app startup.
     from app.database import models  # noqa: F401
-
-    if database_engine.dialect.name == "postgresql":
-        upgrade_schema()
-        return
 
     Base.metadata.create_all(bind=database_engine)
     # ``create_all`` intentionally leaves existing tables alone. Add only the
@@ -86,6 +95,39 @@ def initialize_database(database_engine: Engine = engine) -> None:
 
 
 def upgrade_schema() -> None:
+    """Apply Alembic revisions once at a time in this process."""
+
+    with _schema_lock:
+        _apply_alembic_upgrade()
+
+
+def run_migrations() -> None:
+    """Apply revisions outside the API. PostgreSQL callers wait on one lock."""
+
+    if engine.dialect.name == "postgresql":
+        _migrate_postgres()
+        return
+    upgrade_schema()
+
+
+def _migrate_postgres() -> None:
+    with engine.connect() as connection:
+        connection.execute(
+            text("SELECT pg_advisory_lock(:key)"),
+            {"key": POSTGRES_ADVISORY_LOCK_KEY},
+        )
+        connection.commit()
+        try:
+            upgrade_schema()
+        finally:
+            connection.execute(
+                text("SELECT pg_advisory_unlock(:key)"),
+                {"key": POSTGRES_ADVISORY_LOCK_KEY},
+            )
+            connection.commit()
+
+
+def _apply_alembic_upgrade() -> None:
     """Apply Alembic migrations. Failures propagate to the caller."""
 
     from alembic import command

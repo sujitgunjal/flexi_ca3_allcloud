@@ -1,0 +1,41 @@
+Fix two issues in my Switchboard backend (FastAPI, PostgreSQL/Neon, Alembic, Voyage AI, Python 3.12, Vercel).
+
+1. Alembic migration error
+
+KeyError: 'config' occurs in EnvironmentContext._remove_proxy() when migrations run during metrics requests.
+
+Inspect app/database/database.py, app/services/metrics_service.py, and Alembic configuration.
+
+Identify the root cause, including possible concurrent migration execution.
+
+Remove migrations from API request paths and implement a controlled migration workflow suitable for Vercel serverless deployment.
+
+Preserve existing database schema and data.
+
+2. Voyage AI embeddings HTTP 400
+
+The error originates in app/context/embeddings.py, called by app/agents/context_agent.py.
+
+Use https://docs.voyageai.com/docs/embeddings to verify:
+
+Endpoint, API key, model, and request payload.
+
+input is a string or list of strings.
+
+input_type correctly distinguishes query from document, where supported.
+
+Inspect and log Voyage's actual error response safely to identify the real cause. Fix the confirmed issue, validate embedding responses, and preserve the existing hash-similarity fallback. Never log secrets or retry permanent 400 errors unnecessarily.
+
+Requirements
+
+Inspect the code before modifying it; don't guess at root causes.
+
+Add tests for migration behavior, embedding requests, API failures, and fallback.
+
+Mock external APIs and run relevant tests.
+
+Preserve existing routes, routing, calibration, caching, and evaluation logic.
+
+Provide modified files, test results, required Vercel environment variables, and safe migration/redeployment steps.
+
+Avoid destructive database operations and unrelated refactoring.

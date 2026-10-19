@@ -1,9 +1,12 @@
 import hashlib
 import json
+import logging
 import os
 import re
 import urllib.error
 import urllib.request
+
+logger = logging.getLogger(__name__)
 
 from app.providers.config import (
     EMBEDDING_MODEL,
@@ -57,14 +60,25 @@ class VoyageEmbedder:
         # Query-to-query cache comparisons and query-to-document context ranking
         # both use Voyage's retrieval prompt. Callers pass document for history.
         selected_type = input_type or "query"
-        vectors: list[list[float]] = []
-        for start in range(0, len(texts), VOYAGE_BATCH_LIMIT):
-            batch = texts[start:start + VOYAGE_BATCH_LIMIT]
-            vectors.extend(self._embed_batch(batch, selected_type))
-        width = len(vectors[0])
-        if any(len(vector) != width for vector in vectors):
-            raise RuntimeError("Voyage returned embeddings with different dimensions")
-        return vectors
+        # Voyage rejects "" with HTTP 400: input cannot contain empty strings.
+        pending = [(index, text) for index, text in enumerate(texts) if text != ""]
+        if not pending:
+            return HashEmbedder().embed(texts)
+        vectors: list[list[float] | None] = [None] * len(texts)
+        width: int | None = None
+        for start in range(0, len(pending), VOYAGE_BATCH_LIMIT):
+            batch = pending[start:start + VOYAGE_BATCH_LIMIT]
+            embedded = self._embed_batch([text for _index, text in batch], selected_type)
+            if width is None:
+                width = len(embedded[0])
+            elif any(len(vector) != width for vector in embedded):
+                raise RuntimeError("Voyage returned embeddings with different dimensions")
+            for (index, _text), vector in zip(batch, embedded):
+                vectors[index] = vector
+        if width is None:
+            raise RuntimeError("Voyage returned no embeddings")
+        blank = [0.0] * width
+        return [vector if vector is not None else list(blank) for vector in vectors]
 
     def _embed_batch(self, texts: list[str], input_type: str) -> list[list[float]]:
         request = urllib.request.Request(
@@ -84,8 +98,19 @@ class VoyageEmbedder:
             with urllib.request.urlopen(request, timeout=self.timeout) as response:
                 payload = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
+            # 400 is a permanent request error. Do not send it again.
+            detail = _voyage_error_detail(exc, self.api_key)
+            logger.error(
+                "Voyage embeddings failed stage=embed status=%s detail=%s",
+                exc.code,
+                detail,
+            )
             raise RuntimeError(f"Voyage embeddings returned HTTP {exc.code}") from exc
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            logger.error(
+                "Voyage embeddings failed stage=embed category=%s",
+                type(exc).__name__,
+            )
             raise RuntimeError("Voyage embeddings request failed") from exc
         return _vectors_from_voyage_payload(payload, len(texts))
 
@@ -148,6 +173,26 @@ def get_embedder():
     if provider == "voyage":
         return VoyageEmbedder()
     raise RuntimeError(f"Unknown embedding provider '{provider}'. Use 'voyage' or 'ollama'.")
+
+
+def _voyage_error_detail(exc: urllib.error.HTTPError, api_key: str) -> str:
+    """Return Voyage's error detail without the credential or request body."""
+
+    try:
+        raw = exc.read().decode("utf-8", errors="replace")
+    except Exception:
+        return "unreadable error response"
+    detail = raw
+    try:
+        payload = json.loads(raw)
+    except json.JSONDecodeError:
+        payload = None
+    if isinstance(payload, dict) and isinstance(payload.get("detail"), str):
+        detail = payload["detail"]
+    if api_key:
+        detail = detail.replace(api_key, "[redacted]")
+    detail = re.sub(r"Bearer\s+\S+", "Bearer [redacted]", detail, flags=re.IGNORECASE)
+    return detail[:300]
 
 
 def _vectors_from_voyage_payload(payload: object, expected: int) -> list[list[float]]:
